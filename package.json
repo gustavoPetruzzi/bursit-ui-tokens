@@ -1,0 +1,54 @@
+{
+  "name": "bursit-ui-tokens",
+  "version": "0.1.0",
+  "description": "Shared CSS custom properties for Angular and React components",
+  "type": "module",
+  "main": "index.scss",
+  "style": "index.css",
+  "exports": {
+    ".": {
+      "style": "./index.css",
+      "sass": "./index.scss"
+    },
+    "./tokens": {
+      "style": "./tokens.css",
+      "sass": "./_tokens.scss"
+    }
+  },
+  "files": [
+    "*.{scss,css}",
+    "src/"
+  ],
+  "keywords": [
+    "css",
+    "css-variables",
+    "custom-properties",
+    "design-tokens",
+    "themes",
+    "angular",
+    "react"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chusti/bursit-ui-tokens"
+  },
+  "peerDependencies": {
+    "sass": "^1.69.0"
+  },
+  "devDependencies": {
+    "sass": "^1.69.0",
+    "vitepress": "^1.0.0",
+    "vite": "^5.0.0"
+  },
+  "scripts": {
+    "build": "sass src/index.scss index.css --no-source-map && sass src/_tokens.scss tokens.css --no-source-map",
+    "prepublishOnly": "npm run build",
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
