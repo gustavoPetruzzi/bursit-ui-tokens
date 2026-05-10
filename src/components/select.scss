@@ -1,0 +1,39 @@
+// =============================================================================
+// Select Tokens - CSS Custom Properties
+// =============================================================================
+// Tokens for native select dropdown components.
+// Extends input base tokens with select-specific properties (chevron icon, etc.).
+// =============================================================================
+
+:root {
+  --select-bg: var(--input-bg);
+  --select-color: var(--input-color);
+  --select-border-color: var(--input-border-color);
+  --select-border-width: var(--input-border-width);
+  --select-border-radius: var(--input-border-radius);
+  --select-padding-y: var(--input-padding-y);
+  --select-padding-x: var(--input-padding-x);
+  --select-padding-end: 2.5rem;
+  --select-font-size: var(--input-font-size);
+  --select-font-weight: var(--input-font-weight);
+  --select-line-height: var(--input-line-height);
+  --select-transition: var(--input-transition);
+
+  --select-icon-color: var(--input-icon-color);
+  --select-icon-size: 1rem;
+  --select-icon-offset: 0.75rem;
+
+  --select-focus-border-color: var(--input-focus-border-color);
+  --select-focus-shadow: var(--input-focus-shadow);
+  --select-disabled-bg: var(--input-disabled-bg);
+  --select-disabled-color: var(--input-disabled-color);
+  --select-disabled-border-color: var(--input-disabled-border-color);
+  --select-disabled-opacity: var(--input-disabled-opacity);
+
+  --select-option-bg: var(--select-bg);
+  --select-option-color: var(--select-color);
+  --select-option-hover-bg: var(--color-neutral-100);
+  --select-option-hover-color: var(--color-neutral-1000);
+  --select-option-focus-bg: var(--color-primary);
+  --select-option-focus-color: var(--color-primary-contrast);
+}

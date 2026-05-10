@@ -1,0 +1,27 @@
+// =============================================================================
+// Radio Tokens - CSS Custom Properties
+// =============================================================================
+// Tokens for radio button components.
+// =============================================================================
+
+:root {
+  --radio-size: 1rem;
+  --radio-border-width: var(--border-width-thin);
+  --radio-border-color: var(--color-neutral-300);
+  --radio-border-radius: var(--radius-full);
+  --radio-bg: var(--color-neutral-0);
+  --radio-checked-bg: var(--color-primary);
+  --radio-checked-border-color: var(--color-primary);
+  --radio-checked-inner-size: 0.5rem;
+  --radio-checked-inner-color: var(--color-primary-contrast);
+  --radio-hover-border-color: var(--color-neutral-400);
+  --radio-hover-checked-border-color: var(--color-primary);
+  --radio-disabled-bg: var(--color-neutral-100);
+  --radio-disabled-border-color: var(--color-neutral-200);
+  --radio-disabled-checked-bg: var(--color-neutral-300);
+  --radio-disabled-checked-border-color: var(--color-neutral-300);
+  --radio-disabled-checked-inner-color: var(--color-neutral-500);
+  --radio-disabled-opacity: 0.6;
+  --radio-focus-shadow: 0 0 0 3px var(--color-primary-alpha-15);
+  --radio-transition: all var(--duration-fast) var(--ease-in-out);
+}

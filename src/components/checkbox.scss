@@ -1,0 +1,31 @@
+// =============================================================================
+// Checkbox Tokens - CSS Custom Properties
+// =============================================================================
+// Tokens for checkbox components (native and custom styled).
+// =============================================================================
+
+:root {
+  --checkbox-size: 1rem;
+  --checkbox-border-width: var(--border-width-thin);
+  --checkbox-border-color: var(--color-neutral-300);
+  --checkbox-border-radius: var(--radius-sm);
+  --checkbox-bg: var(--color-neutral-0);
+  --checkbox-checked-bg: var(--color-primary);
+  --checkbox-checked-border-color: var(--color-primary);
+  --checkbox-checked-color: var(--color-primary-contrast);
+  --checkbox-hover-border-color: var(--color-neutral-400);
+  --checkbox-hover-checked-border-color: var(--color-primary);
+  --checkbox-hover-checked-bg: var(--color-primary);
+  --checkbox-disabled-bg: var(--color-neutral-100);
+  --checkbox-disabled-border-color: var(--color-neutral-200);
+  --checkbox-disabled-checked-bg: var(--color-neutral-300);
+  --checkbox-disabled-checked-border-color: var(--color-neutral-300);
+  --checkbox-disabled-checked-color: var(--color-neutral-500);
+  --checkbox-disabled-opacity: 0.6;
+  --checkbox-focus-shadow: 0 0 0 3px var(--color-primary-alpha-15);
+  --checkbox-transition: all var(--duration-fast) var(--ease-in-out);
+
+  --checkbox-indeterminate-bg: var(--color-primary);
+  --checkbox-indeterminate-border-color: var(--color-primary);
+  --checkbox-indeterminate-color: var(--color-primary-contrast);
+}

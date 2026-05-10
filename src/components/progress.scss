@@ -1,0 +1,34 @@
+// =============================================================================
+// Progress Tokens - CSS Custom Properties
+// =============================================================================
+// Tokens for progress bar components (linear and circular).
+// =============================================================================
+
+:root {
+  --progress-height: 0.5rem;
+  --progress-border-radius: var(--radius-full);
+  --progress-bg: var(--color-neutral-200);
+  --progress-track-bg: var(--color-neutral-200);
+  --progress-bar-bg: var(--color-primary);
+  --progress-bar-transition: width var(--duration-normal) var(--ease-in-out);
+  --progress-striped-bg: repeating-linear-gradient(
+    -45deg,
+    transparent,
+    transparent 0.25rem,
+    var(--color-white-alpha-15) 0.25rem,
+    var(--color-white-alpha-15) 0.5rem
+  );
+  --progress-animation-duration: 1s;
+
+  // Variant: Success
+  --progress-success-bg: var(--color-success);
+  // Variant: Warning
+  --progress-warning-bg: var(--color-warning);
+  // Variant: Error
+  --progress-error-bg: var(--color-error);
+
+  // Label
+  --progress-label-font-size: var(--font-size-xs);
+  --progress-label-font-weight: var(--font-weight-medium);
+  --progress-label-color: var(--color-neutral-600);
+}

@@ -1,0 +1,41 @@
+// =============================================================================
+// Tabs Tokens - CSS Custom Properties
+// =============================================================================
+// Tokens for tab navigation components.
+// =============================================================================
+
+:root {
+  --tabs-gap: 0;
+  --tabs-border-color: var(--color-neutral-200);
+  --tabs-border-width: var(--border-width-thin);
+
+  // Tab base
+  --tab-padding-y: var(--space-sm);
+  --tab-padding-x: var(--space-md);
+  --tab-font-size: var(--font-size-sm);
+  --tab-font-weight: var(--font-weight-medium);
+  --tab-color: var(--color-neutral-500);
+  --tab-hover-color: var(--color-neutral-700);
+  --tab-hover-bg: transparent;
+  --tab-border-color: transparent;
+  --tab-border-bottom-width: 2px;
+  --tab-transition: all var(--duration-fast) var(--ease-in-out);
+
+  // Active tab
+  --tab-active-color: var(--color-primary);
+  --tab-active-border-color: var(--color-primary);
+  --tab-active-bg: transparent;
+
+  // Disabled tab
+  --tab-disabled-color: var(--color-neutral-300);
+  --tab-disabled-opacity: 0.6;
+
+  // Indicator (underline style)
+  --tab-indicator-height: 2px;
+  --tab-indicator-color: var(--color-primary);
+  --tab-indicator-transition: all var(--duration-fast) var(--ease-in-out);
+
+  // Tab panel
+  --tab-panel-padding-y: var(--space-md);
+  --tab-panel-padding-x: 0;
+}

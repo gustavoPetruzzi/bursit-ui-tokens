@@ -1,0 +1,305 @@
+// =============================================================================
+// Design Tokens - CSS Custom Properties
+// =============================================================================
+// This file defines the core design tokens as CSS custom properties.
+// All values are defined in :root to make them globally available.
+//
+// Usage in SCSS:
+//   @use 'bursit-ui-tokens/tokens' as *;
+//
+// Usage in plain CSS:
+//   @import 'bursit-ui-tokens';
+//
+// Customizing values:
+//   Override in your own stylesheet after importing:
+//   :root {
+//     --color-primary: #your-brand-color;
+//   }
+// =============================================================================
+
+:root {
+  // ---------------------------------------------------------------------------
+  // Colors - Brand
+  // ---------------------------------------------------------------------------
+
+  /// Primary brand color. Used for primary actions, links, and key UI elements.
+  --color-primary: #3b82f6;
+
+  /// Contrast color for text on top of primary color.
+  --color-primary-contrast: #ffffff;
+
+  /// Secondary brand color. Used for secondary actions and accents.
+  --color-secondary: #8b5cf6;
+
+  /// Contrast color for text on top of secondary color.
+  --color-secondary-contrast: #ffffff;
+
+  /// Hover state for primary color (darkened ~10%).
+  --color-primary-hover: #2563eb;
+
+  /// Active/pressed state for primary color (darkened ~15%).
+  --color-primary-active: #1d4ed8;
+
+  // ---------------------------------------------------------------------------
+  // Colors - Neutral (Grayscale)
+  // ---------------------------------------------------------------------------
+
+  /// Neutral color scale from 0 (lightest) to 1000 (darkest).
+  --color-neutral-0: #fafafa;
+  --color-neutral-50: #ffffff;
+  --color-neutral-100: #f4f4f5;
+  --color-neutral-200: #e4e4e7;
+  --color-neutral-300: #d4d4d8;
+  --color-neutral-400: #a1a1aa;
+  --color-neutral-500: #71717a;
+  --color-neutral-600: #52525b;
+  --color-neutral-700: #3f3f46;
+  --color-neutral-800: #27272a;
+  --color-neutral-900: #18181b;
+  --color-neutral-1000: #09090b;
+
+  // ---------------------------------------------------------------------------
+  // Colors - Semantic
+  // ---------------------------------------------------------------------------
+
+  /// Success color. Used for positive feedback, completed states.
+  --color-success: #22c55e;
+
+  /// Success contrast color for text.
+  --color-success-contrast: #ffffff;
+
+  /// Warning color. Used for alerts and cautionary messages.
+  --color-warning: #f59e0b;
+
+  /// Warning contrast color for text.
+  --color-warning-contrast: #ffffff;
+
+  /// Error color. Used for errors, invalid states.
+  --color-error: #ef4444;
+
+  /// Error contrast color for text.
+  --color-error-contrast: #ffffff;
+
+  /// Info color. Used for informational messages.
+  --color-info: #3b82f6;
+
+  /// Info contrast color for text.
+  --color-info-contrast: #ffffff;
+
+  /// Hover state for error color (darkened ~10%).
+  --color-error-hover: #dc2626;
+
+  /// Active/pressed state for error color (darkened ~15%).
+  --color-error-active: #b91c1c;
+
+  // ---------------------------------------------------------------------------
+  // Colors - Alpha Variants
+  // ---------------------------------------------------------------------------
+
+  /// Alpha variants of semantic colors for subtle backgrounds, focus rings,
+  /// and overlays. These adapt automatically when base colors change.
+  --color-primary-alpha-8: rgb(from var(--color-primary) r g b / 0.08);
+  --color-primary-alpha-10: rgb(from var(--color-primary) r g b / 0.1);
+  --color-primary-alpha-15: rgb(from var(--color-primary) r g b / 0.15);
+  --color-success-alpha-10: rgb(from var(--color-success) r g b / 0.1);
+  --color-warning-alpha-10: rgb(from var(--color-warning) r g b / 0.1);
+  --color-error-alpha-10: rgb(from var(--color-error) r g b / 0.1);
+  --color-error-alpha-15: rgb(from var(--color-error) r g b / 0.15);
+  --color-info-alpha-10: rgb(from var(--color-info) r g b / 0.1);
+
+  /// Overlay background for modals and backdrops.
+  --color-overlay: rgb(0 0 0 / 0.5);
+
+  /// White alpha for pattern overlays (e.g. striped progress bars).
+  --color-white-alpha-15: rgb(255 255 255 / 0.15);
+
+  // ---------------------------------------------------------------------------
+  // Typography - Font Family
+  // ---------------------------------------------------------------------------
+
+  /// Primary font family for body text and UI elements.
+  --font-family-sans: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+
+  /// Monospace font family for code and technical content.
+  --font-family-mono: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+
+  // ---------------------------------------------------------------------------
+  // Typography - Font Size
+  // ---------------------------------------------------------------------------
+
+  /// Font size scale. Use responsive values for better mobile experience.
+  --font-size-xs: 0.75rem;    // 12px
+  --font-size-sm: 0.875rem;   // 14px
+  --font-size-base: 1rem;     // 16px
+  --font-size-lg: 1.125rem;   // 18px
+  --font-size-xl: 1.25rem;    // 20px
+  --font-size-2xl: 1.5rem;    // 24px
+  --font-size-3xl: 1.875rem;  // 30px
+  --font-size-4xl: 2.25rem;   // 36px
+
+  // ---------------------------------------------------------------------------
+  // Typography - Font Weight
+  // ---------------------------------------------------------------------------
+
+  /// Font weight for regular text.
+  --font-weight-normal: 400;
+
+  /// Font weight for medium emphasis.
+  --font-weight-medium: 500;
+
+  /// Font weight for bold text and headings.
+  --font-weight-bold: 700;
+
+  // ---------------------------------------------------------------------------
+  // Typography - Line Height
+  // ---------------------------------------------------------------------------
+
+  /// Line height for tight spacing (headings).
+  --line-height-tight: 1.25;
+
+  /// Default line height for body text.
+  --line-height-normal: 1.5;
+
+  /// Line height for relaxed reading (large text).
+  --line-height-relaxed: 1.75;
+
+  // ---------------------------------------------------------------------------
+  // Spacing
+  // ---------------------------------------------------------------------------
+
+  /// Spacing scale for margins, padding, and gaps.
+  --space-2xs: 0.125rem;  // 2px
+  --space-xs: 0.25rem;    // 4px
+  --space-sm: 0.5rem;     // 8px
+  --space-md: 1rem;       // 16px
+  --space-lg: 1.5rem;     // 24px
+  --space-xl: 2rem;       // 32px
+  --space-2xl: 3rem;      // 48px
+  --space-3xl: 4rem;      // 64px
+
+  // ---------------------------------------------------------------------------
+  // Borders - Radius
+  // ---------------------------------------------------------------------------
+
+  /// Border radius for small elements (inputs, buttons).
+  --radius-sm: 0.25rem;
+
+  /// Border radius for medium elements (cards, modals).
+  --radius-md: 0.5rem;
+
+  /// Border radius for large elements (containers).
+  --radius-lg: 0.75rem;
+
+  /// Fully rounded elements (pills, avatars).
+  --radius-full: 9999px;
+
+  // ---------------------------------------------------------------------------
+  // Borders - Width
+  // ---------------------------------------------------------------------------
+
+  /// Border width for thin borders (dividers).
+  --border-width-thin: 1px;
+
+  /// Border width for medium borders (inputs).
+  --border-width-medium: 2px;
+
+  /// Border width for thick borders (focus states).
+  --border-width-thick: 3px;
+
+  // ---------------------------------------------------------------------------
+  // Shadows
+  // ---------------------------------------------------------------------------
+
+  /// Subtle shadow for elevated elements.
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+
+  /// Default shadow for cards and dropdowns.
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+
+  /// Large shadow for modals and popovers.
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+
+  /// Extra large shadow for overlays.
+  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+
+  // ---------------------------------------------------------------------------
+  // Transitions - Duration
+  // ---------------------------------------------------------------------------
+
+  /// Fast transition for micro-interactions (hover states).
+  --duration-fast: 150ms;
+
+  /// Default transition for standard interactions.
+  --duration-normal: 300ms;
+
+  /// Slow transition for page-level animations.
+  --duration-slow: 500ms;
+
+  // ---------------------------------------------------------------------------
+  // Transitions - Easing
+  // ---------------------------------------------------------------------------
+
+  /// Linear easing (no acceleration).
+  --ease-linear: linear;
+
+  /// Ease-out (fast start, slow end). Good for exiting elements.
+  --ease-out: cubic-bezier(0, 0, 0.2, 1);
+
+  /// Ease-in (slow start, fast end). Good for entering elements.
+  --ease-in: cubic-bezier(0.4, 0, 1, 1);
+
+  /// Ease-in-out (smooth). Default for most transitions.
+  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+
+  // ---------------------------------------------------------------------------
+  // Z-Index Scale
+  // ---------------------------------------------------------------------------
+
+  /// Z-index for base elements.
+  --z-index-base: 0;
+
+  /// Z-index for dropdowns and sticky elements.
+  --z-index-dropdown: 100;
+
+  /// Z-index for fixed elements (header, footer).
+  --z-index-fixed: 200;
+
+  /// Z-index for modals and overlays.
+  --z-index-modal: 300;
+
+  /// Z-index for tooltips and popovers.
+  --z-index-tooltip: 400;
+}
+
+html[bursit-theme="dark"], .bursit-theme-dark {
+  --color-neutral-0: #111113;
+  --color-neutral-50: #08080a;
+  --color-neutral-100: #1a1a1f;
+  --color-neutral-200: #25252b;
+  --color-neutral-300: #31313a;
+  --color-neutral-400: #4a4a56;
+  --color-neutral-500: #656573;
+  --color-neutral-600: #828290;
+  --color-neutral-700: #a1a1ad;
+  --color-neutral-800: #c4c4cc;
+  --color-neutral-900: #e3e3e8;
+  --color-neutral-1000: #f5f5f7;
+
+  --color-primary: #60a5fa;
+  --color-primary-contrast: #0f172a;
+  --color-secondary: #a78bfa;
+  --color-secondary-contrast: #0f172a;
+  --color-success: #4ade80;
+  --color-success-contrast: #0f172a;
+  --color-warning: #fbbf24;
+  --color-warning-contrast: #0f172a;
+  --color-error: #f87171;
+  --color-error-contrast: #0f172a;
+  --color-info: #60a5fa;
+  --color-info-contrast: #0f172a;
+
+  --color-primary-hover: #3b82f6;
+  --color-primary-active: #2563eb;
+  --color-error-hover: #ef4444;
+  --color-error-active: #dc2626;
+}

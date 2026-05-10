@@ -1,0 +1,37 @@
+// =============================================================================
+// Modal / Dialog Tokens - CSS Custom Properties
+// =============================================================================
+// Tokens for modal dialog components.
+// =============================================================================
+
+:root {
+  --modal-overlay-bg: var(--color-overlay);
+  --modal-overlay-transition: opacity var(--duration-normal) var(--ease-in-out);
+
+  --modal-bg: var(--color-neutral-0);
+  --modal-border-radius: var(--radius-lg);
+  --modal-shadow: var(--shadow-xl);
+  --modal-border-width: 0;
+  --modal-border-color: transparent;
+  --modal-max-width: 32rem;
+  --modal-padding: var(--space-lg);
+
+  --modal-header-padding: var(--modal-padding);
+  --modal-header-border-color: var(--color-neutral-200);
+  --modal-header-bg: transparent;
+
+  --modal-body-padding: var(--modal-padding);
+
+  --modal-footer-padding: var(--modal-padding);
+  --modal-footer-border-color: var(--color-neutral-200);
+  --modal-footer-bg: transparent;
+
+  --modal-close-size: 2rem;
+  --modal-close-bg: transparent;
+  --modal-close-color: var(--color-neutral-500);
+  --modal-close-hover-bg: var(--color-neutral-100);
+  --modal-close-hover-color: var(--color-neutral-700);
+
+  --modal-enter-transition: opacity var(--duration-normal) var(--ease-out), transform var(--duration-normal) var(--ease-out);
+  --modal-exit-transition: opacity var(--duration-fast) var(--ease-in), transform var(--duration-fast) var(--ease-in);
+}

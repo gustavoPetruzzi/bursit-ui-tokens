@@ -1,0 +1,32 @@
+// =============================================================================
+// Textarea Tokens - CSS Custom Properties
+// =============================================================================
+// Tokens for textarea components. Extends input base tokens with
+// textarea-specific properties (min-height, resize behavior).
+// =============================================================================
+
+:root {
+  --textarea-bg: var(--input-bg);
+  --textarea-color: var(--input-color);
+  --textarea-border-color: var(--input-border-color);
+  --textarea-border-width: var(--input-border-width);
+  --textarea-border-radius: var(--input-border-radius);
+  --textarea-padding-y: var(--input-padding-y);
+  --textarea-padding-x: var(--input-padding-x);
+  --textarea-font-size: var(--input-font-size);
+  --textarea-font-weight: var(--input-font-weight);
+  --textarea-line-height: var(--line-height-relaxed);
+  --textarea-min-height: 6rem;
+  --textarea-resize: vertical;
+  --textarea-placeholder-color: var(--input-placeholder-color);
+  --textarea-transition: var(--input-transition);
+
+  --textarea-focus-border-color: var(--input-focus-border-color);
+  --textarea-focus-shadow: var(--input-focus-shadow);
+  --textarea-error-border-color: var(--input-error-border-color);
+  --textarea-error-focus-shadow: var(--input-error-focus-shadow);
+  --textarea-disabled-bg: var(--input-disabled-bg);
+  --textarea-disabled-color: var(--input-disabled-color);
+  --textarea-disabled-border-color: var(--input-disabled-border-color);
+  --textarea-disabled-opacity: var(--input-disabled-opacity);
+}

@@ -1,0 +1,246 @@
+// =============================================================================
+// Mixins - Helper Functions
+// =============================================================================
+// Utility mixins to work with design tokens.
+// =============================================================================
+
+@use 'sass:math';
+@use 'sass:meta';
+@use 'tokens' as *;
+
+// -----------------------------------------------------------------------------
+// Typography Mixins
+// -----------------------------------------------------------------------------
+
+/// Converts a pixel value to rem.
+/// @param {Number} $px - The pixel value to convert.
+/// @return {Number} The rem value.
+/// @example
+///   font-size: rem(16px);
+/// @example
+///   font-size: rem($font-size-lg);
+@function rem($px) {
+  $base-font-size: 16px;
+  @if math.unit($px) == 'rem' {
+    @return $px;
+  }
+  @return math.div($px, $base-font-size) * 1rem;
+}
+
+/// Converts a pixel value to em.
+/// @param {Number} $px - The pixel value to convert.
+/// @param {Number} $context - The base font size for the em calculation (default: 16px).
+/// @return {Number} The em value.
+/// @example
+///   font-size: em(14px);
+@function em($px, $context: 16px) {
+  @if math.unit($px) == 'em' {
+    @return $px;
+  }
+  @return math.div($px, $context) * 1em;
+}
+
+/// Creates a fluid font size that scales between min and max viewport widths.
+/// @param {Number} $min-size - Minimum font size (in pixels).
+/// @param {Number} $max-size - Maximum font size (in pixels).
+/// @param {Number} $min-width - Minimum viewport width (in pixels).
+/// @param {Number} $max-width - Maximum viewport width (in pixels).
+/// @return {String} A clamp() CSS value.
+/// @example
+///   font-size: fluid-type(16px, 24px);
+@function fluid-type($min-size, $max-size, $min-width: 320px, $max-width: 1280px) {
+  $min-size-rem: rem($min-size);
+  $max-size-rem: rem($max-size);
+  $min-width-rem: rem($min-width);
+  $max-width-rem: rem($max-width);
+
+  $slope: math.div($max-size-rem - $min-size-rem, $max-width-rem - $min-width-rem);
+  $y-axis-intersection: -$min-width-rem * $slope + $min-size-rem;
+
+  @return clamp(#{$min-size-rem}, #{$y-axis-intersection} + #{$slope * 100vw}, #{$max-size-rem});
+}
+
+/// Generates a text truncation with ellipsis.
+/// @example
+///   @include line-clamp(3);
+@mixin line-clamp($lines) {
+  display: -webkit-box;
+  -webkit-line-clamp: $lines;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/// Creates a visually hidden but screen-reader accessible element.
+/// @example
+///   @include visually-hidden;
+@mixin visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/// Resets a visually hidden element.
+/// @example
+///   @include visually-hidden-reset;
+@mixin visually-hidden-reset {
+  position: static;
+  width: auto;
+  height: auto;
+  padding: 0;
+  margin: 0;
+  overflow: visible;
+  clip: auto;
+  white-space: normal;
+}
+
+// -----------------------------------------------------------------------------
+// Layout Mixins
+// -----------------------------------------------------------------------------
+
+/// Centers content using flexbox.
+/// @param {String} $direction - flex-direction (row, column).
+/// @example
+///   @include flex-center;
+@mixin flex-center($direction: row) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: center;
+  justify-content: center;
+}
+
+/// Creates a responsive container with max-width.
+/// @param {Number} $max-width - Maximum width (default: 1280px).
+/// @example
+///   @include container;
+@mixin container($max-width: 1280px) {
+  width: 100%;
+  max-width: $max-width;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: rem($space-md);
+  padding-right: rem($space-md);
+}
+
+/// Creates a responsive gap using flex/grid.
+/// @param {Number} $gap - Gap size (default: space-md).
+/// @example
+///   @include gap($space-lg);
+@mixin gap($gap: $space-md) {
+  gap: rem($gap);
+}
+
+// -----------------------------------------------------------------------------
+// Focus & Interaction Mixins
+// -----------------------------------------------------------------------------
+
+/// Creates a focus ring for accessibility.
+/// @param {Color} $color - Focus ring color (default: color-primary).
+/// @param {Number} $offset - Offset from element (default: 2px).
+/// @example
+///   @include focus-ring;
+@mixin focus-ring($color: $color-primary, $offset: 2px) {
+  outline: none;
+  box-shadow: 0 0 0 $offset $color;
+}
+
+/// Creates a smooth transition for multiple properties.
+/// @param {String} $properties - Properties to transition (default: all).
+/// @param {String} $duration - Transition duration (default: duration-normal).
+/// @param {String} $easing - Transition easing (default: ease-in-out).
+/// @example
+///   @include transition;
+@mixin transition($properties: all, $duration: $duration-normal, $easing: $ease-in-out) {
+  transition: $properties $duration $easing;
+}
+
+// -----------------------------------------------------------------------------
+// Button Mixins
+// -----------------------------------------------------------------------------
+
+/// Resets button styles.
+/// @example
+///   @include button-reset;
+@mixin button-reset {
+  appearance: none;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  cursor: pointer;
+  color: inherit;
+}
+
+/// Creates a base button style.
+/// @param {Color} $bg - Background color.
+/// @param {Color} $color - Text color.
+/// @param {Length} $padding-y - Vertical padding.
+/// @param {Length} $padding-x - Horizontal padding.
+/// @example
+///   @include button-base($color-primary, $color-primary-contrast);
+@mixin button-base($bg: $color-primary, $color: $color-primary-contrast, $padding-y: $space-sm, $padding-x: $space-md) {
+  @include button-reset;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $bg;
+  color: $color;
+  padding: rem($padding-y) rem($padding-x);
+  border-radius: rem($radius-sm);
+  font-weight: $font-weight-medium;
+  @include transition;
+}
+
+/// Creates a ghost button style (transparent background).
+/// @example
+///   @include button-ghost;
+@mixin button-ghost($color: $color-primary) {
+  @include button-base($bg: transparent, $color: $color);
+  border: rem($border-width-thin) solid $color;
+}
+
+// -----------------------------------------------------------------------------
+// Input Mixins
+// -----------------------------------------------------------------------------
+
+/// Resets input styles.
+/// @example
+///   @include input-reset;
+@mixin input-reset {
+  appearance: none;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: inherit;
+}
+
+/// Creates a base input style.
+/// @param {Color} $bg - Background color.
+/// @param {Color} $border - Border color.
+/// @param {Length} $padding-y - Vertical padding.
+/// @param {Length} $padding-x - Horizontal padding.
+/// @example
+///   @include input-base;
+@mixin input-base($bg: $color-neutral-0, $border: $color-neutral-300, $padding-y: $space-sm, $padding-x: $space-sm) {
+  @include input-reset;
+  width: 100%;
+  background-color: $bg;
+  border: rem($border-width-thin) solid $border;
+  border-radius: rem($radius-sm);
+  padding: rem($padding-y) rem($padding-x);
+  @include transition(border-color);
+
+  &:focus {
+    outline: none;
+    border-color: $color-primary;
+    @include focus-ring;
+  }
+}

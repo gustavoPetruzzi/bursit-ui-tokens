@@ -1,0 +1,28 @@
+// =============================================================================
+// Switch Tokens - CSS Custom Properties
+// =============================================================================
+// Tokens for toggle switch components.
+// =============================================================================
+
+:root {
+  --switch-width: 2.75rem;
+  --switch-height: 1.5rem;
+  --switch-padding: 0.125rem;
+  --switch-border-radius: var(--radius-full);
+  --switch-bg: var(--color-neutral-300);
+  --switch-checked-bg: var(--color-primary);
+  --switch-thumb-size: 1.25rem;
+  --switch-thumb-bg: var(--color-neutral-0);
+  --switch-thumb-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.15);
+  --switch-thumb-translate: 0;
+  --switch-thumb-translate-checked: calc(var(--switch-width) - var(--switch-thumb-size) - var(--switch-padding) * 2);
+  --switch-hover-bg: var(--color-neutral-400);
+  --switch-hover-checked-bg: var(--color-primary);
+  --switch-disabled-bg: var(--color-neutral-200);
+  --switch-disabled-checked-bg: var(--color-neutral-300);
+  --switch-disabled-thumb-bg: var(--color-neutral-200);
+  --switch-disabled-thumb-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --switch-disabled-opacity: 0.6;
+  --switch-focus-shadow: 0 0 0 3px var(--color-primary-alpha-15);
+  --switch-transition: all var(--duration-fast) var(--ease-in-out);
+}

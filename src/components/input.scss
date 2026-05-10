@@ -1,0 +1,94 @@
+// =============================================================================
+// Input Tokens - CSS Custom Properties
+// =============================================================================
+// Dedicated tokens for text input components with floating labels.
+// Uses --color-* tokens so values automatically switch between
+// light and dark modes via the theme selectors in _tokens.scss.
+//
+// Floating label pattern:
+//   The label transitions from inside the input to a smaller,
+//   elevated position on focus or when the input has a value.
+//   Uses :focus-within and JS class toggling for the filled state.
+//
+// Usage:
+//   .input-wrapper {
+//     position: relative;
+//     display: flex;
+//     flex-direction: column;
+//   }
+//
+//   .input-field {
+//     background: var(--input-bg);
+//     border: var(--input-border-width) solid var(--input-border-color);
+//     border-radius: var(--input-border-radius);
+//     padding: var(--input-padding-y) var(--input-padding-x);
+//   }
+//
+//   .input-label {
+//     transform: translateY(var(--input-label-translate-y))
+//                scale(var(--input-label-scale));
+//   }
+// =============================================================================
+
+:root {
+  // ---------------------------------------------------------------------------
+  // Base
+  // ---------------------------------------------------------------------------
+
+  --input-bg: var(--color-neutral-0);
+  --input-color: var(--color-neutral-900);
+  --input-border-color: var(--color-neutral-200);
+  --input-border-width: var(--border-width-thin);
+  --input-border-radius: var(--radius-sm);
+  --input-border-radius-lg: var(--radius-md);
+  --input-padding-y: 0.75rem;   // 12px
+  --input-padding-x: 1rem;      // 16px
+  --input-font-size: var(--font-size-base);
+  --input-font-weight: var(--font-weight-normal);
+  --input-line-height: var(--line-height-normal);
+  --input-placeholder-color: var(--color-neutral-400);
+  --input-icon-color: var(--color-neutral-400);
+  --input-transition: all var(--duration-fast) var(--ease-in-out);
+
+  // ---------------------------------------------------------------------------
+  // States
+  // ---------------------------------------------------------------------------
+
+  --input-focus-border-color: var(--color-primary);
+  --input-focus-shadow: 0 0 0 3px var(--color-primary-alpha-15);
+  --input-error-border-color: var(--color-error);
+  --input-error-focus-shadow: 0 0 0 3px var(--color-error-alpha-15);
+  --input-disabled-bg: var(--color-neutral-100);
+  --input-disabled-color: var(--color-neutral-400);
+  --input-disabled-border-color: var(--color-neutral-200);
+  --input-disabled-opacity: 0.6;
+
+  // ---------------------------------------------------------------------------
+  // Floating Label
+  // ---------------------------------------------------------------------------
+
+  --input-label-color: var(--color-neutral-400);
+  --input-label-font-size: var(--font-size-sm);
+  --input-label-font-weight: var(--font-weight-medium);
+  --input-label-padding-x: 0.25rem;
+  --input-label-bg: transparent;
+
+  --input-label-translate-y: -1.5rem;
+  --input-label-scale: 0.85;
+  --input-label-floating-color: var(--color-primary);
+  --input-label-filled-color: var(--color-neutral-300);
+  --input-label-transition: all var(--duration-fast) var(--ease-in-out);
+
+  // ---------------------------------------------------------------------------
+  // Helper / Error Text
+  // ---------------------------------------------------------------------------
+
+  --input-helper-font-size: var(--font-size-xs);
+  --input-helper-color: var(--color-neutral-400);
+  --input-helper-error-color: var(--color-error);
+  --input-helper-margin-top: var(--space-xs);
+}
+
+// =============================================================================
+// Dark Theme — only scale shifts that --color-* does not cover
+// =============================================================================

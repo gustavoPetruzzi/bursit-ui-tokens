@@ -1,0 +1,19 @@
+// =============================================================================
+// Divider Tokens - CSS Custom Properties
+// =============================================================================
+// Tokens for visual separator / divider components.
+// =============================================================================
+
+:root {
+  --divider-color: var(--color-neutral-200);
+  --divider-width: var(--border-width-thin);
+  --divider-style: solid;
+  --divider-margin-y: var(--space-md);
+
+  // With text label
+  --divider-text-color: var(--color-neutral-500);
+  --divider-text-font-size: var(--font-size-xs);
+  --divider-text-font-weight: var(--font-weight-normal);
+  --divider-text-padding-x: var(--space-sm);
+  --divider-text-bg: var(--color-neutral-0);
+}

@@ -1,0 +1,53 @@
+// =============================================================================
+// Table Tokens - CSS Custom Properties
+// =============================================================================
+// Tokens for data table components.
+// =============================================================================
+
+:root {
+  --table-bg: transparent;
+  --table-border-collapse: collapse;
+  --table-width: 100%;
+
+  // Cell
+  --table-cell-padding-y: var(--space-sm);
+  --table-cell-padding-x: var(--space-md);
+  --table-cell-border-color: var(--color-neutral-200);
+  --table-cell-border-width: var(--border-width-thin);
+  --table-cell-text-align: left;
+  --table-cell-vertical-align: middle;
+
+  // Header
+  --table-header-bg: transparent;
+  --table-header-color: var(--color-neutral-700);
+  --table-header-font-weight: var(--font-weight-medium);
+  --table-header-font-size: var(--font-size-sm);
+  --table-header-border-color: var(--color-neutral-200);
+  --table-header-border-bottom-width: 2px;
+  --table-header-text-transform: none;
+
+  // Body
+  --table-body-bg: transparent;
+  --table-body-color: var(--color-neutral-900);
+  --table-body-font-size: var(--font-size-sm);
+
+  // Row
+  --table-row-hover-bg: var(--color-neutral-100);
+  --table-row-transition: background-color var(--duration-fast) var(--ease-in-out);
+
+  // Striped rows
+  --table-striped-bg: var(--color-neutral-50);
+  --table-striped-row-bg: var(--color-neutral-50);
+
+  // Footer
+  --table-footer-bg: transparent;
+  --table-footer-color: var(--color-neutral-500);
+  --table-footer-font-weight: var(--font-weight-medium);
+  --table-footer-border-color: var(--color-neutral-200);
+  --table-footer-border-top-width: 2px;
+
+  // Caption
+  --table-caption-color: var(--color-neutral-500);
+  --table-caption-font-size: var(--font-size-xs);
+  --table-caption-padding-top: var(--space-xs);
+}

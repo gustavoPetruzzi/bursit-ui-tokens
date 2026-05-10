@@ -1,0 +1,41 @@
+// =============================================================================
+// bursit-ui-tokens - Shared Design Tokens
+// =============================================================================
+// A framework-agnostic CSS custom properties library for Angular and React.
+//
+// Quick Start:
+//
+// CSS (plain CSS import):
+//   @import "bursit-ui-tokens";
+//
+// SCSS (with mixins):
+//   @use "bursit-ui-tokens" as *;
+//   @use "bursit-ui-tokens/mixins" as *;
+//
+// Customizing tokens:
+//   :root {
+//     --color-primary: #your-brand-color;
+//   }
+//
+// =============================================================================
+
+@forward 'tokens';
+@forward 'components/button';
+@forward 'components/input';
+@forward 'components/textarea';
+@forward 'components/select';
+@forward 'components/checkbox';
+@forward 'components/radio';
+@forward 'components/switch';
+@forward 'components/card';
+@forward 'components/modal';
+@forward 'components/tooltip';
+@forward 'components/divider';
+@forward 'components/badge';
+@forward 'components/alert';
+@forward 'components/progress';
+@forward 'components/tabs';
+@forward 'components/breadcrumb';
+@forward 'components/table';
+@forward 'components/avatar';
+@forward 'mixins';

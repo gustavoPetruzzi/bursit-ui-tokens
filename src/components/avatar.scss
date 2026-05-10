@@ -1,0 +1,49 @@
+// =============================================================================
+// Avatar Tokens - CSS Custom Properties
+// =============================================================================
+// Tokens for user avatar components.
+// =============================================================================
+
+:root {
+  // Base
+  --avatar-border-radius: var(--radius-full);
+  --avatar-font-weight: var(--font-weight-medium);
+  --avatar-color: var(--color-neutral-0);
+  --avatar-bg: var(--color-neutral-500);
+  --avatar-border-width: 0;
+  --avatar-border-color: transparent;
+  --avatar-transition: all var(--duration-fast) var(--ease-in-out);
+
+  // Sizes
+  --avatar-size-xs: 1.25rem;
+  --avatar-font-size-xs: 0.625rem;
+
+  --avatar-size-sm: 1.75rem;
+  --avatar-font-size-sm: 0.75rem;
+
+  --avatar-size-md: 2.25rem;
+  --avatar-font-size-md: 0.875rem;
+
+  --avatar-size-lg: 3rem;
+  --avatar-font-size-lg: 1rem;
+
+  --avatar-size-xl: 3.75rem;
+  --avatar-font-size-xl: 1.25rem;
+
+  --avatar-size-2xl: 5rem;
+  --avatar-font-size-2xl: 1.5rem;
+
+  // Group / stack
+  --avatar-group-margin-left: -0.5rem;
+  --avatar-group-border-width: 2px;
+  --avatar-group-border-color: var(--color-neutral-0);
+
+  // Status indicator (online, offline, away, busy)
+  --avatar-status-size: 0.75rem;
+  --avatar-status-border-width: 2px;
+  --avatar-status-border-color: var(--color-neutral-0);
+  --avatar-status-online-bg: var(--color-success);
+  --avatar-status-offline-bg: var(--color-neutral-400);
+  --avatar-status-away-bg: var(--color-warning);
+  --avatar-status-busy-bg: var(--color-error);
+}

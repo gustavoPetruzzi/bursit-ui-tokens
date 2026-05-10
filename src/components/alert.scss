@@ -1,0 +1,54 @@
+// =============================================================================
+// Alert / Toast Tokens - CSS Custom Properties
+// =============================================================================
+// Tokens for alert message and toast notification components.
+// =============================================================================
+
+:root {
+  --alert-border-radius: var(--radius-md);
+  --alert-border-width: var(--border-width-thin);
+  --alert-padding-y: var(--space-sm);
+  --alert-padding-x: var(--space-md);
+  --alert-font-size: var(--font-size-sm);
+  --alert-line-height: var(--line-height-normal);
+  --alert-icon-size: 1.25rem;
+  --alert-close-size: 1.5rem;
+  --alert-close-color: var(--color-neutral-400);
+  --alert-close-hover-color: var(--color-neutral-600);
+  --alert-transition: all var(--duration-normal) var(--ease-in-out);
+
+  // Variant: Info
+  --alert-info-bg: var(--color-info-alpha-10);
+  --alert-info-border-color: var(--color-info);
+  --alert-info-color: var(--color-info);
+  --alert-info-icon-color: var(--color-info);
+
+  // Variant: Success
+  --alert-success-bg: var(--color-success-alpha-10);
+  --alert-success-border-color: var(--color-success);
+  --alert-success-color: var(--color-success);
+  --alert-success-icon-color: var(--color-success);
+
+  // Variant: Warning
+  --alert-warning-bg: var(--color-warning-alpha-10);
+  --alert-warning-border-color: var(--color-warning);
+  --alert-warning-color: var(--color-warning);
+  --alert-warning-icon-color: var(--color-warning);
+
+  // Variant: Error
+  --alert-error-bg: var(--color-error-alpha-10);
+  --alert-error-border-color: var(--color-error);
+  --alert-error-color: var(--color-error);
+  --alert-error-icon-color: var(--color-error);
+
+  // Toast specific
+  --toast-bg: var(--color-neutral-0);
+  --toast-shadow: var(--shadow-lg);
+  --toast-border-radius: var(--radius-md);
+  --toast-border-width: var(--border-width-thin);
+  --toast-border-color: var(--color-neutral-200);
+  --toast-padding: var(--space-md);
+  --toast-min-width: 20rem;
+  --toast-max-width: 24rem;
+  --toast-z-index: var(--z-index-tooltip);
+}

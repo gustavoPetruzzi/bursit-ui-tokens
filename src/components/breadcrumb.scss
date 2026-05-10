@@ -1,0 +1,25 @@
+// =============================================================================
+// Breadcrumb Tokens - CSS Custom Properties
+// =============================================================================
+// Tokens for breadcrumb navigation components.
+// =============================================================================
+
+:root {
+  --breadcrumb-font-size: var(--font-size-sm);
+  --breadcrumb-padding: 0;
+  --breadcrumb-margin-bottom: var(--space-md);
+
+  // Item
+  --breadcrumb-item-color: var(--color-neutral-500);
+  --breadcrumb-item-hover-color: var(--color-neutral-700);
+  --breadcrumb-item-transition: color var(--duration-fast) var(--ease-in-out);
+
+  // Current / active item
+  --breadcrumb-current-color: var(--color-neutral-900);
+  --breadcrumb-current-font-weight: var(--font-weight-medium);
+
+  // Separator
+  --breadcrumb-separator-color: var(--color-neutral-400);
+  --breadcrumb-separator-margin-x: var(--space-xs);
+  --breadcrumb-separator-content: '/';
+}

@@ -1,0 +1,32 @@
+// =============================================================================
+// Card Tokens - CSS Custom Properties
+// =============================================================================
+// Tokens for card container components.
+// =============================================================================
+
+:root {
+  --card-bg: var(--color-neutral-0);
+  --card-border-width: var(--border-width-thin);
+  --card-border-color: var(--color-neutral-200);
+  --card-border-radius: var(--radius-md);
+  --card-shadow: var(--shadow-sm);
+  --card-padding: var(--space-md);
+  --card-transition: box-shadow var(--duration-fast) var(--ease-in-out);
+
+  --card-hover-shadow: var(--shadow-md);
+  --card-hover-border-color: var(--color-neutral-300);
+
+  --card-header-padding: var(--card-padding);
+  --card-header-border-color: var(--color-neutral-200);
+  --card-header-bg: transparent;
+
+  --card-body-padding: var(--card-padding);
+
+  --card-footer-padding: var(--card-padding);
+  --card-footer-border-color: var(--color-neutral-200);
+  --card-footer-bg: transparent;
+
+  // Variants
+  --card-interactive-cursor: pointer;
+  --card-interactive-shadow: var(--shadow-md);
+}
