@@ -1,0 +1,32 @@
+# Dependencies
+node_modules/
+
+# Build artifacts
+index.css
+tokens.css
+dist/
+
+# VitePress
+docs/.vitepress/dist/
+docs/.vitepress/cache/
+
+# Sass
+.sass-cache/
+
+# AI/Tool artifacts
+.opencode/
+
+# Environment
+.env
+.env.local
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
