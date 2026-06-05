@@ -11,12 +11,17 @@
       "sass": "./index.scss"
     },
     "./tokens": {
-      "style": "./tokens.css",
-      "sass": "./_tokens.scss"
+      "sass": "./src/_tokens.scss"
+    },
+    "./mixins": {
+      "sass": "./src/_mixins.scss"
+    },
+    "./components/*": {
+      "sass": "./src/components/*.scss"
     }
   },
   "files": [
-    "*.{scss,css}",
+    "*.scss",
     "src/"
   ],
   "keywords": [
@@ -42,7 +47,7 @@
     "vite": "^5.0.0"
   },
   "scripts": {
-    "build": "sass src/index.scss index.css --no-source-map && sass src/_tokens.scss tokens.css --no-source-map",
+    "build": "sass src/index.scss index.css --no-source-map",
     "prepublishOnly": "npm run build",
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",

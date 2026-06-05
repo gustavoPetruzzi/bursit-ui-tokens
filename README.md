@@ -1,8 +1,8 @@
 # bursit-ui-tokens
 
-> Shared CSS custom properties for any framework.
+> Framework-agnostic design tokens using CSS custom properties. Works with Angular, React, Vue, Svelte, or plain HTML/CSS.
 
-A framework-agnostic design tokens library using CSS custom properties (CSS variables). Works with Angular, React, Vue, Svelte, or plain HTML/CSS.
+**Brand palette:** deep burgundy + warm teal. Dark and light themes built in.
 
 ## Installation
 
@@ -16,16 +16,8 @@ npm install bursit-ui-tokens
 
 ### Plain CSS
 
-Import tokens and component styles:
-
 ```css
-@import "bursit-ui-tokens";
-```
-
-Import only the tokens (no component styles):
-
-```css
-@import "bursit-ui-tokens/tokens.css";
+@import 'bursit-ui-tokens';
 ```
 
 Or in HTML:
@@ -36,50 +28,40 @@ Or in HTML:
 
 ### SCSS
 
-For tokens, mixins, and component styles:
+**Everything (tokens + mixins + component styles):**
 
 ```scss
-@use "bursit-ui-tokens" as *;
+@use 'bursit-ui-tokens' as *;
 
 .my-button {
   @include button-base;
-
   &:focus {
     @include focus-ring;
   }
 }
 ```
 
-Import only the mixins:
+**Tokens only:**
 
 ```scss
-@use "bursit-ui-tokens/mixins" as *;
+@use 'bursit-ui-tokens/tokens' as *;
 ```
 
-## Customizing Tokens
+**Mixins only:**
 
-Override any token in your `:root` or a specific scope:
-
-```css
-:root {
-  --color-primary: #6366f1;
-  --color-primary-contrast: #ffffff;
-  --space-md: 1.25rem;
-  --font-family-sans: 'Inter', system-ui, sans-serif;
-}
+```scss
+@use 'bursit-ui-tokens/mixins' as *;
 ```
 
-Or scope to a component:
+**Individual components:**
 
-```css
-.my-theme {
-  --color-primary: #your-brand-color;
-}
+```scss
+@use 'bursit-ui-tokens/components/button' as *;
 ```
 
 ## Theming
 
-Light theme is the default. Enable dark mode with one of these methods:
+Light theme is the default. Enable dark mode with one of these:
 
 **Attribute on `<html>`:**
 
@@ -107,12 +89,14 @@ document.body.classList.add('bursit-theme-dark');
 
 | Token | Default | Description |
 |-------|---------|-------------|
-| `--color-primary` | `#3b82f6` | Primary brand color for actions and links |
-| `--color-primary-contrast` | `#ffffff` | Text color on primary |
-| `--color-primary-hover` | `#2563eb` | Hover state for primary |
-| `--color-primary-active` | `#1d4ed8` | Active/pressed state for primary |
-| `--color-secondary` | `#8b5cf6` | Secondary brand color for accents |
-| `--color-secondary-contrast` | `#ffffff` | Text color on secondary |
+| `--color-primary` | `#7c1a2b` | Deep burgundy — primary brand color |
+| `--color-primary-contrast` | `#ffffff` | Text on primary |
+| `--color-primary-hover` | `#5c1320` | Hover state (darkened ~12%) |
+| `--color-primary-active` | `#450e17` | Active/pressed state (darkened ~20%) |
+| `--color-secondary` | `#2a6b5e` | Warm teal — secondary brand color |
+| `--color-secondary-contrast` | `#ffffff` | Text on secondary |
+| `--color-secondary-hover` | `color-mix(in srgb, var(--color-secondary) 88%, black)` | Hover state |
+| `--color-secondary-active` | `color-mix(in srgb, var(--color-secondary) 80%, black)` | Active state |
 
 ### Colors — Neutral
 
@@ -137,14 +121,20 @@ document.body.classList.add('bursit-theme-dark');
 |-------|---------|-------------|
 | `--color-success` | `#22c55e` | Positive feedback |
 | `--color-success-contrast` | `#ffffff` | Text on success |
+| `--color-success-hover` | `color-mix(in srgb, var(--color-success) 88%, black)` | Hover state |
+| `--color-success-active` | `color-mix(in srgb, var(--color-success) 80%, black)` | Active state |
 | `--color-warning` | `#f59e0b` | Alerts, caution |
 | `--color-warning-contrast` | `#ffffff` | Text on warning |
+| `--color-warning-hover` | `color-mix(in srgb, var(--color-warning) 88%, black)` | Hover state |
+| `--color-warning-active` | `color-mix(in srgb, var(--color-warning) 80%, black)` | Active state |
 | `--color-error` | `#ef4444` | Errors, invalid states |
 | `--color-error-contrast` | `#ffffff` | Text on error |
-| `--color-error-hover` | `#dc2626` | Hover state for error |
-| `--color-error-active` | `#b91c1c` | Active state for error |
+| `--color-error-hover` | `#dc2626` | Hover state |
+| `--color-error-active` | `#b91c1c` | Active state |
 | `--color-info` | `#3b82f6` | Informational messages |
 | `--color-info-contrast` | `#ffffff` | Text on info |
+| `--color-info-hover` | `color-mix(in srgb, var(--color-info) 88%, black)` | Hover state |
+| `--color-info-active` | `color-mix(in srgb, var(--color-info) 80%, black)` | Active state |
 
 ### Colors — Alpha Variants
 
@@ -153,6 +143,8 @@ document.body.classList.add('bursit-theme-dark');
 | `--color-primary-alpha-8` | `rgb(from var(--color-primary) r g b / 0.08)` | Subtle primary background |
 | `--color-primary-alpha-10` | `rgb(from var(--color-primary) r g b / 0.1)` | Primary background |
 | `--color-primary-alpha-15` | `rgb(from var(--color-primary) r g b / 0.15)` | Primary background (stronger) |
+| `--color-secondary-alpha-8` | `rgb(from var(--color-secondary) r g b / 0.08)` | Subtle secondary background |
+| `--color-secondary-alpha-10` | `rgb(from var(--color-secondary) r g b / 0.1)` | Secondary background |
 | `--color-success-alpha-10` | `rgb(from var(--color-success) r g b / 0.1)` | Success background |
 | `--color-warning-alpha-10` | `rgb(from var(--color-warning) r g b / 0.1)` | Warning background |
 | `--color-error-alpha-10` | `rgb(from var(--color-error) r g b / 0.1)` | Error background |
@@ -214,9 +206,9 @@ document.body.classList.add('bursit-theme-dark');
 
 | Token | Default | Description |
 |-------|---------|-------------|
-| `--radius-sm` | `0.25rem` (4px) | Inputs, buttons |
-| `--radius-md` | `0.5rem` (8px) | Cards |
-| `--radius-lg` | `0.75rem` (12px) | Modals |
+| `--radius-sm` | `0.375rem` (6px) | Inputs, buttons |
+| `--radius-md` | `0.625rem` (10px) | Cards |
+| `--radius-lg` | `0.875rem` (14px) | Modals |
 | `--radius-full` | `9999px` | Pills, avatars |
 
 ### Borders — Width
@@ -231,10 +223,10 @@ document.body.classList.add('bursit-theme-dark');
 
 | Token | Default | Description |
 |-------|---------|-------------|
-| `--shadow-sm` | `0 1px 2px 0 rgb(0 0 0 / 0.05)` | Subtle elevation |
-| `--shadow-md` | `0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1)` | Cards, dropdowns |
-| `--shadow-lg` | `0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1)` | Modals |
-| `--shadow-xl` | `0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1)` | Overlays |
+| `--shadow-sm` | `0 1px 3px 0 rgb(44 16 22 / 0.06)` | Subtle elevation |
+| `--shadow-md` | `0 6px 10px -2px rgb(44 16 22 / 0.08), 0 3px 5px -3px rgb(44 16 22 / 0.06)` | Cards, dropdowns |
+| `--shadow-lg` | `0 14px 20px -4px rgb(44 16 22 / 0.1), 0 5px 8px -5px rgb(44 16 22 / 0.07)` | Modals |
+| `--shadow-xl` | `0 24px 32px -6px rgb(44 16 22 / 0.12), 0 10px 14px -8px rgb(44 16 22 / 0.08)` | Overlays |
 
 ### Transitions — Duration
 
@@ -262,6 +254,27 @@ document.body.classList.add('bursit-theme-dark');
 | `--z-index-fixed` | `200` | Header, footer |
 | `--z-index-modal` | `300` | Modals |
 | `--z-index-tooltip` | `400` | Tooltips |
+
+## Customizing Tokens
+
+Override any token in your `:root` or a specific scope:
+
+```css
+:root {
+  --color-primary: #6366f1;
+  --color-primary-contrast: #ffffff;
+  --space-md: 1.25rem;
+  --font-family-sans: 'Inter', system-ui, sans-serif;
+}
+```
+
+Or scope to a component:
+
+```css
+.my-theme {
+  --color-primary: #your-brand-color;
+}
+```
 
 ## Available Mixins (SCSS only)
 
@@ -299,7 +312,7 @@ input-base($bg, $border, $padding-y, $padding-x)
 # Install dependencies
 npm install
 
-# Build CSS artifacts (generates index.css and tokens.css)
+# Build CSS (generates index.css)
 npm run build
 
 # Start VitePress docs dev server

@@ -6,7 +6,6 @@
 
 @use 'sass:math';
 @use 'sass:meta';
-@use 'tokens' as *;
 
 // -----------------------------------------------------------------------------
 // Typography Mixins
@@ -123,15 +122,15 @@
   max-width: $max-width;
   margin-left: auto;
   margin-right: auto;
-  padding-left: rem($space-md);
-  padding-right: rem($space-md);
+  padding-left: rem(var(--space-md));
+  padding-right: rem(var(--space-md));
 }
 
 /// Creates a responsive gap using flex/grid.
 /// @param {Number} $gap - Gap size (default: space-md).
 /// @example
 ///   @include gap($space-lg);
-@mixin gap($gap: $space-md) {
+@mixin gap($gap: var(--space-md)) {
   gap: rem($gap);
 }
 
@@ -144,7 +143,7 @@
 /// @param {Number} $offset - Offset from element (default: 2px).
 /// @example
 ///   @include focus-ring;
-@mixin focus-ring($color: $color-primary, $offset: 2px) {
+@mixin focus-ring($color: var(--color-primary), $offset: 2px) {
   outline: none;
   box-shadow: 0 0 0 $offset $color;
 }
@@ -155,7 +154,7 @@
 /// @param {String} $easing - Transition easing (default: ease-in-out).
 /// @example
 ///   @include transition;
-@mixin transition($properties: all, $duration: $duration-normal, $easing: $ease-in-out) {
+@mixin transition($properties: all, $duration: var(--duration-normal), $easing: var(--ease-in-out)) {
   transition: $properties $duration $easing;
 }
 
@@ -184,7 +183,7 @@
 /// @param {Length} $padding-x - Horizontal padding.
 /// @example
 ///   @include button-base($color-primary, $color-primary-contrast);
-@mixin button-base($bg: $color-primary, $color: $color-primary-contrast, $padding-y: $space-sm, $padding-x: $space-md) {
+@mixin button-base($bg: var(--color-primary), $color: var(--color-primary-contrast), $padding-y: var(--space-sm), $padding-x: var(--space-md)) {
   @include button-reset;
   display: inline-flex;
   align-items: center;
@@ -192,17 +191,17 @@
   background-color: $bg;
   color: $color;
   padding: rem($padding-y) rem($padding-x);
-  border-radius: rem($radius-sm);
-  font-weight: $font-weight-medium;
+  border-radius: rem(var(--radius-sm));
+  font-weight: var(--font-weight-medium);
   @include transition;
 }
 
 /// Creates a ghost button style (transparent background).
 /// @example
 ///   @include button-ghost;
-@mixin button-ghost($color: $color-primary) {
+@mixin button-ghost($color: var(--color-primary)) {
   @include button-base($bg: transparent, $color: $color);
-  border: rem($border-width-thin) solid $color;
+  border: rem(var(--border-width-thin)) solid $color;
 }
 
 // -----------------------------------------------------------------------------
@@ -229,18 +228,18 @@
 /// @param {Length} $padding-x - Horizontal padding.
 /// @example
 ///   @include input-base;
-@mixin input-base($bg: $color-neutral-0, $border: $color-neutral-300, $padding-y: $space-sm, $padding-x: $space-sm) {
+@mixin input-base($bg: var(--color-neutral-0), $border: var(--color-neutral-300), $padding-y: var(--space-sm), $padding-x: var(--space-sm)) {
   @include input-reset;
   width: 100%;
   background-color: $bg;
-  border: rem($border-width-thin) solid $border;
-  border-radius: rem($radius-sm);
+  border: rem(var(--border-width-thin)) solid $border;
+  border-radius: rem(var(--radius-sm));
   padding: rem($padding-y) rem($padding-x);
   @include transition(border-color);
 
   &:focus {
     outline: none;
-    border-color: $color-primary;
+    border-color: var(--color-primary);
     @include focus-ring;
   }
 }

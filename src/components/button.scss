@@ -32,19 +32,19 @@
   // ---------------------------------------------------------------------------
 
   // Small
-  --btn-padding-y-sm: 0.25rem;   // 4px
-  --btn-padding-x-sm: 0.5rem;    // 8px
-  --btn-font-size-sm: 0.875rem;  // 14px
+  --btn-padding-y-sm: 0.25rem; // 4px
+  --btn-padding-x-sm: 0.5rem; // 8px
+  --btn-font-size-sm: 0.875rem; // 14px
 
   // Medium (default)
-  --btn-padding-y-md: 0.5rem;   // 8px
-  --btn-padding-x-md: 1rem;     // 16px
-  --btn-font-size-md: 1rem;     // 16px
+  --btn-padding-y-md: 0.5rem; // 8px
+  --btn-padding-x-md: 1rem; // 16px
+  --btn-font-size-md: 1rem; // 16px
 
   // Large
-  --btn-padding-y-lg: 0.75rem;   // 12px
-  --btn-padding-x-lg: 1.5rem;    // 24px
-  --btn-font-size-lg: 1.125rem;  // 18px
+  --btn-padding-y-lg: 0.75rem; // 12px
+  --btn-padding-x-lg: 1.5rem; // 24px
+  --btn-font-size-lg: 1.125rem; // 18px
 
   // ---------------------------------------------------------------------------
   // Variant: Primary
@@ -52,19 +52,19 @@
 
   --btn-primary-bg: var(--color-primary);
   --btn-primary-color: var(--color-primary-contrast);
-  --btn-primary-hover-bg: var(--color-primary);
+  --btn-primary-hover-bg: var(--color-primary-hover);
   --btn-primary-hover-color: var(--color-primary-contrast);
-  --btn-primary-active-bg: var(--color-primary);
+  --btn-primary-active-bg: var(--color-primary-active);
 
   // ---------------------------------------------------------------------------
   // Variant: Secondary
   // ---------------------------------------------------------------------------
 
-  --btn-secondary-bg: var(--color-neutral-100);
-  --btn-secondary-color: var(--color-neutral-900);
-  --btn-secondary-hover-bg: var(--color-neutral-200);
-  --btn-secondary-hover-color: var(--color-neutral-1000);
-  --btn-secondary-active-bg: var(--color-neutral-300);
+  --btn-secondary-bg: var(--color-secondary);
+  --btn-secondary-color: var(--color-secondary-contrast);
+  --btn-secondary-hover-bg: var(--color-secondary-hover);
+  --btn-secondary-hover-color: var(--color-secondary-contrast);
+  --btn-secondary-active-bg: var(--color-secondary-active);
 
   // ---------------------------------------------------------------------------
   // Variant: Outline
@@ -110,9 +110,9 @@
   --btn-icon-hover-color: var(--color-neutral-900);
   --btn-icon-active-bg: var(--color-neutral-200);
 
-  --btn-icon-size-sm: 2rem;    // 32px
-  --btn-icon-size-md: 2.5rem;  // 40px
-  --btn-icon-size-lg: 3rem;    // 48px
+  --btn-icon-size-sm: 2rem; // 32px
+  --btn-icon-size-md: 2.5rem; // 40px
+  --btn-icon-size-lg: 3rem; // 48px
 
   // ---------------------------------------------------------------------------
   // Variant: Danger
@@ -120,7 +120,8 @@
 
   --btn-danger-bg: var(--color-error);
   --btn-danger-color: var(--color-error-contrast);
-  --btn-danger-hover-bg: var(--color-error);
+  --btn-danger-hover-bg: var(--color-error-hover);
   --btn-danger-hover-color: var(--color-error-contrast);
-  --btn-danger-active-bg: var(--color-error);
+  --btn-danger-active-bg: var(--color-error-active);
 }
+

@@ -22,75 +22,51 @@
   // Colors - Brand
   // ---------------------------------------------------------------------------
 
-  /// Primary brand color. Used for primary actions, links, and key UI elements.
-  --color-primary: #3b82f6;
+  /// Primary brand color. Deep burgundy/bordo — warm, confident, distinctive.
+  --color-primary: #7c1a2b;
 
   /// Contrast color for text on top of primary color.
   --color-primary-contrast: #ffffff;
 
-  /// Secondary brand color. Used for secondary actions and accents.
-  --color-secondary: #8b5cf6;
+  /// Secondary brand color. Warm teal to complement burgundy.
+  --color-secondary: #2a6b5e;
 
   /// Contrast color for text on top of secondary color.
   --color-secondary-contrast: #ffffff;
 
-  /// Hover state for primary color (darkened ~10%).
-  --color-primary-hover: #2563eb;
+  /// Hover state for primary color (darkened ~12%).
+  --color-primary-hover: #5c1320;
 
-  /// Active/pressed state for primary color (darkened ~15%).
-  --color-primary-active: #1d4ed8;
+  /// Active/pressed state for primary color (darkened ~20%).
+  --color-primary-active: #450e17;
 
-  // ---------------------------------------------------------------------------
-  // Colors - Neutral (Grayscale)
-  // ---------------------------------------------------------------------------
+  /// Hover state for secondary color (darkened ~12%).
+  --color-secondary-hover: color-mix(in srgb, var(--color-secondary) 88%, black);
 
-  /// Neutral color scale from 0 (lightest) to 1000 (darkest).
-  --color-neutral-0: #fafafa;
-  --color-neutral-50: #ffffff;
-  --color-neutral-100: #f4f4f5;
-  --color-neutral-200: #e4e4e7;
-  --color-neutral-300: #d4d4d8;
-  --color-neutral-400: #a1a1aa;
-  --color-neutral-500: #71717a;
-  --color-neutral-600: #52525b;
-  --color-neutral-700: #3f3f46;
-  --color-neutral-800: #27272a;
-  --color-neutral-900: #18181b;
-  --color-neutral-1000: #09090b;
+  /// Active/pressed state for secondary color (darkened ~20%).
+  --color-secondary-active: color-mix(in srgb, var(--color-secondary) 80%, black);
 
   // ---------------------------------------------------------------------------
-  // Colors - Semantic
+  // Colors - Success / Warning / Info (hover + active)
   // ---------------------------------------------------------------------------
 
-  /// Success color. Used for positive feedback, completed states.
-  --color-success: #22c55e;
+  /// Hover state for success color.
+  --color-success-hover: color-mix(in srgb, var(--color-success) 88%, black);
 
-  /// Success contrast color for text.
-  --color-success-contrast: #ffffff;
+  /// Active/pressed state for success color.
+  --color-success-active: color-mix(in srgb, var(--color-success) 80%, black);
 
-  /// Warning color. Used for alerts and cautionary messages.
-  --color-warning: #f59e0b;
+  /// Hover state for warning color.
+  --color-warning-hover: color-mix(in srgb, var(--color-warning) 88%, black);
 
-  /// Warning contrast color for text.
-  --color-warning-contrast: #ffffff;
+  /// Active/pressed state for warning color.
+  --color-warning-active: color-mix(in srgb, var(--color-warning) 80%, black);
 
-  /// Error color. Used for errors, invalid states.
-  --color-error: #ef4444;
+  /// Hover state for info color.
+  --color-info-hover: color-mix(in srgb, var(--color-info) 88%, black);
 
-  /// Error contrast color for text.
-  --color-error-contrast: #ffffff;
-
-  /// Info color. Used for informational messages.
-  --color-info: #3b82f6;
-
-  /// Info contrast color for text.
-  --color-info-contrast: #ffffff;
-
-  /// Hover state for error color (darkened ~10%).
-  --color-error-hover: #dc2626;
-
-  /// Active/pressed state for error color (darkened ~15%).
-  --color-error-active: #b91c1c;
+  /// Active/pressed state for info color.
+  --color-info-active: color-mix(in srgb, var(--color-info) 80%, black);
 
   // ---------------------------------------------------------------------------
   // Colors - Alpha Variants
@@ -101,6 +77,8 @@
   --color-primary-alpha-8: rgb(from var(--color-primary) r g b / 0.08);
   --color-primary-alpha-10: rgb(from var(--color-primary) r g b / 0.1);
   --color-primary-alpha-15: rgb(from var(--color-primary) r g b / 0.15);
+  --color-secondary-alpha-8: rgb(from var(--color-secondary) r g b / 0.08);
+  --color-secondary-alpha-10: rgb(from var(--color-secondary) r g b / 0.1);
   --color-success-alpha-10: rgb(from var(--color-success) r g b / 0.1);
   --color-warning-alpha-10: rgb(from var(--color-warning) r g b / 0.1);
   --color-error-alpha-10: rgb(from var(--color-error) r g b / 0.1);
@@ -182,13 +160,13 @@
   // ---------------------------------------------------------------------------
 
   /// Border radius for small elements (inputs, buttons).
-  --radius-sm: 0.25rem;
+  --radius-sm: 0.375rem;
 
   /// Border radius for medium elements (cards, modals).
-  --radius-md: 0.5rem;
+  --radius-md: 0.625rem;
 
   /// Border radius for large elements (containers).
-  --radius-lg: 0.75rem;
+  --radius-lg: 0.875rem;
 
   /// Fully rounded elements (pills, avatars).
   --radius-full: 9999px;
@@ -211,16 +189,16 @@
   // ---------------------------------------------------------------------------
 
   /// Subtle shadow for elevated elements.
-  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-sm: 0 1px 3px 0 rgb(44 16 22 / 0.06);
 
   /// Default shadow for cards and dropdowns.
-  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-md: 0 6px 10px -2px rgb(44 16 22 / 0.08), 0 3px 5px -3px rgb(44 16 22 / 0.06);
 
   /// Large shadow for modals and popovers.
-  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 14px 20px -4px rgb(44 16 22 / 0.1), 0 5px 8px -5px rgb(44 16 22 / 0.07);
 
   /// Extra large shadow for overlays.
-  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  --shadow-xl: 0 24px 32px -6px rgb(44 16 22 / 0.12), 0 10px 14px -8px rgb(44 16 22 / 0.08);
 
   // ---------------------------------------------------------------------------
   // Transitions - Duration
@@ -285,10 +263,10 @@ html[bursit-theme="dark"], .bursit-theme-dark {
   --color-neutral-900: #e3e3e8;
   --color-neutral-1000: #f5f5f7;
 
-  --color-primary: #60a5fa;
-  --color-primary-contrast: #0f172a;
-  --color-secondary: #a78bfa;
-  --color-secondary-contrast: #0f172a;
+  --color-primary: #a8485a;
+  --color-primary-contrast: #f5f5f7;
+  --color-secondary: #4da696;
+  --color-secondary-contrast: #f5f5f7;
   --color-success: #4ade80;
   --color-success-contrast: #0f172a;
   --color-warning: #fbbf24;
@@ -298,8 +276,20 @@ html[bursit-theme="dark"], .bursit-theme-dark {
   --color-info: #60a5fa;
   --color-info-contrast: #0f172a;
 
-  --color-primary-hover: #3b82f6;
-  --color-primary-active: #2563eb;
+  --color-primary-hover: #8f3c4c;
+  --color-primary-active: #7c1a2b;
   --color-error-hover: #ef4444;
   --color-error-active: #dc2626;
+
+  --color-secondary-hover: color-mix(in srgb, var(--color-secondary) 88%, black);
+  --color-secondary-active: color-mix(in srgb, var(--color-secondary) 80%, black);
+
+  --color-success-hover: color-mix(in srgb, var(--color-success) 88%, black);
+  --color-success-active: color-mix(in srgb, var(--color-success) 80%, black);
+
+  --color-warning-hover: color-mix(in srgb, var(--color-warning) 88%, black);
+  --color-warning-active: color-mix(in srgb, var(--color-warning) 80%, black);
+
+  --color-info-hover: color-mix(in srgb, var(--color-info) 88%, black);
+  --color-info-active: color-mix(in srgb, var(--color-info) 80%, black);
 }
