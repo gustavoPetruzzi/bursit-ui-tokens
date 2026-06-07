@@ -22,6 +22,20 @@
 //     border: var(--input-border-width) solid var(--input-border-color);
 //     border-radius: var(--input-border-radius);
 //     padding: var(--input-padding-y) var(--input-padding-x);
+//     transition: var(--input-transition);
+//   }
+//
+//   .input-field:focus-visible {
+//     border-color: var(--input-focus-border-color);
+//     outline: var(--input-focus-outline-width) var(--input-focus-outline-style) var(--input-focus-outline-color);
+//     outline-offset: var(--input-focus-outline-offset);
+//     box-shadow: var(--input-focus-shadow); /* optional glow layer */
+//   }
+//
+//   .input-field[aria-invalid="true"]:focus-visible {
+//     border-color: var(--input-error-border-color);
+//     outline: var(--input-focus-outline-width) var(--input-focus-outline-style) var(--input-error-focus-outline-color);
+//     box-shadow: var(--input-error-focus-shadow);
 //   }
 //
 //   .input-label {
@@ -41,8 +55,8 @@
   --input-border-width: var(--border-width-thin);
   --input-border-radius: var(--radius-sm);
   --input-border-radius-lg: var(--radius-md);
-  --input-padding-y: 0.75rem;   // 12px
-  --input-padding-x: 1rem;      // 16px
+  --input-padding-y: 0.75rem; // 12px
+  --input-padding-x: 1rem; // 16px
   --input-font-size: var(--font-size-base);
   --input-font-weight: var(--font-weight-normal);
   --input-line-height: var(--line-height-normal);
@@ -56,8 +70,13 @@
 
   --input-focus-border-color: var(--color-primary);
   --input-focus-shadow: 0 0 0 3px var(--color-primary-alpha-15);
+  --input-focus-outline-color: var(--color-primary);
+  --input-focus-outline-width: var(--border-width-medium);
+  --input-focus-outline-style: solid;
+  --input-focus-outline-offset: 0px;
   --input-error-border-color: var(--color-error);
   --input-error-focus-shadow: 0 0 0 3px var(--color-error-alpha-15);
+  --input-error-focus-outline-color: var(--color-error);
   --input-disabled-bg: var(--color-neutral-100);
   --input-disabled-color: var(--color-neutral-400);
   --input-disabled-border-color: var(--color-neutral-200);
