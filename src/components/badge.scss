@@ -46,6 +46,20 @@
   --badge-outline-color: var(--color-neutral-500);
   --badge-outline-border-color: var(--color-neutral-300);
 
+  // Subtle variants (alpha backgrounds)
+  --badge-subtle-primary-bg: var(--color-primary-alpha-8);
+  --badge-subtle-primary-color: var(--color-primary);
+  --badge-subtle-secondary-bg: var(--color-secondary-alpha-8);
+  --badge-subtle-secondary-color: var(--color-secondary);
+  --badge-subtle-success-bg: var(--color-success-alpha-10);
+  --badge-subtle-success-color: var(--color-success);
+  --badge-subtle-warning-bg: var(--color-warning-alpha-10);
+  --badge-subtle-warning-color: var(--color-warning);
+  --badge-subtle-error-bg: var(--color-error-alpha-10);
+  --badge-subtle-error-color: var(--color-error);
+  --badge-subtle-info-bg: var(--color-info-alpha-10);
+  --badge-subtle-info-color: var(--color-info);
+
   // Dotted indicator
   --badge-dot-size: 0.5rem;
 }

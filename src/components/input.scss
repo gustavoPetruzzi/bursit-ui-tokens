@@ -49,19 +49,19 @@
   // Base
   // ---------------------------------------------------------------------------
 
-  --input-bg: var(--color-neutral-0);
+  --input-bg: var(--color-bg-elevated);
   --input-color: var(--color-neutral-900);
   --input-border-color: var(--color-neutral-200);
   --input-border-width: var(--border-width-thin);
   --input-border-radius: var(--radius-sm);
   --input-border-radius-lg: var(--radius-md);
-  --input-padding-y: 0.75rem; // 12px
+  --input-padding-y: 0.6875rem; // 11px
   --input-padding-x: 1rem; // 16px
   --input-font-size: var(--font-size-base);
   --input-font-weight: var(--font-weight-normal);
   --input-line-height: var(--line-height-normal);
-  --input-placeholder-color: var(--color-neutral-400);
-  --input-icon-color: var(--color-neutral-400);
+  --input-placeholder-color: var(--color-text-subtle);
+  --input-icon-color: var(--color-text-subtle);
   --input-transition: all var(--duration-fast) var(--ease-in-out);
 
   // ---------------------------------------------------------------------------
@@ -69,11 +69,11 @@
   // ---------------------------------------------------------------------------
 
   --input-focus-border-color: var(--color-primary);
-  --input-focus-shadow: 0 0 0 3px var(--color-primary-alpha-15);
+  --input-focus-shadow: var(--shadow-glow-primary);
   --input-focus-outline-color: var(--color-primary);
   --input-focus-outline-width: var(--border-width-medium);
   --input-focus-outline-style: solid;
-  --input-focus-outline-offset: 0px;
+  --input-focus-outline-offset: -1px;
   --input-error-border-color: var(--color-error);
   --input-error-focus-shadow: 0 0 0 3px var(--color-error-alpha-15);
   --input-error-focus-outline-color: var(--color-error);
@@ -86,7 +86,7 @@
   // Floating Label
   // ---------------------------------------------------------------------------
 
-  --input-label-color: var(--color-neutral-400);
+  --input-label-color: var(--color-text-muted);
   --input-label-font-size: var(--font-size-sm);
   --input-label-font-weight: var(--font-weight-medium);
   --input-label-padding-x: 0.25rem;
@@ -95,7 +95,7 @@
   --input-label-translate-y: -1.5rem;
   --input-label-scale: 0.85;
   --input-label-floating-color: var(--color-primary);
-  --input-label-filled-color: var(--color-neutral-300);
+  --input-label-filled-color: var(--color-text-subtle);
   --input-label-transition: all var(--duration-fast) var(--ease-in-out);
 
   // ---------------------------------------------------------------------------
@@ -103,7 +103,7 @@
   // ---------------------------------------------------------------------------
 
   --input-helper-font-size: var(--font-size-xs);
-  --input-helper-color: var(--color-neutral-400);
+  --input-helper-color: var(--color-text-muted);
   --input-helper-error-color: var(--color-error);
   --input-helper-margin-top: var(--space-xs);
 }

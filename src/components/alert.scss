@@ -42,7 +42,7 @@
   --alert-error-icon-color: var(--color-error);
 
   // Toast specific
-  --toast-bg: var(--color-neutral-0);
+  --toast-bg: var(--color-bg-elevated);
   --toast-shadow: var(--shadow-lg);
   --toast-border-radius: var(--radius-md);
   --toast-border-width: var(--border-width-thin);
@@ -50,5 +50,7 @@
   --toast-padding: var(--space-md);
   --toast-min-width: 20rem;
   --toast-max-width: 24rem;
+  --toast-enter-ease: var(--ease-spring);
+  --toast-enter-duration: var(--duration-slow);
   --toast-z-index: var(--z-index-tooltip);
 }

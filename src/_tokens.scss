@@ -1,347 +1,479 @@
 // =============================================================================
-// Design Tokens - CSS Custom Properties
+// Design Tokens — CSS Custom Properties
 // =============================================================================
-// This file defines the core design tokens as CSS custom properties.
-// All values are defined in :root to make them globally available.
+// Palette: Índigo eléctrico + Cian frío. Neutros de base azulada.
+// Light mode por defecto. Dark mode via [bursit-theme="dark"] o .dark.
 //
-// Usage in SCSS:
-//   @use 'bursit-ui-tokens/tokens' as *;
-//
-// Usage in plain CSS:
-//   @import 'bursit-ui-tokens';
-//
-// Customizing values:
-//   Override in your own stylesheet after importing:
-//   :root {
-//     --color-primary: #your-brand-color;
-//   }
+// Uso recomendado en Angular:
+//   ThemeService que alterna el atributo en <html [attr.bursit-theme]="theme">
+// =============================================================================
+
+// =============================================================================
+// PRIMITIVES — valores crudos, no se usan directamente en componentes
+// =============================================================================
+
+// Indigo scale
+$indigo-50: #eef2ff;
+$indigo-100: #e0e7ff;
+$indigo-200: #c7d2fe;
+$indigo-300: #a5b4fc;
+$indigo-400: #818cf8;
+$indigo-500: #6366f1; // ← primary base
+$indigo-600: #4f46e5;
+$indigo-700: #4338ca;
+$indigo-800: #3730a3;
+$indigo-900: #312e81;
+$indigo-950: #1e1b4b;
+
+// Cyan scale
+$cyan-50: #ecfeff;
+$cyan-100: #cffafe;
+$cyan-200: #a5f3fc;
+$cyan-300: #67e8f9;
+$cyan-400: #22d3ee;
+$cyan-500: #06b6d4; // ← secondary base
+$cyan-600: #0891b2;
+$cyan-700: #0e7490;
+$cyan-800: #155e75;
+$cyan-900: #164e63;
+
+// Neutrals — base azulada fría (no gray puro)
+$neutral-0: #ffffff;
+$neutral-50: #f8fafc;
+$neutral-100: #f1f5f9;
+$neutral-200: #e2e8f0;
+$neutral-300: #cbd5e1;
+$neutral-400: #94a3b8;
+$neutral-500: #64748b;
+$neutral-600: #475569;
+$neutral-700: #334155;
+$neutral-800: #1e293b;
+$neutral-850: #172033;
+$neutral-900: #0f172a;
+$neutral-950: #080d17;
+$neutral-1000: #020408;
+
+// Semantic primitives
+$green-400: #4ade80;
+$green-500: #22c55e;
+$green-600: #16a34a;
+$green-700: #15803d;
+
+$amber-400: #fbbf24;
+$amber-500: #f59e0b;
+$amber-600: #d97706;
+
+$red-400: #f87171;
+$red-500: #ef4444;
+$red-600: #dc2626;
+$red-700: #b91c1c;
+
+// =============================================================================
+// LIGHT MODE — :root
 // =============================================================================
 
 :root {
   // ---------------------------------------------------------------------------
-  // Colors - Brand
+  // Brand / Primary — Índigo
   // ---------------------------------------------------------------------------
 
-  /// Primary color. Pure black — bold, minimal, timeless.
-  --color-primary: #000000;
+  --color-primary: #{$indigo-500};
+  --color-primary-hover: #{$indigo-600};
+  --color-primary-active: #{$indigo-700};
+  --color-primary-subtle: #{$indigo-50};
+  --color-primary-contrast: #{$neutral-0};
 
-  /// Contrast color for text on top of primary color.
-  --color-primary-contrast: #ffffff;
-
-  /// Secondary color. Dark gray for supporting actions and surfaces.
-  --color-secondary: #374151;
-
-  /// Contrast color for text on top of secondary color.
-  --color-secondary-contrast: #ffffff;
-
-  /// Hover state for primary color (slightly softened).
-  --color-primary-hover: #1a1a1a;
-
-  /// Active/pressed state for primary color (back to solid).
-  --color-primary-active: #000000;
-
-  /// Hover state for secondary color (deepened ~12%).
-  --color-secondary-hover: #1f2937;
-
-  /// Active/pressed state for secondary color (deepened ~20%).
-  --color-secondary-active: #111827;
+  --color-primary-alpha-8: #{rgba($indigo-500, 0.08)};
+  --color-primary-alpha-15: #{rgba($indigo-500, 0.15)};
+  --color-primary-alpha-20: #{rgba($indigo-500, 0.2)};
 
   // ---------------------------------------------------------------------------
-  // Colors - Semantic
+  // Secondary — Cian
   // ---------------------------------------------------------------------------
 
-  /// Success color. Green — positive actions, confirmations.
-  --color-success: #16a34a;
+  --color-secondary: #{$cyan-500};
+  --color-secondary-hover: #{$cyan-600};
+  --color-secondary-active: #{$cyan-700};
+  --color-secondary-subtle: #{$cyan-50};
+  --color-secondary-contrast: #{$neutral-0};
 
-  /// Contrast for text on success backgrounds.
-  --color-success-contrast: #ffffff;
-
-  /// Warning color. Amber — caution, attention needed.
-  --color-warning: #d97706;
-
-  /// Contrast for text on warning backgrounds.
-  --color-warning-contrast: #ffffff;
-
-  /// Error color. Red — destructive actions, validation failures.
-  --color-error: #dc2626;
-
-  /// Contrast for text on error backgrounds.
-  --color-error-contrast: #ffffff;
-
-  /// Hover state for error color.
-  --color-error-hover: #b91c1c;
-
-  /// Active/pressed state for error color.
-  --color-error-active: #991b1b;
-
-  /// Info color. Blue — informational messages, neutral callouts.
-  --color-info: #2563eb;
-
-  /// Contrast for text on info backgrounds.
-  --color-info-contrast: #ffffff;
+  --color-secondary-alpha-8: #{rgba($cyan-500, 0.08)};
+  --color-secondary-alpha-15: #{rgba($cyan-500, 0.15)};
 
   // ---------------------------------------------------------------------------
-  // Colors - Semantic Hover / Active
+  // Neutrals
   // ---------------------------------------------------------------------------
 
-  /// Hover state for success color.
-  --color-success-hover: color-mix(in srgb, var(--color-success) 88%, black);
-
-  /// Active/pressed state for success color.
-  --color-success-active: color-mix(in srgb, var(--color-success) 80%, black);
-
-  /// Hover state for warning color.
-  --color-warning-hover: color-mix(in srgb, var(--color-warning) 88%, black);
-
-  /// Active/pressed state for warning color.
-  --color-warning-active: color-mix(in srgb, var(--color-warning) 80%, black);
-
-  /// Hover state for info color.
-  --color-info-hover: color-mix(in srgb, var(--color-info) 88%, black);
-
-  /// Active/pressed state for info color.
-  --color-info-active: color-mix(in srgb, var(--color-info) 80%, black);
+  --color-neutral-0: #{$neutral-0};
+  --color-neutral-50: #{$neutral-50};
+  --color-neutral-100: #{$neutral-100};
+  --color-neutral-200: #{$neutral-200};
+  --color-neutral-300: #{$neutral-300};
+  --color-neutral-400: #{$neutral-400};
+  --color-neutral-500: #{$neutral-500};
+  --color-neutral-600: #{$neutral-600};
+  --color-neutral-700: #{$neutral-700};
+  --color-neutral-800: #{$neutral-800};
+  --color-neutral-900: #{$neutral-900};
+  --color-neutral-950: #{$neutral-950};
+  --color-neutral-1000: #{$neutral-1000};
 
   // ---------------------------------------------------------------------------
-  // Colors - Alpha Variants
+  // Semantic — Success
   // ---------------------------------------------------------------------------
 
-  /// Alpha variants of semantic colors for subtle backgrounds, focus rings,
-  /// and overlays. These adapt automatically when base colors change.
-  --color-primary-alpha-8: rgb(from var(--color-primary) r g b / 0.08);
-  --color-primary-alpha-10: rgb(from var(--color-primary) r g b / 0.1);
-  --color-primary-alpha-15: rgb(from var(--color-primary) r g b / 0.15);
-  --color-secondary-alpha-8: rgb(from var(--color-secondary) r g b / 0.08);
-  --color-secondary-alpha-10: rgb(from var(--color-secondary) r g b / 0.1);
-  --color-success-alpha-10: rgb(from var(--color-success) r g b / 0.1);
-  --color-warning-alpha-10: rgb(from var(--color-warning) r g b / 0.1);
-  --color-error-alpha-10: rgb(from var(--color-error) r g b / 0.1);
-  --color-error-alpha-15: rgb(from var(--color-error) r g b / 0.15);
-  --color-info-alpha-10: rgb(from var(--color-info) r g b / 0.1);
-
-  /// Overlay background for modals and backdrops.
-  --color-overlay: rgb(0 0 0 / 0.5);
-
-  /// White alpha for pattern overlays (e.g. striped progress bars).
-  --color-white-alpha-15: rgb(255 255 255 / 0.15);
+  --color-success: #{$green-500};
+  --color-success-hover: #{$green-600};
+  --color-success-active: #{$green-700};
+  --color-success-contrast: #{$neutral-0};
+  --color-success-alpha-10: #{rgba($green-500, 0.1)};
+  --color-success-alpha-15: #{rgba($green-500, 0.15)};
 
   // ---------------------------------------------------------------------------
-  // Colors - Neutral
+  // Semantic — Warning
   // ---------------------------------------------------------------------------
 
-  /// Neutral color scale. 0 = lightest (background), 1000 = darkest (foreground).
-  --color-neutral-0: #ffffff;
-  --color-neutral-50: #f9fafb;
-  --color-neutral-100: #f3f4f6;
-  --color-neutral-200: #e5e7eb;
-  --color-neutral-300: #d1d5db;
-  --color-neutral-400: #9ca3af;
-  --color-neutral-500: #6b7280;
-  --color-neutral-600: #4b5563;
-  --color-neutral-700: #374151;
-  --color-neutral-800: #1f2937;
-  --color-neutral-900: #111827;
-  --color-neutral-1000: #030712;
+  --color-warning: #{$amber-500};
+  --color-warning-hover: #{$amber-600};
+  --color-warning-active: #{$amber-600};
+  --color-warning-contrast: #{$neutral-900};
+  --color-warning-alpha-10: #{rgba($amber-500, 0.1)};
+  --color-warning-alpha-15: #{rgba($amber-500, 0.15)};
 
   // ---------------------------------------------------------------------------
-  // Typography - Font Family
+  // Semantic — Error
   // ---------------------------------------------------------------------------
 
-  /// Primary font family for body text and UI elements.
-  --font-family-sans: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-
-  /// Monospace font family for code and technical content.
-  --font-family-mono: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
-
-  // ---------------------------------------------------------------------------
-  // Typography - Font Size
-  // ---------------------------------------------------------------------------
-
-  /// Font size scale. Use responsive values for better mobile experience.
-  --font-size-xs: 0.75rem;    // 12px
-  --font-size-sm: 0.875rem;   // 14px
-  --font-size-base: 1rem;     // 16px
-  --font-size-lg: 1.125rem;   // 18px
-  --font-size-xl: 1.25rem;    // 20px
-  --font-size-2xl: 1.5rem;    // 24px
-  --font-size-3xl: 1.875rem;  // 30px
-  --font-size-4xl: 2.25rem;   // 36px
+  --color-error: #{$red-500};
+  --color-error-hover: #{$red-600};
+  --color-error-active: #{$red-700};
+  --color-error-contrast: #{$neutral-0};
+  --color-error-alpha-10: #{rgba($red-500, 0.1)};
+  --color-error-alpha-15: #{rgba($red-500, 0.15)};
 
   // ---------------------------------------------------------------------------
-  // Typography - Font Weight
+  // Semantic — Info (índigo claro, diferente del primary)
   // ---------------------------------------------------------------------------
 
-  /// Font weight for regular text.
+  --color-info: #{$indigo-400};
+  --color-info-contrast: #{$neutral-0};
+  --color-info-alpha-10: #{rgba($indigo-400, 0.1)};
+  --color-info-alpha-15: #{rgba($indigo-400, 0.15)};
+
+  // ---------------------------------------------------------------------------
+  // Surfaces & backgrounds
+  // ---------------------------------------------------------------------------
+
+  --color-bg: #{$neutral-50};
+  --color-bg-elevated: #{$neutral-0};
+  --color-bg-sunken: #{$neutral-100};
+  --color-overlay: #{rgba($neutral-900, 0.55)};
+
+  // Alphas utilitarios
+  --color-white-alpha-15: #{rgba($neutral-0, 0.15)};
+  --color-black-alpha-10: #{rgba($neutral-1000, 0.1)};
+
+  // ---------------------------------------------------------------------------
+  // Typography
+  // ---------------------------------------------------------------------------
+
+  --color-text: #{$neutral-900};
+  --color-text-muted: #{$neutral-500};
+  --color-text-subtle: #{$neutral-400};
+  --color-text-inverse: #{$neutral-0};
+
+  // ---------------------------------------------------------------------------
+  // Border
+  // ---------------------------------------------------------------------------
+
+  --color-border: #{$neutral-200};
+  --color-border-strong: #{$neutral-300};
+
+  // ---------------------------------------------------------------------------
+  // Focus
+  // ---------------------------------------------------------------------------
+
+  --color-focus-ring: #{rgba($indigo-500, 0.4)};
+
+  // ---------------------------------------------------------------------------
+  // Typography scale
+  // ---------------------------------------------------------------------------
+
+  --font-family-sans: "Inter", "Geist", system-ui, -apple-system, sans-serif;
+  --font-family-mono: "JetBrains Mono", "Fira Code", "Cascadia Code", monospace;
+  --font-family-display: var(--font-family-sans);
+
+  --font-size-xs: 0.75rem; // 12px
+  --font-size-sm: 0.875rem; // 14px
+  --font-size-base: 1rem; // 16px
+  --font-size-lg: 1.125rem; // 18px
+  --font-size-xl: 1.25rem; // 20px
+  --font-size-2xl: 1.5rem; // 24px
+  --font-size-3xl: 1.875rem; // 30px
+  --font-size-4xl: 2.25rem; // 36px
+  --font-size-5xl: 3rem; // 48px
+
   --font-weight-normal: 400;
-
-  /// Font weight for medium emphasis.
   --font-weight-medium: 500;
-
-  /// Font weight for bold text and headings.
+  --font-weight-semibold: 600;
   --font-weight-bold: 700;
 
-  // ---------------------------------------------------------------------------
-  // Typography - Line Height
-  // ---------------------------------------------------------------------------
-
-  /// Line height for tight spacing (headings).
   --line-height-tight: 1.25;
-
-  /// Default line height for body text.
+  --line-height-snug: 1.375;
   --line-height-normal: 1.5;
+  --line-height-relaxed: 1.625;
+  --line-height-loose: 2;
 
-  /// Line height for relaxed reading (large text).
-  --line-height-relaxed: 1.75;
+  --letter-spacing-tight: -0.025em;
+  --letter-spacing-normal: 0em;
+  --letter-spacing-wide: 0.025em;
+  --letter-spacing-wider: 0.05em;
+  --letter-spacing-widest: 0.1em;
 
   // ---------------------------------------------------------------------------
   // Spacing
   // ---------------------------------------------------------------------------
 
-  /// Spacing scale for margins, padding, and gaps.
-  --space-2xs: 0.125rem;  // 2px
-  --space-xs: 0.25rem;    // 4px
-  --space-sm: 0.5rem;     // 8px
-  --space-md: 1rem;       // 16px
-  --space-lg: 1.5rem;     // 24px
-  --space-xl: 2rem;       // 32px
-  --space-2xl: 3rem;      // 48px
-  --space-3xl: 4rem;      // 64px
+  --space-0: 0;
+  --space-px: 1px;
+  --space-xs: 0.25rem; // 4px
+  --space-sm: 0.5rem; // 8px
+  --space-md: 1rem; // 16px
+  --space-lg: 1.5rem; // 24px
+  --space-xl: 2rem; // 32px
+  --space-2xl: 3rem; // 48px
+  --space-3xl: 4rem; // 64px
+  --space-4xl: 6rem; // 96px
 
   // ---------------------------------------------------------------------------
-  // Borders - Radius
+  // Border radius
   // ---------------------------------------------------------------------------
 
-  /// Border radius for small elements (inputs, buttons).
-  --radius-sm: 0.375rem;
-
-  /// Border radius for medium elements (cards, modals).
-  --radius-md: 0.625rem;
-
-  /// Border radius for large elements (containers).
-  --radius-lg: 0.875rem;
-
-  /// Fully rounded elements (pills, avatars).
+  --radius-none: 0;
+  --radius-xs: 0.125rem; // 2px
+  --radius-sm: 0.375rem; // 6px
+  --radius-md: 0.5rem; // 8px
+  --radius-lg: 0.75rem; // 12px
+  --radius-xl: 1rem; // 16px
+  --radius-2xl: 1.5rem; // 24px
   --radius-full: 9999px;
 
   // ---------------------------------------------------------------------------
-  // Borders - Width
+  // Border width
   // ---------------------------------------------------------------------------
 
-  /// Border width for thin borders (dividers).
   --border-width-thin: 1px;
-
-  /// Border width for medium borders (inputs).
   --border-width-medium: 2px;
-
-  /// Border width for thick borders (focus states).
-  --border-width-thick: 3px;
+  --border-width-thick: 4px;
 
   // ---------------------------------------------------------------------------
-  // Shadows
+  // Shadows — tonalizadas en índigo para coherencia
   // ---------------------------------------------------------------------------
 
-  /// Subtle shadow for elevated elements.
-  --shadow-sm: 0 1px 3px 0 rgb(0 0 0 / 0.06);
+  --shadow-xs: 0 1px 2px 0 #{rgba($indigo-950, 0.04)};
+  --shadow-sm:
+    0 1px 3px 0 #{rgba($indigo-950, 0.08)},
+    0 1px 2px -1px #{rgba($indigo-950, 0.06)};
+  --shadow-md:
+    0 4px 6px -1px #{rgba($indigo-950, 0.08)},
+    0 2px 4px -2px #{rgba($indigo-950, 0.06)};
+  --shadow-lg:
+    0 10px 15px -3px #{rgba($indigo-950, 0.08)},
+    0 4px 6px -4px #{rgba($indigo-950, 0.05)};
+  --shadow-xl:
+    0 20px 25px -5px #{rgba($indigo-950, 0.1)},
+    0 8px 10px -6px #{rgba($indigo-950, 0.06)};
+  --shadow-2xl: 0 25px 50px -12px #{rgba($indigo-950, 0.2)};
+  --shadow-inner: inset 0 2px 4px 0 #{rgba($indigo-950, 0.06)};
 
-  /// Default shadow for cards and dropdowns.
-  --shadow-md: 0 6px 10px -2px rgb(0 0 0 / 0.08), 0 3px 5px -3px rgb(0 0 0 / 0.06);
-
-  /// Large shadow for modals and popovers.
-  --shadow-lg: 0 14px 20px -4px rgb(0 0 0 / 0.1), 0 5px 8px -5px rgb(0 0 0 / 0.07);
-
-  /// Extra large shadow for overlays.
-  --shadow-xl: 0 24px 32px -6px rgb(0 0 0 / 0.12), 0 10px 14px -8px rgb(0 0 0 / 0.08);
-
-  // ---------------------------------------------------------------------------
-  // Transitions - Duration
-  // ---------------------------------------------------------------------------
-
-  /// Fast transition for micro-interactions (hover states).
-  --duration-fast: 150ms;
-
-  /// Default transition for standard interactions.
-  --duration-normal: 300ms;
-
-  /// Slow transition for page-level animations.
-  --duration-slow: 500ms;
+  // Glow para elementos activos / hover con acento
+  --shadow-glow-primary: 0 0 0 3px #{rgba($indigo-500, 0.3)};
+  --shadow-glow-secondary: 0 0 0 3px #{rgba($cyan-500, 0.3)};
 
   // ---------------------------------------------------------------------------
-  // Transitions - Easing
+  // Motion
   // ---------------------------------------------------------------------------
 
-  /// Linear easing (no acceleration).
+  --duration-instant: 50ms;
+  --duration-fast: 100ms;
+  --duration-normal: 200ms;
+  --duration-slow: 350ms;
+  --duration-slower: 500ms;
+
   --ease-linear: linear;
-
-  /// Ease-out (fast start, slow end). Good for exiting elements.
-  --ease-out: cubic-bezier(0, 0, 0.2, 1);
-
-  /// Ease-in (slow start, fast end). Good for entering elements.
   --ease-in: cubic-bezier(0.4, 0, 1, 1);
-
-  /// Ease-in-out (smooth). Default for most transitions.
+  --ease-out: cubic-bezier(0, 0, 0.2, 1);
   --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1); // slight overshoot
+  --ease-bounce: cubic-bezier(0.68, -0.55, 0.27, 1.55);
 
   // ---------------------------------------------------------------------------
-  // Z-Index Scale
+  // Z-index scale
   // ---------------------------------------------------------------------------
 
-  /// Z-index for base elements.
+  --z-index-below: -1;
   --z-index-base: 0;
-
-  /// Z-index for dropdowns and sticky elements.
+  --z-index-raised: 10;
   --z-index-dropdown: 100;
-
-  /// Z-index for fixed elements (header, footer).
-  --z-index-fixed: 200;
-
-  /// Z-index for modals and overlays.
-  --z-index-modal: 300;
-
-  /// Z-index for tooltips and popovers.
-  --z-index-tooltip: 400;
+  --z-index-sticky: 200;
+  --z-index-overlay: 300;
+  --z-index-modal: 400;
+  --z-index-tooltip: 500;
+  --z-index-toast: 600;
 }
 
-html[bursit-theme="dark"], .bursit-theme-dark {
-  --color-neutral-0: #111113;
-  --color-neutral-50: #08080a;
-  --color-neutral-100: #1a1a1f;
-  --color-neutral-200: #25252b;
-  --color-neutral-300: #31313a;
-  --color-neutral-400: #4a4a56;
-  --color-neutral-500: #656573;
-  --color-neutral-600: #828290;
-  --color-neutral-700: #a1a1ad;
-  --color-neutral-800: #c4c4cc;
-  --color-neutral-900: #e3e3e8;
-  --color-neutral-1000: #f5f5f7;
+// =============================================================================
+// DARK MODE — [bursit-theme="dark"] o .dark
+// =============================================================================
+// Solo se redefinen los tokens que cambian entre modos.
+// Todos los tokens de espaciado, tipografía y motion se heredan de :root.
+// =============================================================================
 
-  --color-primary: #ffffff;
-  --color-primary-contrast: #000000;
-  --color-secondary: #d1d5db;
-  --color-secondary-contrast: #000000;
-  --color-success: #4ade80;
-  --color-success-contrast: #0f172a;
-  --color-warning: #fbbf24;
-  --color-warning-contrast: #0f172a;
-  --color-error: #f87171;
-  --color-error-contrast: #0f172a;
-  --color-info: #60a5fa;
-  --color-info-contrast: #0f172a;
+[bursit-theme="dark"],
+.dark {
+  // ---------------------------------------------------------------------------
+  // Brand / Primary — índigo más brillante sobre fondo oscuro
+  // ---------------------------------------------------------------------------
 
-  --color-primary-hover: #e5e5e5;
-  --color-primary-active: #ffffff;
-  --color-error-hover: #ef4444;
-  --color-error-active: #dc2626;
+  --color-primary: #{$indigo-400};
+  --color-primary-hover: #{$indigo-300};
+  --color-primary-active: #{$indigo-200};
+  --color-primary-subtle: #{rgba($indigo-500, 0.15)};
+  --color-primary-contrast: #{$neutral-950};
 
-  --color-secondary-hover: color-mix(in srgb, var(--color-secondary) 88%, black);
-  --color-secondary-active: color-mix(in srgb, var(--color-secondary) 80%, black);
+  --color-primary-alpha-8: #{rgba($indigo-400, 0.08)};
+  --color-primary-alpha-15: #{rgba($indigo-400, 0.15)};
+  --color-primary-alpha-20: #{rgba($indigo-400, 0.2)};
 
-  --color-success-hover: color-mix(in srgb, var(--color-success) 88%, black);
-  --color-success-active: color-mix(in srgb, var(--color-success) 80%, black);
+  // ---------------------------------------------------------------------------
+  // Secondary — cian sobre oscuro
+  // ---------------------------------------------------------------------------
 
-  --color-warning-hover: color-mix(in srgb, var(--color-warning) 88%, black);
-  --color-warning-active: color-mix(in srgb, var(--color-warning) 80%, black);
+  --color-secondary: #{$cyan-400};
+  --color-secondary-hover: #{$cyan-300};
+  --color-secondary-active: #{$cyan-200};
+  --color-secondary-subtle: #{rgba($cyan-500, 0.12)};
+  --color-secondary-contrast: #{$neutral-950};
 
-  --color-info-hover: color-mix(in srgb, var(--color-info) 88%, black);
-  --color-info-active: color-mix(in srgb, var(--color-info) 80%, black);
+  --color-secondary-alpha-8: #{rgba($cyan-400, 0.08)};
+  --color-secondary-alpha-15: #{rgba($cyan-400, 0.15)};
+
+  // ---------------------------------------------------------------------------
+  // Neutrals — invertidos
+  // ---------------------------------------------------------------------------
+
+  --color-neutral-0: #{$neutral-950};
+  --color-neutral-50: #{$neutral-900};
+  --color-neutral-100: #{$neutral-850};
+  --color-neutral-200: #{$neutral-800};
+  --color-neutral-300: #{$neutral-700};
+  --color-neutral-400: #{$neutral-600};
+  --color-neutral-500: #{$neutral-500};
+  --color-neutral-600: #{$neutral-400};
+  --color-neutral-700: #{$neutral-300};
+  --color-neutral-800: #{$neutral-200};
+  --color-neutral-900: #{$neutral-100};
+  --color-neutral-950: #{$neutral-50};
+  --color-neutral-1000: #{$neutral-0};
+
+  // ---------------------------------------------------------------------------
+  // Semantic
+  // ---------------------------------------------------------------------------
+
+  --color-success: #{$green-400};
+  --color-success-hover: #{$green-500};
+  --color-success-active: #{$green-600};
+  --color-success-contrast: #{$neutral-950};
+  --color-success-alpha-10: #{rgba($green-400, 0.12)};
+  --color-success-alpha-15: #{rgba($green-400, 0.18)};
+
+  --color-warning: #{$amber-400};
+  --color-warning-hover: #{$amber-500};
+  --color-warning-active: #{$amber-500};
+  --color-warning-contrast: #{$neutral-950};
+  --color-warning-alpha-10: #{rgba($amber-400, 0.12)};
+  --color-warning-alpha-15: #{rgba($amber-400, 0.18)};
+
+  --color-error: #{$red-400};
+  --color-error-hover: #{$red-500};
+  --color-error-active: #{$red-600};
+  --color-error-contrast: #{$neutral-950};
+  --color-error-alpha-10: #{rgba($red-400, 0.12)};
+  --color-error-alpha-15: #{rgba($red-400, 0.18)};
+
+  --color-info: #{$indigo-300};
+  --color-info-contrast: #{$neutral-950};
+  --color-info-alpha-10: #{rgba($indigo-300, 0.12)};
+  --color-info-alpha-15: #{rgba($indigo-300, 0.18)};
+
+  // ---------------------------------------------------------------------------
+  // Surfaces
+  // ---------------------------------------------------------------------------
+
+  --color-bg: #{$neutral-950};
+  --color-bg-elevated: #{$neutral-900};
+  --color-bg-sunken: #{rgba($neutral-1000, 0.6)};
+  --color-overlay: #{rgba($neutral-1000, 0.7)};
+
+  --color-white-alpha-15: #{rgba($neutral-0, 0.15)};
+  --color-black-alpha-10: #{rgba($neutral-1000, 0.3)};
+
+  // ---------------------------------------------------------------------------
+  // Typography
+  // ---------------------------------------------------------------------------
+
+  --color-text: #{$neutral-50};
+  --color-text-muted: #{$neutral-400};
+  --color-text-subtle: #{$neutral-600};
+  --color-text-inverse: #{$neutral-950};
+
+  // ---------------------------------------------------------------------------
+  // Border
+  // ---------------------------------------------------------------------------
+
+  --color-border: #{$neutral-800};
+  --color-border-strong: #{$neutral-700};
+
+  // ---------------------------------------------------------------------------
+  // Focus
+  // ---------------------------------------------------------------------------
+
+  --color-focus-ring: #{rgba($indigo-400, 0.45)};
+
+  // ---------------------------------------------------------------------------
+  // Shadows — más pronunciadas en dark (el contraste lo necesita)
+  // ---------------------------------------------------------------------------
+
+  --shadow-xs: 0 1px 2px 0 #{rgba($neutral-1000, 0.3)};
+  --shadow-sm:
+    0 1px 3px 0 #{rgba($neutral-1000, 0.4)},
+    0 1px 2px -1px #{rgba($neutral-1000, 0.3)};
+  --shadow-md:
+    0 4px 6px -1px #{rgba($neutral-1000, 0.45)},
+    0 2px 4px -2px #{rgba($neutral-1000, 0.35)};
+  --shadow-lg:
+    0 10px 15px -3px #{rgba($neutral-1000, 0.5)},
+    0 4px 6px -4px #{rgba($neutral-1000, 0.4)};
+  --shadow-xl:
+    0 20px 25px -5px #{rgba($neutral-1000, 0.55)},
+    0 8px 10px -6px #{rgba($neutral-1000, 0.45)};
+  --shadow-2xl: 0 25px 50px -12px #{rgba($neutral-1000, 0.7)};
+  --shadow-inner: inset 0 2px 4px 0 #{rgba($neutral-1000, 0.4)};
+
+  --shadow-glow-primary: 0 0 0 3px #{rgba($indigo-400, 0.35)};
+  --shadow-glow-secondary: 0 0 0 3px #{rgba($cyan-400, 0.35)};
+}
+
+// =============================================================================
+// Prefer-reduced-motion — respeta accesibilidad
+// =============================================================================
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --duration-instant: 0ms;
+    --duration-fast: 0ms;
+    --duration-normal: 0ms;
+    --duration-slow: 0ms;
+    --duration-slower: 0ms;
+  }
 }

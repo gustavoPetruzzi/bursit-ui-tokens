@@ -22,10 +22,15 @@
   --checkbox-disabled-checked-border-color: var(--color-neutral-300);
   --checkbox-disabled-checked-color: var(--color-neutral-500);
   --checkbox-disabled-opacity: 0.6;
-  --checkbox-focus-shadow: 0 0 0 3px var(--color-primary-alpha-15);
+  --checkbox-check-ease: var(--ease-spring);
+  --checkbox-focus-shadow: var(--shadow-glow-primary);
   --checkbox-transition: all var(--duration-fast) var(--ease-in-out);
 
   --checkbox-indeterminate-bg: var(--color-primary);
   --checkbox-indeterminate-border-color: var(--color-primary);
   --checkbox-indeterminate-color: var(--color-primary-contrast);
+
+  // Error state
+  --checkbox-error-border-color: var(--color-error);
+  --checkbox-error-focus-shadow: 0 0 0 3px var(--color-error-alpha-15);
 }

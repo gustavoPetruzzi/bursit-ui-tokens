@@ -10,7 +10,8 @@
   --progress-bg: var(--color-neutral-200);
   --progress-track-bg: var(--color-neutral-200);
   --progress-bar-bg: var(--color-primary);
-  --progress-bar-transition: width var(--duration-normal) var(--ease-in-out);
+  --progress-bar-ease: var(--ease-spring);
+  --progress-bar-transition: width var(--duration-normal) var(--ease-spring);
   --progress-striped-bg: repeating-linear-gradient(
     -45deg,
     transparent,

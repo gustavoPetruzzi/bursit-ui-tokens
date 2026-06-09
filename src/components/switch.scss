@@ -23,6 +23,12 @@
   --switch-disabled-thumb-bg: var(--color-neutral-200);
   --switch-disabled-thumb-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
   --switch-disabled-opacity: 0.6;
-  --switch-focus-shadow: 0 0 0 3px var(--color-primary-alpha-15);
-  --switch-transition: all var(--duration-fast) var(--ease-in-out);
+  --switch-thumb-ease: var(--ease-spring);
+  --switch-focus-shadow: var(--shadow-glow-primary);
+  --switch-transition: transform var(--duration-normal) var(--ease-spring);
+  --switch-color-transition: background-color var(--duration-fast) var(--ease-in-out);
+
+  // Error state
+  --switch-error-bg: var(--color-error);
+  --switch-error-focus-shadow: var(--shadow-glow-primary);
 }

@@ -22,6 +22,11 @@
   --radio-disabled-checked-border-color: var(--color-neutral-300);
   --radio-disabled-checked-inner-color: var(--color-neutral-500);
   --radio-disabled-opacity: 0.6;
-  --radio-focus-shadow: 0 0 0 3px var(--color-primary-alpha-15);
+  --radio-dot-ease: var(--ease-spring);
+  --radio-focus-shadow: var(--shadow-glow-primary);
   --radio-transition: all var(--duration-fast) var(--ease-in-out);
+
+  // Error state
+  --radio-error-border-color: var(--color-error);
+  --radio-error-focus-shadow: 0 0 0 3px var(--color-error-alpha-15);
 }

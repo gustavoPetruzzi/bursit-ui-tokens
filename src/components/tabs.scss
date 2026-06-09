@@ -33,7 +33,8 @@
   // Indicator (underline style)
   --tab-indicator-height: 2px;
   --tab-indicator-color: var(--color-primary);
-  --tab-indicator-transition: all var(--duration-fast) var(--ease-in-out);
+  --tab-indicator-ease: var(--ease-spring);
+  --tab-indicator-transition: all var(--duration-normal) var(--ease-spring);
 
   // Tab panel
   --tab-panel-padding-y: var(--space-md);

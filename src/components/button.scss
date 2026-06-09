@@ -25,6 +25,9 @@
   --btn-border-width: var(--border-width-thin);
   --btn-disabled-opacity: 0.5;
   --btn-transition: all var(--duration-fast) var(--ease-in-out);
+  --btn-active-ease: var(--ease-spring);
+  --btn-active-scale: 0.97;
+  --btn-focus-shadow: var(--shadow-glow-primary);
   --btn-line-height: 1;
 
   // ---------------------------------------------------------------------------
@@ -50,9 +53,9 @@
   // Variant: Primary
   // ---------------------------------------------------------------------------
 
-  --btn-primary-bg: var(--color-primary);
+  --btn-primary-bg: var(--color-primary-hover);
   --btn-primary-color: var(--color-primary-contrast);
-  --btn-primary-hover-bg: var(--color-primary-hover);
+  --btn-primary-hover-bg: var(--color-primary-active);
   --btn-primary-hover-color: var(--color-primary-contrast);
   --btn-primary-active-bg: var(--color-primary-active);
 
@@ -60,9 +63,9 @@
   // Variant: Secondary
   // ---------------------------------------------------------------------------
 
-  --btn-secondary-bg: var(--color-secondary);
+  --btn-secondary-bg: var(--color-secondary-active);
   --btn-secondary-color: var(--color-secondary-contrast);
-  --btn-secondary-hover-bg: var(--color-secondary-hover);
+  --btn-secondary-hover-bg: #155E75;
   --btn-secondary-hover-color: var(--color-secondary-contrast);
   --btn-secondary-active-bg: var(--color-secondary-active);
 
@@ -71,11 +74,11 @@
   // ---------------------------------------------------------------------------
 
   --btn-outline-bg: transparent;
-  --btn-outline-color: var(--color-primary);
-  --btn-outline-border-color: var(--color-primary);
+  --btn-outline-color: var(--color-primary-hover);
+  --btn-outline-border-color: var(--color-primary-hover);
   --btn-outline-hover-bg: var(--color-primary-alpha-8);
-  --btn-outline-hover-color: var(--color-primary);
-  --btn-outline-hover-border-color: var(--color-primary);
+  --btn-outline-hover-color: var(--color-primary-active);
+  --btn-outline-hover-border-color: var(--color-primary-active);
   --btn-outline-active-bg: var(--color-primary-alpha-15);
 
   // ---------------------------------------------------------------------------
@@ -93,8 +96,8 @@
   // ---------------------------------------------------------------------------
 
   --btn-link-bg: transparent;
-  --btn-link-color: var(--color-primary);
-  --btn-link-hover-color: var(--color-primary);
+  --btn-link-color: var(--color-primary-hover);
+  --btn-link-hover-color: var(--color-primary-active);
   --btn-link-text-decoration: underline;
   --btn-link-hover-text-decoration: underline;
   --btn-link-padding-y: 0;
@@ -118,9 +121,9 @@
   // Variant: Danger
   // ---------------------------------------------------------------------------
 
-  --btn-danger-bg: var(--color-error);
+  --btn-danger-bg: var(--color-error-hover);
   --btn-danger-color: var(--color-error-contrast);
-  --btn-danger-hover-bg: var(--color-error-hover);
+  --btn-danger-hover-bg: var(--color-error-active);
   --btn-danger-hover-color: var(--color-error-contrast);
   --btn-danger-active-bg: var(--color-error-active);
 }

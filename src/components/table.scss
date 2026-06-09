@@ -34,6 +34,10 @@
   // Row
   --table-row-hover-bg: var(--color-neutral-100);
   --table-row-transition: background-color var(--duration-fast) var(--ease-in-out);
+  --table-row-selected-bg: var(--color-primary-alpha-8);
+  --table-row-selected-border-color: var(--color-primary);
+  --table-sort-icon-color: var(--color-primary);
+  --table-sort-icon-size: 0.875rem;
 
   // Striped rows
   --table-striped-bg: var(--color-neutral-50);
