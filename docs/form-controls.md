@@ -57,7 +57,7 @@ Native `<select>` dropdown styling.
 
 | Token | Default | Description |
 |-------|---------|-------------|
-| `--select-padding-end` | `2.5rem` | Right padding for chevron space |
+| `--select-padding-end` | `1rem` | Right padding for chevron space |
 | `--select-icon-size` | `1rem` | Chevron icon size |
 | `--select-icon-offset` | `0.75rem` | Distance from right edge |
 | `--select-option-hover-bg` | `var(--color-neutral-100)` | Option hover background |

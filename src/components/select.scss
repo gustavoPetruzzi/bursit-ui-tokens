@@ -9,22 +9,28 @@
   --select-bg: var(--input-bg);
   --select-color: var(--input-color);
   --select-border-color: var(--input-border-color);
+  --select-border-style: var(--input-border-style);
   --select-border-width: var(--input-border-width);
   --select-border-radius: var(--input-border-radius);
   --select-padding-y: var(--input-padding-y);
   --select-padding-x: var(--input-padding-x);
-  --select-padding-end: 2.5rem;
+  --select-padding-end: 1rem;
+  --select-min-width: 12.5rem;
   --select-font-size: var(--input-font-size);
   --select-font-weight: var(--input-font-weight);
   --select-line-height: var(--input-line-height);
   --select-transition: var(--input-transition);
 
   --select-icon-color: var(--input-icon-color);
-  --select-icon-size: 1rem;
-  --select-icon-offset: 0.75rem;
 
   --select-focus-border-color: var(--input-focus-border-color);
   --select-focus-shadow: var(--input-focus-shadow);
+  --select-focus-outline-width: var(--input-focus-outline-width);
+  --select-focus-outline-style: var(--input-focus-outline-style);
+  --select-focus-outline-color: var(--input-focus-outline-color);
+  --select-focus-outline-offset: var(--input-focus-outline-offset);
+  --select-hover-bg: var(--color-neutral-100);
+  --select-hover-border-color: var(--color-neutral-300);
   --select-disabled-bg: var(--input-disabled-bg);
   --select-disabled-color: var(--input-disabled-color);
   --select-disabled-border-color: var(--input-disabled-border-color);
@@ -36,4 +42,28 @@
   --select-option-hover-color: var(--color-neutral-1000);
   --select-option-focus-bg: var(--color-primary);
   --select-option-focus-color: var(--color-primary-contrast);
+  --select-option-focus-outline-width: var(--select-focus-outline-width);
+  --select-option-focus-outline-style: var(--select-focus-outline-style);
+  --select-option-focus-outline-color: var(--select-focus-outline-color);
+  --select-option-focus-outline-offset: var(--select-focus-outline-offset);
+
+  --select-option-disabled-bg: var(--select-disabled-bg);
+  --select-option-disabled-color: var(--select-disabled-color);
+  --select-option-disabled-opacity: var(--select-disabled-opacity);
+
+  --select-option-padding-y: 0.5rem;
+  --select-option-padding-x: 0.75rem;
+  --select-option-font-size: var(--select-font-size);
+
+  // Panel (dropdown)
+  --select-panel-bg: var(--color-bg-elevated);
+  --select-panel-border-width: 1px;
+  --select-panel-border-style: solid;
+  --select-panel-border-color: var(--input-border-color);
+  --select-panel-border-radius: var(--select-border-radius);
+  --select-panel-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --select-panel-max-height: 15rem;
+
+  // Placeholder
+  --select-placeholder-color: var(--input-placeholder-color);
 }
