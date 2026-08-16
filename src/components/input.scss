@@ -52,6 +52,7 @@
   --input-bg: var(--color-bg-elevated);
   --input-color: var(--color-neutral-900);
   --input-border-color: var(--color-neutral-200);
+  --input-border-style: var(--border-style);
   --input-border-width: var(--border-width-thin);
   --input-border-radius: var(--radius-sm);
   --input-border-radius-lg: var(--radius-md);
@@ -104,7 +105,7 @@
 
   --input-helper-font-size: var(--font-size-xs);
   --input-helper-color: var(--color-text-muted);
-  --input-helper-error-color: var(--color-error);
+  --input-helper-error-color: var(--color-error-text);
   --input-helper-margin-top: var(--space-xs);
 }
 
