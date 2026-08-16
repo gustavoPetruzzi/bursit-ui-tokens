@@ -150,6 +150,7 @@ $red-700: #b91c1c;
   --color-error-contrast: #{$neutral-0};
   --color-error-alpha-10: #{rgba($red-500, 0.1)};
   --color-error-alpha-15: #{rgba($red-500, 0.15)};
+  --color-error-text: #{$red-600}; // WCAG AA on light bg
 
   // ---------------------------------------------------------------------------
   // Semantic — Info (índigo claro, diferente del primary)
@@ -261,6 +262,8 @@ $red-700: #b91c1c;
   // ---------------------------------------------------------------------------
   // Border width
   // ---------------------------------------------------------------------------
+
+  --border-style: solid;
 
   --border-width-thin: 1px;
   --border-width-medium: 2px;
@@ -400,6 +403,7 @@ $red-700: #b91c1c;
   --color-error-contrast: #{$neutral-950};
   --color-error-alpha-10: #{rgba($red-400, 0.12)};
   --color-error-alpha-15: #{rgba($red-400, 0.18)};
+  --color-error-text: #{$red-400}; // WCAG AA on dark bg
 
   --color-info: #{$indigo-300};
   --color-info-contrast: #{$neutral-950};
