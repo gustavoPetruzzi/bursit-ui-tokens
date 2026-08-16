@@ -15,6 +15,7 @@ docs/.vitepress/cache/
 
 # AI/Tool artifacts
 .opencode/
+.atl/
 
 # Environment
 .env
