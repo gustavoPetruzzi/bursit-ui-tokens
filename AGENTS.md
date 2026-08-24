@@ -4,12 +4,13 @@
 
 ```bash
 npm run build          # sass src/index.scss index.css --no-source-map
+npm run validate       # node scripts/validate-tokens.mjs (token integrity checks)
 npm run docs:dev       # vitepress dev docs
 npm run docs:build     # vitepress build docs
 npm run docs:preview   # vitepress preview docs
 ```
 
-There is no lint, test, typecheck, or CI.
+CI (`.github/workflows/validation.yml`) runs install, validate, and build on every push/PR to `master`. Releases are fully automated via `.github/workflows/release.yml` (release-please + OIDC npm publish) — never bump `version` in `package.json` manually or edit `CHANGELOG.md` by hand; use Conventional Commits and let the Release PR do it.
 
 ## Architecture
 
@@ -24,7 +25,7 @@ There is no lint, test, typecheck, or CI.
 - Subpath `./tokens` exports `_tokens.scss` (Sass only, no plain CSS alternative)
 - Subpath `./mixins` exports `_mixins.scss`
 - Subpath `./components/*` exports individual component token files
-- `"files"` in `package.json` publishes all `*.scss` in root + `src/` directory
+- `"files"` in `package.json` publishes `index.css` (built) + the whole `src/` directory
 - `"type": "module"` — ESM only
 - Sass peerDependency: `sass@^1.69.0` (required for `@use` module system)
 
@@ -32,4 +33,4 @@ There is no lint, test, typecheck, or CI.
 
 - SCSS uses `@use` / `@forward` (Dart Sass module system), NOT legacy `@import`
 - Token naming follows `--category-name-scale` pattern (e.g. `--color-primary`, `--space-md`, `--font-size-base`)
-- Default values in `:root`, themed overrides via `html[bursit-theme="dark"]` / `html[bursit-theme="light"]` or `.bursit-theme-dark` / `.bursit-theme-light`
+- Default values in `:root` (light theme is the default), themed overrides via `html[bursit-theme="dark"]` or the `.dark` class — there is no separate light override block

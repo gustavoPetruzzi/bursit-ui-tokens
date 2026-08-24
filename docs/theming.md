@@ -1,6 +1,6 @@
 # Theming & Dark Mode
 
-The design system supports light and dark themes through CSS custom properties. Themes work with both plain CSS (`tokens.css`) and SCSS.
+The design system supports light and dark themes through CSS custom properties. Themes work with both plain CSS (`index.css`) and SCSS.
 
 ## How It Works
 
@@ -13,9 +13,9 @@ Themes are applied via one of two selectors:
 | Selector | Usage |
 |----------|-------|
 | `html[bursit-theme="dark"]` | Set the attribute on `<html>` |
-| `.bursit-theme-dark` | Add the class to any container |
+| `.dark` | Add the class to any container |
 
-The same applies for light mode: `html[bursit-theme="light"]` or `.bursit-theme-light`.
+Light mode is the `:root` default — there is no separate light override block. Setting `bursit-theme="light"` explicitly is harmless (it simply matches nothing and keeps the defaults).
 
 ### Setting the Theme
 
@@ -27,7 +27,7 @@ The same applies for light mode: `html[bursit-theme="light"]` or `.bursit-theme-
 <html lang="en" bursit-theme="dark">
 
 <!-- Scoped dark theme (only affects children) -->
-<div class="bursit-theme-dark">
+<div class="dark">
   <!-- everything in here is dark -->
 </div>
 ```
@@ -38,36 +38,42 @@ All `--color-*` tokens change value based on the active theme. Use them directly
 
 ### Neutral Scale
 
+The scale inverts in dark mode: `-0` becomes darkest and `-1000` becomes lightest.
+
 | Token | Light | Dark |
 |-------|-------|------|
-| `--color-neutral-0` | `#fafafa` | `#111113` |
-| `--color-neutral-100` | `#f4f4f5` | `#1a1a1f` |
-| `--color-neutral-200` | `#e4e4e7` | `#25252b` |
-| `--color-neutral-300` | `#d4d4d8` | `#31313a` |
-| `--color-neutral-400` | `#a1a1aa` | `#4a4a56` |
-| `--color-neutral-500` | `#71717a` | `#656573` |
-| `--color-neutral-600` | `#52525b` | `#828290` |
-| `--color-neutral-700` | `#3f3f46` | `#a1a1ad` |
-| `--color-neutral-800` | `#27272a` | `#c4c4cc` |
-| `--color-neutral-900` | `#18181b` | `#e3e3e8` |
-| `--color-neutral-1000` | `#09090b` | `#f5f5f7` |
+| `--color-neutral-0` | `#ffffff` | `#080d17` |
+| `--color-neutral-50` | `#f8fafc` | `#0f172a` |
+| `--color-neutral-100` | `#f1f5f9` | `#172033` |
+| `--color-neutral-200` | `#e2e8f0` | `#1e293b` |
+| `--color-neutral-300` | `#cbd5e1` | `#334155` |
+| `--color-neutral-400` | `#94a3b8` | `#475569` |
+| `--color-neutral-500` | `#64748b` | `#64748b` |
+| `--color-neutral-600` | `#475569` | `#94a3b8` |
+| `--color-neutral-700` | `#334155` | `#cbd5e1` |
+| `--color-neutral-800` | `#1e293b` | `#e2e8f0` |
+| `--color-neutral-900` | `#0f172a` | `#f1f5f9` |
+| `--color-neutral-950` | `#080d17` | `#f8fafc` |
+| `--color-neutral-1000` | `#020408` | `#ffffff` |
 
 ### Semantic
 
+Brand and semantic colors switch to lighter steps in dark mode; contrast colors flip to dark text.
+
 | Token | Light | Dark |
 |-------|-------|------|
-| `--color-primary` | `#3b82f6` | `#60a5fa` |
-| `--color-primary-contrast` | `#ffffff` | `#0f172a` |
-| `--color-secondary` | `#8b5cf6` | `#a78bfa` |
-| `--color-secondary-contrast` | `#ffffff` | `#0f172a` |
+| `--color-primary` | `#6366f1` | `#818cf8` |
+| `--color-primary-contrast` | `#ffffff` | `#080d17` |
+| `--color-secondary` | `#06b6d4` | `#22d3ee` |
+| `--color-secondary-contrast` | `#ffffff` | `#080d17` |
 | `--color-success` | `#22c55e` | `#4ade80` |
-| `--color-success-contrast` | `#ffffff` | `#0f172a` |
+| `--color-success-contrast` | `#ffffff` | `#080d17` |
 | `--color-warning` | `#f59e0b` | `#fbbf24` |
-| `--color-warning-contrast` | `#ffffff` | `#0f172a` |
+| `--color-warning-contrast` | `#0f172a` | `#080d17` |
 | `--color-error` | `#ef4444` | `#f87171` |
-| `--color-error-contrast` | `#ffffff` | `#0f172a` |
-| `--color-info` | `#3b82f6` | `#60a5fa` |
-| `--color-info-contrast` | `#ffffff` | `#0f172a` |
+| `--color-error-contrast` | `#ffffff` | `#080d17` |
+| `--color-info` | `#818cf8` | `#a5b4fc` |
+| `--color-info-contrast` | `#ffffff` | `#080d17` |
 
 ## Adding a Custom Theme
 

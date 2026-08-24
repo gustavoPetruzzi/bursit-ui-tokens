@@ -6,10 +6,10 @@ Design tokens for spacing, margins, padding, and gaps.
 
 <div class="spacing-grid">
   <div class="spacing-item">
-    <div class="spacing-preview" style="width: var(--space-2xs); height: var(--space-2xs);"></div>
+    <div class="spacing-preview" style="width: var(--space-xs); height: var(--space-xs);"></div>
     <div class="spacing-info">
-      <code>--space-2xs</code>
-      <span>0.125rem (2px)</span>
+      <code>--space-xs</code>
+      <span>0.25rem (4px)</span>
     </div>
   </div>
   <div class="spacing-item">
@@ -61,6 +61,13 @@ Design tokens for spacing, margins, padding, and gaps.
       <span>4rem (64px)</span>
     </div>
   </div>
+  <div class="spacing-item">
+    <div class="spacing-preview" style="width: var(--space-4xl); height: var(--space-4xl);"></div>
+    <div class="spacing-info">
+      <code>--space-4xl</code>
+      <span>6rem (96px)</span>
+    </div>
+  </div>
 </div>
 
 ## Usage
@@ -84,7 +91,7 @@ Design tokens for spacing, margins, padding, and gaps.
 /* SCSS with mixin */
 .container {
   @include container;
-  @include gap($space-lg);
+  @include gap(var(--space-lg));
 }
 ```
 

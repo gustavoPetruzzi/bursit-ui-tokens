@@ -1,5 +1,7 @@
 # Guía: Publicar y usar un paquete npm
 
+> **⚠️ Desactualizada:** esta guía documenta el flujo manual de publicación anterior al proyecto. Desde v1.0.0 los releases son automáticos: Conventional Commits → Release PR de release-please → merge → publicación a npm vía OIDC. **No incrementes `version` a mano ni corras `npm publish`** — el workflow `release.yml` lo hace solo.
+
 Basado en el proyecto actual `bursit-ui-tokens`.
 
 ## 1. Preparar el paquete
@@ -88,7 +90,7 @@ npm install bursit-ui-tokens
 ### Usarlo como CSS plano:
 
 ```css
-@import 'bursit-ui-tokens/tokens.css';
+@import 'bursit-ui-tokens/index.css';
 ```
 
 ### En Angular:
