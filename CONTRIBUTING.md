@@ -48,9 +48,9 @@ Every commit message must follow the [Conventional Commits](https://www.conventi
 
 ### Scopes used in this repo
 
-Use the component or area as scope:
+Use the component or area as scope (an omitted scope is also fine):
 
-`tokens`, `mixins`, `modal`, `select`, `input`, `button`, `avatar`, `docs`, `ci`
+`tokens`, `mixins`, `modal`, `select`, `input`, `button`, `avatar`, `package`, `docs`, `ci`
 
 ### Breaking changes
 
@@ -93,6 +93,12 @@ refactor(input): use error-text token for helper color
 2. Make your changes with conventional commits
 3. Run `npm run validate` and `npm run build` locally
 4. Open a PR describing what changed and why
+
+**CI enforces these rules:** every pull request runs [commitlint](https://commitlint.js.org) against its commits — non-conforming messages fail the check before merge. You can test locally:
+
+```bash
+npx commitlint --from origin/master --to HEAD --verbose
+```
 
 PRs are squash-merged: make sure the **PR title** also follows Conventional Commits, since it becomes the commit message on `master`.
 
