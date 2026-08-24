@@ -61,7 +61,7 @@
   --select-panel-border-style: solid;
   --select-panel-border-color: var(--input-border-color);
   --select-panel-border-radius: var(--select-border-radius);
-  --select-panel-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --select-panel-shadow: var(--shadow-md);
   --select-panel-max-height: 15rem;
 
   // Placeholder
