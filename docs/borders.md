@@ -144,6 +144,17 @@ Design tokens for borders (radius, width) and shadows (elevation).
   color: var(--color-neutral-500);
 }
 
+/* Shadows bleed outside their box, so don't clip them like radius previews */
+.shadow-item {
+  overflow: visible;
+}
+
+.shadow-preview {
+  width: calc(100% - 5rem);
+  height: 56px;
+  margin: 1.75rem auto 2.5rem;
+}
+
 .token-table {
   margin: 1.5rem 0;
 }
