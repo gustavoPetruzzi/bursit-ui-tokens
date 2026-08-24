@@ -29,8 +29,11 @@ jobs:
       - name: Build package
         run: npm run build
 
+  # Conventional Commits gate: only runs on human-authored pull requests.
+  # release-please's own Release PRs are exempt — their commits use the
+  # reserved 'master' scope and would fail the scope-enum rule.
   commitlint:
-    if: github.event_name == 'pull_request'
+    if: github.event_name == 'pull_request' && github.event.pull_request.user.login != 'github-actions[bot]'
     runs-on: ubuntu-latest
 
     steps:
