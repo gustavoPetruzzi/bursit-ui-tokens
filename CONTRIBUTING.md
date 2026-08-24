@@ -50,7 +50,7 @@ Every commit message must follow the [Conventional Commits](https://www.conventi
 
 Use the component or area as scope (an omitted scope is also fine):
 
-`tokens`, `mixins`, `modal`, `select`, `input`, `button`, `avatar`, `package`, `docs`, `ci`
+`tokens`, `mixins`, `components`, `modal`, `select`, `input`, `button`, `avatar`, `package`, `docs`, `ci`
 
 ### Breaking changes
 

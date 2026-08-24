@@ -16,6 +16,7 @@ export default {
       [
         'tokens',
         'mixins',
+        'components',
         'modal',
         'select',
         'input',
