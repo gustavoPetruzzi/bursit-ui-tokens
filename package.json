@@ -36,7 +36,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/chusti/bursit-ui-tokens"
+    "url": "https://github.com/gustavoPetruzzi/bursit-ui-tokens"
   },
   "peerDependencies": {
     "sass": "^1.69.0"
