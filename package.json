@@ -3,12 +3,12 @@
   "version": "0.1.0",
   "description": "Shared CSS custom properties for Angular and React components",
   "type": "module",
-  "main": "index.scss",
+  "main": "src/index.scss",
   "style": "index.css",
   "exports": {
     ".": {
       "style": "./index.css",
-      "sass": "./index.scss"
+      "sass": "./src/index.scss"
     },
     "./tokens": {
       "sass": "./src/_tokens.scss"
@@ -21,7 +21,7 @@
     }
   },
   "files": [
-    "*.scss",
+    "index.css",
     "src/"
   ],
   "keywords": [
@@ -36,7 +36,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/gustavoPetruzzi/bursit-ui-tokens"
+    "url": "git+https://github.com/gustavoPetruzzi/bursit-ui-tokens.git"
   },
   "peerDependencies": {
     "sass": "^1.69.0"
