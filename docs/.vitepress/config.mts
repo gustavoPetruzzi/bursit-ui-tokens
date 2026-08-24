@@ -1,6 +1,7 @@
 import { defineConfig } from 'vitepress'
 
 export default defineConfig({
+  base: '/bursit-ui-tokens/',
   title: 'bursit-ui-tokens',
   description: 'Shared CSS custom properties for Angular and React components',
   themeConfig: {
@@ -47,7 +48,7 @@ export default defineConfig({
     ],
     footer: {
       message: 'MIT License',
-      copyright: 'Copyright © 2024'
+      copyright: 'Copyright © 2026'
     }
   }
 })
