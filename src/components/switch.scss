@@ -13,7 +13,7 @@
   --switch-checked-bg: var(--color-primary);
   --switch-thumb-size: 1.25rem;
   --switch-thumb-bg: var(--color-neutral-0);
-  --switch-thumb-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.15);
+  --switch-thumb-shadow: var(--shadow-sm);
   --switch-thumb-translate: 0;
   --switch-thumb-translate-checked: calc(var(--switch-width) - var(--switch-thumb-size) - var(--switch-padding) * 2);
   --switch-hover-bg: var(--color-neutral-400);
@@ -21,7 +21,7 @@
   --switch-disabled-bg: var(--color-neutral-200);
   --switch-disabled-checked-bg: var(--color-neutral-300);
   --switch-disabled-thumb-bg: var(--color-neutral-200);
-  --switch-disabled-thumb-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --switch-disabled-thumb-shadow: var(--shadow-xs);
   --switch-disabled-opacity: 0.6;
   --switch-thumb-ease: var(--ease-spring);
   --switch-focus-shadow: var(--shadow-glow-primary);
