@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.1.0](https://github.com/gustavoPetruzzi/bursit-ui-tokens/compare/v1.0.0...v1.1.0) (2026-08-25)
+
+
+### Features
+
+* **tokens:** expose border-style across components ([#6](https://github.com/gustavoPetruzzi/bursit-ui-tokens/issues/6)) ([8075422](https://github.com/gustavoPetruzzi/bursit-ui-tokens/commit/80754229b683b4ffb081850257bf9dae3259e562))
+
+
+### Bug Fixes
+
+* **ci:** skip commitlint for bot-authored pull requests ([#5](https://github.com/gustavoPetruzzi/bursit-ui-tokens/issues/5)) ([749277d](https://github.com/gustavoPetruzzi/bursit-ui-tokens/commit/749277df62d84cada7b18bff49f725f78cd5fc2c))
+* **components:** replace deprecated clip and migrate hardcoded shadows to token scale ([#2](https://github.com/gustavoPetruzzi/bursit-ui-tokens/issues/2)) ([bb71277](https://github.com/gustavoPetruzzi/bursit-ui-tokens/commit/bb712777192ac7c09204e22173ab7a86470ba1c6))
+
 ## 1.0.0 (2026-08-24)
 
 
