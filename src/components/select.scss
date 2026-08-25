@@ -58,7 +58,7 @@
   // Panel (dropdown)
   --select-panel-bg: var(--color-bg-elevated);
   --select-panel-border-width: 1px;
-  --select-panel-border-style: solid;
+  --select-panel-border-style: var(--border-style);
   --select-panel-border-color: var(--input-border-color);
   --select-panel-border-radius: var(--select-border-radius);
   --select-panel-shadow: var(--shadow-md);

@@ -7,6 +7,7 @@
 :root {
   --alert-border-radius: var(--radius-md);
   --alert-border-width: var(--border-width-thin);
+  --alert-border-style: var(--border-style);
   --alert-padding-y: var(--space-sm);
   --alert-padding-x: var(--space-md);
   --alert-font-size: var(--font-size-sm);
@@ -46,6 +47,7 @@
   --toast-shadow: var(--shadow-lg);
   --toast-border-radius: var(--radius-md);
   --toast-border-width: var(--border-width-thin);
+  --toast-border-style: var(--border-style);
   --toast-border-color: var(--color-neutral-200);
   --toast-padding: var(--space-md);
   --toast-min-width: 20rem;
