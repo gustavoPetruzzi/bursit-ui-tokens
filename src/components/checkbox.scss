@@ -9,7 +9,7 @@
   --checkbox-border-width: var(--border-width-thin);
   --checkbox-border-style: var(--border-style);
   --checkbox-border-color: var(--color-neutral-300);
-  --checkbox-border-radius: var(--radius-sm);
+  --checkbox-border-radius: 0;
   --checkbox-bg: var(--color-neutral-0);
   --checkbox-checked-bg: var(--color-primary);
   --checkbox-checked-border-color: var(--color-primary);
@@ -34,4 +34,12 @@
   // Error state
   --checkbox-error-border-color: var(--color-error);
   --checkbox-error-focus-shadow: 0 0 0 3px var(--color-error-alpha-15);
+
+  // Label
+  --checkbox-label-color: var(--color-text);
+  --checkbox-label-font-size: var(--font-size-sm);
+  --checkbox-label-font-weight: var(--font-weight-normal);
+  --checkbox-label-line-height: var(--line-height-normal);
+  --checkbox-label-gap: var(--space-sm);
+  --checkbox-label-disabled-color: var(--color-text-subtle);
 }
