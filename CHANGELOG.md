@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.2.0](https://github.com/gustavoPetruzzi/bursit-ui-tokens/compare/v1.1.0...v1.2.0) (2026-08-31)
+
+
+### Features
+
+* **tokens:** expose border-style across components ([#9](https://github.com/gustavoPetruzzi/bursit-ui-tokens/issues/9)) ([c2fe4e3](https://github.com/gustavoPetruzzi/bursit-ui-tokens/commit/c2fe4e3534b063e96ef7dc018389e13520f16b02))
+* **tokens:** use muted text token for select placeholder ([#11](https://github.com/gustavoPetruzzi/bursit-ui-tokens/issues/11)) ([a4a93f1](https://github.com/gustavoPetruzzi/bursit-ui-tokens/commit/a4a93f17cbf1f5e7e81dde443f1522f42407fc8e))
+
 ## [1.1.0](https://github.com/gustavoPetruzzi/bursit-ui-tokens/compare/v1.0.0...v1.1.0) (2026-08-25)
 
 
