@@ -1,0 +1,20 @@
+// =============================================================================
+// Toast Tokens - CSS Custom Properties
+// =============================================================================
+// Tokens for toast notification components.
+// =============================================================================
+
+:root {
+  --toast-bg: var(--color-bg-elevated);
+  --toast-shadow: var(--shadow-lg);
+  --toast-border-radius: var(--radius-md);
+  --toast-border-width: var(--border-width-thin);
+  --toast-border-style: var(--border-style);
+  --toast-border-color: var(--color-neutral-200);
+  --toast-padding: var(--space-md);
+  --toast-min-width: 20rem;
+  --toast-max-width: 24rem;
+  --toast-enter-ease: var(--ease-spring);
+  --toast-enter-duration: var(--duration-slow);
+  --toast-z-index: var(--z-index-toast);
+}
