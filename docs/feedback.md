@@ -139,7 +139,7 @@ Floating notification (extends alert patterns).
 |-------|---------|-------------|
 | `--toast-min-width` | `20rem` | Minimum width |
 | `--toast-max-width` | `24rem` | Maximum width |
-| `--toast-z-index` | `var(--z-index-tooltip)` | Stacking order |
+| `--toast-z-index` | `var(--z-index-toast)` (600) | Stacking order |
 
 ## Progress
 
