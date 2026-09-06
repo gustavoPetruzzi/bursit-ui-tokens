@@ -17,4 +17,28 @@
   --toast-enter-ease: var(--ease-spring);
   --toast-enter-duration: var(--duration-slow);
   --toast-z-index: var(--z-index-toast);
+
+  // Variant: Info
+  --toast-info-bg: var(--color-info-alpha-10);
+  --toast-info-border-color: var(--color-info);
+  --toast-info-color: var(--color-info);
+  --toast-info-icon-color: var(--color-info);
+
+  // Variant: Success
+  --toast-success-bg: var(--color-success-alpha-10);
+  --toast-success-border-color: var(--color-success);
+  --toast-success-color: var(--color-success);
+  --toast-success-icon-color: var(--color-success);
+
+  // Variant: Warning
+  --toast-warning-bg: var(--color-warning-alpha-10);
+  --toast-warning-border-color: var(--color-warning);
+  --toast-warning-color: var(--color-warning);
+  --toast-warning-icon-color: var(--color-warning);
+
+  // Variant: Error
+  --toast-error-bg: var(--color-error-alpha-10);
+  --toast-error-border-color: var(--color-error);
+  --toast-error-color: var(--color-error);
+  --toast-error-icon-color: var(--color-error);
 }
