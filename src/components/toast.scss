@@ -23,14 +23,13 @@
   --toast-enter-duration: var(--duration-slow);
   --toast-z-index: var(--z-index-toast);
 
-  // Toast layout tokens
+// Toast layout tokens
   --toast-gap: var(--space-sm);
   --toast-exit-duration: var(--duration-fast);
   --toast-exit-ease: var(--ease-in);
   --toast-icon-size: 1.25rem;
   --toast-close-size: 1.5rem;
   --toast-position-offset: var(--space-lg);
-
   // Variant: Info
   --toast-info-bg: var(--color-info-alpha-10);
   --toast-info-border-color: var(--color-info-text);
