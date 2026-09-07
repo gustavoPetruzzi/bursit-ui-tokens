@@ -58,10 +58,12 @@ $green-400: #4ade80;
 $green-500: #22c55e;
 $green-600: #16a34a;
 $green-700: #15803d;
+$green-800: #166534;
 
 $amber-400: #fbbf24;
 $amber-500: #f59e0b;
 $amber-600: #d97706;
+$amber-800: #92400e;
 
 $red-400: #f87171;
 $red-500: #ef4444;
@@ -128,6 +130,7 @@ $red-700: #b91c1c;
   --color-success-contrast: #{$neutral-0};
   --color-success-alpha-10: #{rgba($green-500, 0.1)};
   --color-success-alpha-15: #{rgba($green-500, 0.15)};
+  --color-success-text: #{$green-800}; // WCAG AA on light tinted backgrounds
 
   // ---------------------------------------------------------------------------
   // Semantic — Warning
@@ -139,6 +142,7 @@ $red-700: #b91c1c;
   --color-warning-contrast: #{$neutral-900};
   --color-warning-alpha-10: #{rgba($amber-500, 0.1)};
   --color-warning-alpha-15: #{rgba($amber-500, 0.15)};
+  --color-warning-text: #{$amber-800}; // WCAG AA on light tinted backgrounds
 
   // ---------------------------------------------------------------------------
   // Semantic — Error
@@ -150,7 +154,7 @@ $red-700: #b91c1c;
   --color-error-contrast: #{$neutral-0};
   --color-error-alpha-10: #{rgba($red-500, 0.1)};
   --color-error-alpha-15: #{rgba($red-500, 0.15)};
-  --color-error-text: #{$red-600}; // WCAG AA on light bg
+  --color-error-text: #{$red-700}; // WCAG AA on light bg and alpha-10 tinted backgrounds
 
   // ---------------------------------------------------------------------------
   // Semantic — Info (índigo claro, diferente del primary)
@@ -160,6 +164,7 @@ $red-700: #b91c1c;
   --color-info-contrast: #{$neutral-0};
   --color-info-alpha-10: #{rgba($indigo-400, 0.1)};
   --color-info-alpha-15: #{rgba($indigo-400, 0.15)};
+  --color-info-text: #{$indigo-600}; // WCAG AA on light tinted backgrounds
 
   // ---------------------------------------------------------------------------
   // Surfaces & backgrounds
@@ -389,6 +394,7 @@ $red-700: #b91c1c;
   --color-success-contrast: #{$neutral-950};
   --color-success-alpha-10: #{rgba($green-400, 0.12)};
   --color-success-alpha-15: #{rgba($green-400, 0.18)};
+  --color-success-text: #{$green-400}; // WCAG AA on dark tinted backgrounds
 
   --color-warning: #{$amber-400};
   --color-warning-hover: #{$amber-500};
@@ -396,6 +402,7 @@ $red-700: #b91c1c;
   --color-warning-contrast: #{$neutral-950};
   --color-warning-alpha-10: #{rgba($amber-400, 0.12)};
   --color-warning-alpha-15: #{rgba($amber-400, 0.18)};
+  --color-warning-text: #{$amber-400}; // WCAG AA on dark tinted backgrounds
 
   --color-error: #{$red-400};
   --color-error-hover: #{$red-500};
@@ -409,6 +416,7 @@ $red-700: #b91c1c;
   --color-info-contrast: #{$neutral-950};
   --color-info-alpha-10: #{rgba($indigo-300, 0.12)};
   --color-info-alpha-15: #{rgba($indigo-300, 0.18)};
+  --color-info-text: #{$indigo-300}; // WCAG AA on dark tinted backgrounds
 
   // ---------------------------------------------------------------------------
   // Surfaces
