@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.3.0](https://github.com/gustavoPetruzzi/bursit-ui-tokens/compare/v1.2.0...v1.3.0) (2026-09-07)
+
+
+### Features
+
+* **tokens:** add toast layout tokens ([#15](https://github.com/gustavoPetruzzi/bursit-ui-tokens/issues/15)) ([70f0f88](https://github.com/gustavoPetruzzi/bursit-ui-tokens/commit/70f0f8898729c87c08d4d3d66e09fd440ca1c464))
+* **tokens:** add toast status variant tokens (WCAG AA accessible) ([#13](https://github.com/gustavoPetruzzi/bursit-ui-tokens/issues/13)) ([a63e6b6](https://github.com/gustavoPetruzzi/bursit-ui-tokens/commit/a63e6b6a1d298a2bc6071b288efec5b66c2dd214))
+
 ## [1.2.0](https://github.com/gustavoPetruzzi/bursit-ui-tokens/compare/v1.1.0...v1.2.0) (2026-09-06)
 
 
