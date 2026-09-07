@@ -140,6 +140,12 @@ Floating notification (extends alert patterns).
 | `--toast-min-width` | `20rem` | Minimum width |
 | `--toast-max-width` | `24rem` | Maximum width |
 | `--toast-z-index` | `var(--z-index-toast)` (600) | Stacking order |
+| `--toast-gap` | `var(--space-sm)` | Gap between stacked toasts |
+| `--toast-exit-duration` | `var(--duration-fast)` | Exit animation duration |
+| `--toast-exit-ease` | `var(--ease-in)` | Exit animation easing |
+| `--toast-icon-size` | `1.25rem` | Type icon size |
+| `--toast-close-size` | `1.5rem` | Close button size |
+| `--toast-position-offset` | `var(--space-lg)` | Distance from viewport edge |
 
 ## Progress
 
