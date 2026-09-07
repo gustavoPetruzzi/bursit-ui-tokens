@@ -148,7 +148,7 @@ The scale inverts in dark mode: `-0` becomes darkest and `-1000` becomes lightes
 | `--color-error-hover` | `#dc2626` | Hover state |
 | `--color-error-active` | `#b91c1c` | Active state |
 | `--color-error-contrast` | `#ffffff` | Text on error |
-| `--color-error-text` | `#dc2626` | Error text on light backgrounds (WCAG AA) — `#f87171` in dark mode |
+| `--color-error-text` | `#b91c1c` | Error text on light backgrounds and alpha tinted surfaces (WCAG AA) — `#f87171` in dark mode |
 | `--color-info` | `#818cf8` | Informational messages (light indigo, distinct from primary) |
 | `--color-info-contrast` | `#ffffff` | Text on info |
 

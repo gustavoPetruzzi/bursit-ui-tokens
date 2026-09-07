@@ -2,6 +2,11 @@
 // Toast Tokens - CSS Custom Properties
 // =============================================================================
 // Tokens for toast notification components.
+//
+// Accessibility: --toast-*-color and --toast-*-border-color point to the
+// per-variant -text semantic tokens, which are tuned to pass WCAG AA
+// on their alpha tinted backgrounds (text needs 4.5:1, borders/UI graphics
+// need 3:1) in both light and dark mode.
 // =============================================================================
 
 :root {
@@ -20,25 +25,25 @@
 
   // Variant: Info
   --toast-info-bg: var(--color-info-alpha-10);
-  --toast-info-border-color: var(--color-info);
-  --toast-info-color: var(--color-info);
-  --toast-info-icon-color: var(--color-info);
+  --toast-info-border-color: var(--color-info-text);
+  --toast-info-color: var(--color-info-text);
+  --toast-info-icon-color: var(--color-info-text);
 
   // Variant: Success
   --toast-success-bg: var(--color-success-alpha-10);
-  --toast-success-border-color: var(--color-success);
-  --toast-success-color: var(--color-success);
-  --toast-success-icon-color: var(--color-success);
+  --toast-success-border-color: var(--color-success-text);
+  --toast-success-color: var(--color-success-text);
+  --toast-success-icon-color: var(--color-success-text);
 
   // Variant: Warning
   --toast-warning-bg: var(--color-warning-alpha-10);
-  --toast-warning-border-color: var(--color-warning);
-  --toast-warning-color: var(--color-warning);
-  --toast-warning-icon-color: var(--color-warning);
+  --toast-warning-border-color: var(--color-warning-text);
+  --toast-warning-color: var(--color-warning-text);
+  --toast-warning-icon-color: var(--color-warning-text);
 
   // Variant: Error
   --toast-error-bg: var(--color-error-alpha-10);
-  --toast-error-border-color: var(--color-error);
-  --toast-error-color: var(--color-error);
-  --toast-error-icon-color: var(--color-error);
+  --toast-error-border-color: var(--color-error-text);
+  --toast-error-color: var(--color-error-text);
+  --toast-error-icon-color: var(--color-error-text);
 }
