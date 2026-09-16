@@ -11,7 +11,7 @@ Primary and secondary brand colors for actions and accents.
     <span class="swatch-preview"></span>
     <div class="swatch-info">
       <code>--color-primary</code>
-      <span>#3b82f6</span>
+      <span>#ba3b54</span>
     </div>
   </div>
   <div class="color-swatch" style="--color: var(--color-primary-contrast); --text: var(--color-primary)">
@@ -25,21 +25,21 @@ Primary and secondary brand colors for actions and accents.
     <span class="swatch-preview"></span>
     <div class="swatch-info">
       <code>--color-primary-hover</code>
-      <span>#2563eb</span>
+      <span>#9d3449</span>
     </div>
   </div>
   <div class="color-swatch" style="--color: var(--color-primary-active)">
     <span class="swatch-preview"></span>
     <div class="swatch-info">
       <code>--color-primary-active</code>
-      <span>#1d4ed8</span>
+      <span>#7f2f3f</span>
     </div>
   </div>
   <div class="color-swatch" style="--color: var(--color-secondary)">
     <span class="swatch-preview"></span>
     <div class="swatch-info">
       <code>--color-secondary</code>
-      <span>#8b5cf6</span>
+      <span>#3a6b9c</span>
     </div>
   </div>
   <div class="color-swatch" style="--color: var(--color-secondary-contrast); --text: var(--color-secondary)">
@@ -60,84 +60,84 @@ Grayscale palette from lightest (0) to darkest (1000).
     <span class="swatch-preview"></span>
     <div class="swatch-info">
       <code>--color-neutral-0</code>
-      <span>#fafafa</span>
+      <span>#ffffff</span>
     </div>
   </div>
   <div class="color-swatch" style="--color: var(--color-neutral-50)">
     <span class="swatch-preview"></span>
     <div class="swatch-info">
       <code>--color-neutral-50</code>
-      <span>#ffffff</span>
+      <span>#f9fafb</span>
     </div>
   </div>
   <div class="color-swatch" style="--color: var(--color-neutral-100)">
     <span class="swatch-preview"></span>
     <div class="swatch-info">
       <code>--color-neutral-100</code>
-      <span>#f4f4f5</span>
+      <span>#eff2f5</span>
     </div>
   </div>
   <div class="color-swatch" style="--color: var(--color-neutral-200)">
     <span class="swatch-preview"></span>
     <div class="swatch-info">
       <code>--color-neutral-200</code>
-      <span>#e4e4e7</span>
+      <span>#dde3e9</span>
     </div>
   </div>
   <div class="color-swatch" style="--color: var(--color-neutral-300)">
     <span class="swatch-preview"></span>
     <div class="swatch-info">
       <code>--color-neutral-300</code>
-      <span>#d4d4d8</span>
+      <span>#c0c9d3</span>
     </div>
   </div>
   <div class="color-swatch" style="--color: var(--color-neutral-400)">
     <span class="swatch-preview"></span>
     <div class="swatch-info">
       <code>--color-neutral-400</code>
-      <span>#a1a1aa</span>
+      <span>#9aa8b6</span>
     </div>
   </div>
   <div class="color-swatch" style="--color: var(--color-neutral-500)">
     <span class="swatch-preview"></span>
     <div class="swatch-info">
       <code>--color-neutral-500</code>
-      <span>#71717a</span>
+      <span>#647587</span>
     </div>
   </div>
   <div class="color-swatch" style="--color: var(--color-neutral-600)">
     <span class="swatch-preview"></span>
     <div class="swatch-info">
       <code>--color-neutral-600</code>
-      <span>#52525b</span>
+      <span>#505e6d</span>
     </div>
   </div>
   <div class="color-swatch" style="--color: var(--color-neutral-700)">
     <span class="swatch-preview"></span>
     <div class="swatch-info">
       <code>--color-neutral-700</code>
-      <span>#3f3f46</span>
+      <span>#3e4a56</span>
     </div>
   </div>
   <div class="color-swatch" style="--color: var(--color-neutral-800)">
     <span class="swatch-preview"></span>
     <div class="swatch-info">
       <code>--color-neutral-800</code>
-      <span>#27272a</span>
+      <span>#313b44</span>
     </div>
   </div>
   <div class="color-swatch" style="--color: var(--color-neutral-900)">
     <span class="swatch-preview"></span>
     <div class="swatch-info">
       <code>--color-neutral-900</code>
-      <span>#18181b</span>
+      <span>#272e35</span>
     </div>
   </div>
   <div class="color-swatch" style="--color: var(--color-neutral-1000)">
     <span class="swatch-preview"></span>
     <div class="swatch-info">
       <code>--color-neutral-1000</code>
-      <span>#09090b</span>
+      <span>#111418</span>
     </div>
   </div>
 </div>
@@ -165,28 +165,28 @@ Colors for success, warning, error, and info states.
     <span class="swatch-preview"></span>
     <div class="swatch-info">
       <code>--color-error</code>
-      <span>#ef4444</span>
+      <span>#dc2626</span>
     </div>
   </div>
   <div class="color-swatch" style="--color: var(--color-error-hover)">
     <span class="swatch-preview"></span>
     <div class="swatch-info">
       <code>--color-error-hover</code>
-      <span>#dc2626</span>
+      <span>#b91c1c</span>
     </div>
   </div>
   <div class="color-swatch" style="--color: var(--color-error-active)">
     <span class="swatch-preview"></span>
     <div class="swatch-info">
       <code>--color-error-active</code>
-      <span>#b91c1c</span>
+      <span>#991b1b</span>
     </div>
   </div>
   <div class="color-swatch" style="--color: var(--color-info)">
     <span class="swatch-preview"></span>
     <div class="swatch-info">
       <code>--color-info</code>
-      <span>#3b82f6</span>
+      <span>#2563eb</span>
     </div>
   </div>
 </div>

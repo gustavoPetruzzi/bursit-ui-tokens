@@ -5,7 +5,7 @@
 
 > Framework-agnostic design tokens using CSS custom properties. Works with Angular, React, Vue, Svelte, or plain HTML/CSS.
 
-**Brand palette:** electric indigo + cool cyan. Dark and light themes built in.
+**Brand palette:** wine + steel. Dark and light themes built in.
 
 ## Installation
 
@@ -92,43 +92,54 @@ Dark mode redefines only the tokens that change between modes (colors, shadows).
 
 Values shown are **light theme defaults**. In dark mode, brand and semantic colors switch to lighter steps, neutrals invert their scale (`--color-neutral-0` becomes darkest), and shadows get stronger.
 
-### Colors — Brand Primary (Indigo)
+### Colors — Brand Primary (Wine)
 
 | Token | Default | Description |
 |-------|---------|-------------|
-| `--color-primary` | `#6366f1` | Indigo 500 — primary brand color |
-| `--color-primary-hover` | `#4f46e5` | Hover state (indigo 600) |
-| `--color-primary-active` | `#4338ca` | Active/pressed state (indigo 700) |
-| `--color-primary-subtle` | `#eef2ff` | Tinted background (indigo 50) |
+| `--color-primary` | `#ba3b54` | Wine 500 — primary brand color |
+| `--color-primary-hover` | `#9d3449` | Hover state (wine 600) |
+| `--color-primary-active` | `#7f2f3f` | Active/pressed state (wine 700) |
+| `--color-primary-subtle` | `#fcf3f5` | Tinted background (wine 50) |
 | `--color-primary-contrast` | `#ffffff` | Text on primary |
 
-### Colors — Secondary (Cyan)
+### Colors — Secondary (Steel)
 
 | Token | Default | Description |
 |-------|---------|-------------|
-| `--color-secondary` | `#06b6d4` | Cyan 500 — secondary brand color |
-| `--color-secondary-hover` | `#0891b2` | Hover state (cyan 600) |
-| `--color-secondary-active` | `#0e7490` | Active state (cyan 700) |
-| `--color-secondary-subtle` | `#ecfeff` | Tinted background (cyan 50) |
+| `--color-secondary` | `#3a6b9c` | Steel 500 — secondary brand color |
+| `--color-secondary-hover` | `#305982` | Hover state (steel 600) |
+| `--color-secondary-active` | `#294765` | Active state (steel 700) |
+| `--color-secondary-strong` | `#23384d` | Strong secondary background (steel 800) — `--btn-secondary-hover-bg` |
+| `--color-secondary-subtle` | `#f5f7fa` | Tinted background (steel 50) |
 | `--color-secondary-contrast` | `#ffffff` | Text on secondary |
+
+### Colors — Brand Mark
+
+Mode-independent and mode-register brand anchors for the logo mark placeholders.
+
+| Token | Default | Description |
+|-------|---------|-------------|
+| `--color-brand-field` | `#22282e` | Brand plate / field (same in both modes) |
+| `--color-brand-mark-bright` | `#835a60` | Brand mark bright facet (dark mode: `#e8a1af`) |
+| `--color-brand-mark-deep` | `#4e383e` | Brand mark deep facet (dark mode: `#d77588`) |
 
 ### Colors — Neutral
 
 | Token | Default | Description |
 |-------|---------|-------------|
 | `--color-neutral-0` | `#ffffff` | Pure white |
-| `--color-neutral-50` | `#f8fafc` | Lightest neutral |
-| `--color-neutral-100` | `#f1f5f9` | Sunken backgrounds |
-| `--color-neutral-200` | `#e2e8f0` | Subtle borders |
-| `--color-neutral-300` | `#cbd5e1` | Strong borders, disabled states |
-| `--color-neutral-400` | `#94a3b8` | Placeholder, subtle text |
-| `--color-neutral-500` | `#64748b` | Muted text |
-| `--color-neutral-600` | `#475569` | Secondary text (dark mode) |
-| `--color-neutral-700` | `#334155` | Headings on dark surfaces |
-| `--color-neutral-800` | `#1e293b` | Elevated dark backgrounds |
-| `--color-neutral-900` | `#0f172a` | Body text (light mode) |
-| `--color-neutral-950` | `#080d17` | Page background (dark mode) |
-| `--color-neutral-1000` | `#020408` | Darkest step |
+| `--color-neutral-50` | `#f9fafb` | Lightest neutral |
+| `--color-neutral-100` | `#eff2f5` | Sunken backgrounds |
+| `--color-neutral-200` | `#dde3e9` | Subtle borders |
+| `--color-neutral-300` | `#c0c9d3` | Strong borders, disabled states |
+| `--color-neutral-400` | `#9aa8b6` | Placeholder, subtle text |
+| `--color-neutral-500` | `#647587` | Muted text |
+| `--color-neutral-600` | `#505e6d` | Secondary text |
+| `--color-neutral-700` | `#3e4a56` | Headings on dark surfaces |
+| `--color-neutral-800` | `#313b44` | Elevated dark backgrounds |
+| `--color-neutral-900` | `#272e35` | Body text (light mode) |
+| `--color-neutral-950` | `#22282e` | Page background (dark mode) |
+| `--color-neutral-1000` | `#111418` | Darkest step |
 
 The scale inverts in dark mode: `-0` becomes darkest and `-1000` becomes lightest, so components keep working without changes.
 
@@ -139,54 +150,58 @@ The scale inverts in dark mode: `-0` becomes darkest and `-1000` becomes lightes
 | `--color-success` | `#22c55e` | Positive feedback |
 | `--color-success-hover` | `#16a34a` | Hover state |
 | `--color-success-active` | `#15803d` | Active state |
-| `--color-success-contrast` | `#ffffff` | Text on success |
+| `--color-success-contrast` | `#22282e` | Text on success (dark ink for AA contrast) |
+| `--color-success-text` | `#166534` | Success text on light backgrounds and alpha tinted surfaces (WCAG AA) — `#4ade80` in dark mode |
 | `--color-warning` | `#f59e0b` | Alerts, caution |
 | `--color-warning-hover` | `#d97706` | Hover state |
 | `--color-warning-active` | `#d97706` | Active state |
-| `--color-warning-contrast` | `#0f172a` | Text on warning (dark text for AA contrast) |
-| `--color-error` | `#ef4444` | Errors, invalid states |
-| `--color-error-hover` | `#dc2626` | Hover state |
-| `--color-error-active` | `#b91c1c` | Active state |
+| `--color-warning-contrast` | `#272e35` | Text on warning (dark text for AA contrast) |
+| `--color-warning-text` | `#92400e` | Warning text on light backgrounds and alpha tinted surfaces (WCAG AA) — `#fbbf24` in dark mode |
+| `--color-error` | `#dc2626` | Errors, invalid states |
+| `--color-error-hover` | `#b91c1c` | Hover state |
+| `--color-error-active` | `#991b1b` | Active state |
 | `--color-error-contrast` | `#ffffff` | Text on error |
 | `--color-error-text` | `#b91c1c` | Error text on light backgrounds and alpha tinted surfaces (WCAG AA) — `#f87171` in dark mode |
-| `--color-info` | `#818cf8` | Informational messages (light indigo, distinct from primary) |
+| `--color-info` | `#2563eb` | Informational messages (blue, distinct from primary) |
 | `--color-info-contrast` | `#ffffff` | Text on info |
+| `--color-info-text` | `#1d4ed8` | Info text on light backgrounds and alpha tinted surfaces (WCAG AA) — `#60a5fa` in dark mode |
 
 ### Colors — Alpha Variants
 
 | Token | Default | Description |
 |-------|---------|-------------|
-| `--color-primary-alpha-8` | `rgb(99 102 241 / 0.08)` | Subtle primary background |
-| `--color-primary-alpha-15` | `rgb(99 102 241 / 0.15)` | Primary background |
-| `--color-primary-alpha-20` | `rgb(99 102 241 / 0.2)` | Primary background (stronger) |
-| `--color-secondary-alpha-8` | `rgb(6 182 212 / 0.08)` | Subtle secondary background |
-| `--color-secondary-alpha-15` | `rgb(6 182 212 / 0.15)` | Secondary background |
+| `--color-primary-alpha-8` | `rgb(186 59 84 / 0.08)` | Subtle primary background |
+| `--color-primary-alpha-15` | `rgb(186 59 84 / 0.15)` | Primary background |
+| `--color-primary-alpha-20` | `rgb(186 59 84 / 0.2)` | Primary background (stronger) |
+| `--color-secondary-alpha-8` | `rgb(58 107 156 / 0.08)` | Subtle secondary background |
+| `--color-secondary-alpha-15` | `rgb(58 107 156 / 0.15)` | Secondary background |
 | `--color-success-alpha-10` | `rgb(34 197 94 / 0.1)` | Success background |
 | `--color-success-alpha-15` | `rgb(34 197 94 / 0.15)` | Success background (stronger) |
 | `--color-warning-alpha-10` | `rgb(245 158 11 / 0.1)` | Warning background |
 | `--color-warning-alpha-15` | `rgb(245 158 11 / 0.15)` | Warning background (stronger) |
-| `--color-error-alpha-10` | `rgb(239 68 68 / 0.1)` | Error background |
-| `--color-error-alpha-15` | `rgb(239 68 68 / 0.15)` | Error background (stronger) |
-| `--color-info-alpha-10` | `rgb(129 140 248 / 0.1)` | Info background |
-| `--color-info-alpha-15` | `rgb(129 140 248 / 0.15)` | Info background (stronger) |
-| `--color-overlay` | `rgb(15 23 42 / 0.55)` | Modal backdrop |
+| `--color-error-alpha-10` | `rgb(220 38 38 / 0.1)` | Error background |
+| `--color-error-alpha-15` | `rgb(220 38 38 / 0.15)` | Error background (stronger) |
+| `--color-info-alpha-10` | `rgb(37 99 235 / 0.1)` | Info background |
+| `--color-info-alpha-15` | `rgb(37 99 235 / 0.15)` | Info background (stronger) |
+| `--color-overlay` | `rgb(39 46 53 / 0.55)` | Modal backdrop |
 | `--color-white-alpha-15` | `rgb(255 255 255 / 0.15)` | Pattern overlays |
-| `--color-black-alpha-10` | `rgb(2 4 8 / 0.1)` | Utility shadow tint |
+| `--color-black-alpha-10` | `rgb(17 20 24 / 0.1)` | Utility shadow tint |
 
 ### Colors — Surfaces, Text & Borders
 
 | Token | Default | Description |
 |-------|---------|-------------|
-| `--color-bg` | `#f8fafc` | Page background |
+| `--color-bg` | `#f9fafb` | Page background |
 | `--color-bg-elevated` | `#ffffff` | Cards, panels, modals |
-| `--color-bg-sunken` | `#f1f5f9` | Wells, inset areas |
-| `--color-text` | `#0f172a` | Body text |
-| `--color-text-muted` | `#64748b` | Secondary text |
-| `--color-text-subtle` | `#94a3b8` | Placeholders, hints |
+| `--color-bg-sunken` | `#eff2f5` | Wells, inset areas |
+| `--color-text` | `#272e35` | Body text |
+| `--color-text-muted` | `#505e6d` | Secondary text |
+| `--color-text-subtle` | `#505e6d` | Placeholders, hints |
 | `--color-text-inverse` | `#ffffff` | Text on colored fills |
-| `--color-border` | `#e2e8f0` | Default borders |
-| `--color-border-strong` | `#cbd5e1` | Emphasized borders |
-| `--color-focus-ring` | `rgb(99 102 241 / 0.4)` | Focus indicator color |
+| `--color-border` | `#dde3e9` | Default borders |
+| `--color-border-strong` | `#c0c9d3` | Emphasized borders |
+| `--color-border-control` | `#647587` | Control borders — ≥3:1 UI contrast (`#9aa8b6` in dark mode) |
+| `--color-focus-ring` | `rgb(186 59 84 / 0.7)` | Focus indicator color |
 
 ### Typography — Font Family
 
@@ -278,19 +293,19 @@ The scale inverts in dark mode: `-0` becomes darkest and `-1000` becomes lightes
 
 ### Shadows
 
-Tinted with indigo for coherence with the brand. All get stronger in dark mode.
+Tinted with wine for coherence with the brand. All get stronger in dark mode.
 
 | Token | Default | Description |
 |-------|---------|-------------|
-| `--shadow-xs` | `0 1px 2px 0 rgb(30 27 75 / 0.04)` | Hairline elevation |
-| `--shadow-sm` | `0 1px 3px 0 rgb(30 27 75 / 0.08), 0 1px 2px -1px rgb(30 27 75 / 0.06)` | Subtle elevation |
-| `--shadow-md` | `0 4px 6px -1px rgb(30 27 75 / 0.08), 0 2px 4px -2px rgb(30 27 75 / 0.06)` | Cards, dropdowns |
-| `--shadow-lg` | `0 10px 15px -3px rgb(30 27 75 / 0.08), 0 4px 6px -4px rgb(30 27 75 / 0.05)` | Popovers |
-| `--shadow-xl` | `0 20px 25px -5px rgb(30 27 75 / 0.1), 0 8px 10px -6px rgb(30 27 75 / 0.06)` | Modals |
-| `--shadow-2xl` | `0 25px 50px -12px rgb(30 27 75 / 0.2)` | Full-screen overlays |
-| `--shadow-inner` | `inset 0 2px 4px 0 rgb(30 27 75 / 0.06)` | Inset wells |
-| `--shadow-glow-primary` | `0 0 0 3px rgb(99 102 241 / 0.3)` | Primary accent glow |
-| `--shadow-glow-secondary` | `0 0 0 3px rgb(6 182 212 / 0.3)` | Secondary accent glow |
+| `--shadow-xs` | `0 1px 2px 0 rgb(44 23 27 / 0.04)` | Hairline elevation |
+| `--shadow-sm` | `0 1px 3px 0 rgb(44 23 27 / 0.08), 0 1px 2px -1px rgb(44 23 27 / 0.06)` | Subtle elevation |
+| `--shadow-md` | `0 4px 6px -1px rgb(44 23 27 / 0.08), 0 2px 4px -2px rgb(44 23 27 / 0.06)` | Cards, dropdowns |
+| `--shadow-lg` | `0 10px 15px -3px rgb(44 23 27 / 0.08), 0 4px 6px -4px rgb(44 23 27 / 0.05)` | Popovers |
+| `--shadow-xl` | `0 20px 25px -5px rgb(44 23 27 / 0.1), 0 8px 10px -6px rgb(44 23 27 / 0.06)` | Modals |
+| `--shadow-2xl` | `0 25px 50px -12px rgb(44 23 27 / 0.2)` | Full-screen overlays |
+| `--shadow-inner` | `inset 0 2px 4px 0 rgb(44 23 27 / 0.06)` | Inset wells |
+| `--shadow-glow-primary` | `0 0 0 3px rgb(186 59 84 / 0.7)` | Primary accent glow / focus ring |
+| `--shadow-glow-secondary` | `0 0 0 3px rgb(58 107 156 / 0.3)` | Secondary accent glow |
 
 ### Motion — Duration
 
