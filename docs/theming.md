@@ -42,19 +42,19 @@ The scale inverts in dark mode: `-0` becomes darkest and `-1000` becomes lightes
 
 | Token | Light | Dark |
 |-------|-------|------|
-| `--color-neutral-0` | `#ffffff` | `#080d17` |
-| `--color-neutral-50` | `#f8fafc` | `#0f172a` |
-| `--color-neutral-100` | `#f1f5f9` | `#172033` |
-| `--color-neutral-200` | `#e2e8f0` | `#1e293b` |
-| `--color-neutral-300` | `#cbd5e1` | `#334155` |
-| `--color-neutral-400` | `#94a3b8` | `#475569` |
-| `--color-neutral-500` | `#64748b` | `#64748b` |
-| `--color-neutral-600` | `#475569` | `#94a3b8` |
-| `--color-neutral-700` | `#334155` | `#cbd5e1` |
-| `--color-neutral-800` | `#1e293b` | `#e2e8f0` |
-| `--color-neutral-900` | `#0f172a` | `#f1f5f9` |
-| `--color-neutral-950` | `#080d17` | `#f8fafc` |
-| `--color-neutral-1000` | `#020408` | `#ffffff` |
+| `--color-neutral-0` | `#ffffff` | `#22282e` |
+| `--color-neutral-50` | `#f9fafb` | `#272e35` |
+| `--color-neutral-100` | `#eff2f5` | `#2b333b` |
+| `--color-neutral-200` | `#dde3e9` | `#313b44` |
+| `--color-neutral-300` | `#c0c9d3` | `#3e4a56` |
+| `--color-neutral-400` | `#9aa8b6` | `#505e6d` |
+| `--color-neutral-500` | `#647587` | `#647587` |
+| `--color-neutral-600` | `#505e6d` | `#9aa8b6` |
+| `--color-neutral-700` | `#3e4a56` | `#c0c9d3` |
+| `--color-neutral-800` | `#313b44` | `#dde3e9` |
+| `--color-neutral-900` | `#272e35` | `#eff2f5` |
+| `--color-neutral-950` | `#22282e` | `#f9fafb` |
+| `--color-neutral-1000` | `#111418` | `#ffffff` |
 
 ### Semantic
 
@@ -62,18 +62,20 @@ Brand and semantic colors switch to lighter steps in dark mode; contrast colors 
 
 | Token | Light | Dark |
 |-------|-------|------|
-| `--color-primary` | `#6366f1` | `#818cf8` |
-| `--color-primary-contrast` | `#ffffff` | `#080d17` |
-| `--color-secondary` | `#06b6d4` | `#22d3ee` |
-| `--color-secondary-contrast` | `#ffffff` | `#080d17` |
+| `--color-primary` | `#ba3b54` | `#e8a1af` |
+| `--color-primary-contrast` | `#ffffff` | `#22282e` |
+| `--color-secondary` | `#3a6b9c` | `#7ba3cc` |
+| `--color-secondary-strong` | `#23384d` | `#e7edf3` |
+| `--color-secondary-contrast` | `#ffffff` | `#22282e` |
 | `--color-success` | `#22c55e` | `#4ade80` |
-| `--color-success-contrast` | `#ffffff` | `#080d17` |
+| `--color-success-contrast` | `#22282e` | `#22282e` |
 | `--color-warning` | `#f59e0b` | `#fbbf24` |
-| `--color-warning-contrast` | `#0f172a` | `#080d17` |
-| `--color-error` | `#ef4444` | `#f87171` |
-| `--color-error-contrast` | `#ffffff` | `#080d17` |
-| `--color-info` | `#818cf8` | `#a5b4fc` |
-| `--color-info-contrast` | `#ffffff` | `#080d17` |
+| `--color-warning-contrast` | `#272e35` | `#22282e` |
+| `--color-error` | `#dc2626` | `#f87171` |
+| `--color-error-contrast` | `#ffffff` | `#22282e` |
+| `--color-info` | `#2563eb` | `#60a5fa` |
+| `--color-info-contrast` | `#ffffff` | `#22282e` |
+| `--color-border-control` | `#647587` | `#9aa8b6` |
 
 ## Adding a Custom Theme
 

@@ -2,6 +2,11 @@
 // Badge Tokens - CSS Custom Properties
 // =============================================================================
 // Tokens for status / label badge components.
+//
+// Accessibility: the subtle success/warning/error/info foregrounds point to the
+// per-variant -text semantic tokens, which are tuned to pass WCAG AA on their
+// alpha tinted backgrounds. A 500-level token as text on a 10% tint of itself
+// tops out below 3:1 — see toast.scss, which follows the same pattern.
 // =============================================================================
 
 :root {
@@ -44,7 +49,7 @@
   // Outline variant
   --badge-outline-bg: transparent;
   --badge-outline-color: var(--color-neutral-500);
-  --badge-outline-border-color: var(--color-neutral-300);
+  --badge-outline-border-color: var(--color-border-control);
 
   // Subtle variants (alpha backgrounds)
   --badge-subtle-primary-bg: var(--color-primary-alpha-8);
@@ -52,13 +57,13 @@
   --badge-subtle-secondary-bg: var(--color-secondary-alpha-8);
   --badge-subtle-secondary-color: var(--color-secondary);
   --badge-subtle-success-bg: var(--color-success-alpha-10);
-  --badge-subtle-success-color: var(--color-success);
+  --badge-subtle-success-color: var(--color-success-text);
   --badge-subtle-warning-bg: var(--color-warning-alpha-10);
-  --badge-subtle-warning-color: var(--color-warning);
+  --badge-subtle-warning-color: var(--color-warning-text);
   --badge-subtle-error-bg: var(--color-error-alpha-10);
-  --badge-subtle-error-color: var(--color-error);
+  --badge-subtle-error-color: var(--color-error-text);
   --badge-subtle-info-bg: var(--color-info-alpha-10);
-  --badge-subtle-info-color: var(--color-info);
+  --badge-subtle-info-color: var(--color-info-text);
 
   // Dotted indicator
   --badge-dot-size: 0.5rem;

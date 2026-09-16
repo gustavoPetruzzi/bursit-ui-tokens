@@ -1,57 +1,58 @@
 // =============================================================================
 // Design Tokens — CSS Custom Properties
 // =============================================================================
-// Palette: Índigo eléctrico + Cian frío. Neutros de base azulada.
-// Light mode por defecto. Dark mode via [bursit-theme="dark"] o .dark.
+// Palette: wine (primary) + steel (secondary), on a blue-tinted neutral base.
+// Light mode is the default. Dark mode via [bursit-theme="dark"] or .dark.
 //
-// Uso recomendado en Angular:
-//   ThemeService que alterna el atributo en <html [attr.bursit-theme]="theme">
+// Recommended usage in Angular:
+//   A ThemeService that toggles the attribute on <html [attr.bursit-theme]="theme">
 // =============================================================================
 
 // =============================================================================
-// PRIMITIVES — valores crudos, no se usan directamente en componentes
+// PRIMITIVES — raw values, never used directly in components
 // =============================================================================
 
-// Indigo scale
-$indigo-50: #eef2ff;
-$indigo-100: #e0e7ff;
-$indigo-200: #c7d2fe;
-$indigo-300: #a5b4fc;
-$indigo-400: #818cf8;
-$indigo-500: #6366f1; // ← primary base
-$indigo-600: #4f46e5;
-$indigo-700: #4338ca;
-$indigo-800: #3730a3;
-$indigo-900: #312e81;
-$indigo-950: #1e1b4b;
+// Wine scale (primary)
+$wine-50: #fcf3f5;
+$wine-100: #f8e2e7;
+$wine-200: #f2c4ce;
+$wine-300: #e8a1af;
+$wine-400: #d77588;
+$wine-500: #ba3b54; // ← primary base
+$wine-600: #9d3449;
+$wine-700: #7f2f3f;
+$wine-800: #622833;
+$wine-900: #4a2129;
+$wine-950: #2c171b;
 
-// Cyan scale
-$cyan-50: #ecfeff;
-$cyan-100: #cffafe;
-$cyan-200: #a5f3fc;
-$cyan-300: #67e8f9;
-$cyan-400: #22d3ee;
-$cyan-500: #06b6d4; // ← secondary base
-$cyan-600: #0891b2;
-$cyan-700: #0e7490;
-$cyan-800: #155e75;
-$cyan-900: #164e63;
+// Steel scale (secondary)
+$steel-50: #f5f7fa;
+$steel-100: #e7edf3;
+$steel-200: #cedbe9;
+$steel-300: #afc7de;
+$steel-400: #7ba3cc;
+$steel-500: #3a6b9c; // ← secondary base
+$steel-600: #305982;
+$steel-700: #294765;
+$steel-800: #23384d;
+$steel-900: #1d2b3a;
+$steel-950: #151f28;
 
-// Neutrals — base azulada fría (no gray puro)
+// Neutrals — cool blue-tinted base (not pure gray)
 $neutral-0: #ffffff;
-$neutral-50: #f8fafc;
-$neutral-100: #f1f5f9;
-$neutral-200: #e2e8f0;
-$neutral-300: #cbd5e1;
-$neutral-400: #94a3b8;
-$neutral-500: #64748b;
-$neutral-600: #475569;
-$neutral-700: #334155;
-$neutral-800: #1e293b;
-$neutral-850: #172033;
-$neutral-900: #0f172a;
-$neutral-950: #080d17;
-$neutral-1000: #020408;
+$neutral-50: #f9fafb;
+$neutral-100: #eff2f5;
+$neutral-200: #dde3e9;
+$neutral-300: #c0c9d3;
+$neutral-400: #9aa8b6;
+$neutral-500: #647587;
+$neutral-600: #505e6d;
+$neutral-700: #3e4a56;
+$neutral-800: #313b44;
+$neutral-850: #2b333b;
+$neutral-900: #272e35;
+$neutral-950: #22282e;
+$neutral-1000: #111418;
 
 // Semantic primitives
 $green-400: #4ade80;
@@ -69,6 +70,19 @@ $red-400: #f87171;
 $red-500: #ef4444;
 $red-600: #dc2626;
 $red-700: #b91c1c;
+$red-800: #991b1b;
+
+// Blue scale — 5 steps, mirrors the sibling semantic families
+$blue-400: #60a5fa;
+$blue-500: #3b82f6;
+$blue-600: #2563eb;
+$blue-700: #1d4ed8;
+$blue-800: #1e40af;
+
+// Brand anchors — not ramp steps
+$brand-field: #22282e;
+$brand-bright: #835a60;
+$brand-deep: #4e383e;
 
 // =============================================================================
 // LIGHT MODE — :root
@@ -76,31 +90,40 @@ $red-700: #b91c1c;
 
 :root {
   // ---------------------------------------------------------------------------
-  // Brand / Primary — Índigo
+  // Brand / Primary — wine
   // ---------------------------------------------------------------------------
 
-  --color-primary: #{$indigo-500};
-  --color-primary-hover: #{$indigo-600};
-  --color-primary-active: #{$indigo-700};
-  --color-primary-subtle: #{$indigo-50};
+  --color-primary: #{$wine-500};
+  --color-primary-hover: #{$wine-600};
+  --color-primary-active: #{$wine-700};
+  --color-primary-subtle: #{$wine-50};
   --color-primary-contrast: #{$neutral-0};
 
-  --color-primary-alpha-8: #{rgba($indigo-500, 0.08)};
-  --color-primary-alpha-15: #{rgba($indigo-500, 0.15)};
-  --color-primary-alpha-20: #{rgba($indigo-500, 0.2)};
+  --color-primary-alpha-8: #{rgba($wine-500, 0.08)};
+  --color-primary-alpha-15: #{rgba($wine-500, 0.15)};
+  --color-primary-alpha-20: #{rgba($wine-500, 0.2)};
 
   // ---------------------------------------------------------------------------
-  // Secondary — Cian
+  // Brand — mode-independent identity anchors
   // ---------------------------------------------------------------------------
 
-  --color-secondary: #{$cyan-500};
-  --color-secondary-hover: #{$cyan-600};
-  --color-secondary-active: #{$cyan-700};
-  --color-secondary-subtle: #{$cyan-50};
+  --color-brand-field: #{$brand-field};
+  --color-brand-mark-bright: #{$brand-bright};
+  --color-brand-mark-deep: #{$brand-deep};
+
+  // ---------------------------------------------------------------------------
+  // Secondary — steel
+  // ---------------------------------------------------------------------------
+
+  --color-secondary: #{$steel-500};
+  --color-secondary-hover: #{$steel-600};
+  --color-secondary-active: #{$steel-700};
+  --color-secondary-strong: #{$steel-800}; // ink on --btn-secondary-hover-bg
+  --color-secondary-subtle: #{$steel-50};
   --color-secondary-contrast: #{$neutral-0};
 
-  --color-secondary-alpha-8: #{rgba($cyan-500, 0.08)};
-  --color-secondary-alpha-15: #{rgba($cyan-500, 0.15)};
+  --color-secondary-alpha-8: #{rgba($steel-500, 0.08)};
+  --color-secondary-alpha-15: #{rgba($steel-500, 0.15)};
 
   // ---------------------------------------------------------------------------
   // Neutrals
@@ -127,7 +150,7 @@ $red-700: #b91c1c;
   --color-success: #{$green-500};
   --color-success-hover: #{$green-600};
   --color-success-active: #{$green-700};
-  --color-success-contrast: #{$neutral-0};
+  --color-success-contrast: #{$neutral-950}; // dark ink; white cannot reach AA on a usable green
   --color-success-alpha-10: #{rgba($green-500, 0.1)};
   --color-success-alpha-15: #{rgba($green-500, 0.15)};
   --color-success-text: #{$green-800}; // WCAG AA on light tinted backgrounds
@@ -148,23 +171,23 @@ $red-700: #b91c1c;
   // Semantic — Error
   // ---------------------------------------------------------------------------
 
-  --color-error: #{$red-500};
-  --color-error-hover: #{$red-600};
-  --color-error-active: #{$red-700};
+  --color-error: #{$red-600};
+  --color-error-hover: #{$red-700};
+  --color-error-active: #{$red-800}; // preserves the danger-button state ladder
   --color-error-contrast: #{$neutral-0};
-  --color-error-alpha-10: #{rgba($red-500, 0.1)};
-  --color-error-alpha-15: #{rgba($red-500, 0.15)};
+  --color-error-alpha-10: #{rgba($red-600, 0.1)};
+  --color-error-alpha-15: #{rgba($red-600, 0.15)};
   --color-error-text: #{$red-700}; // WCAG AA on light bg and alpha-10 tinted backgrounds
 
   // ---------------------------------------------------------------------------
-  // Semantic — Info (índigo claro, diferente del primary)
+  // Semantic — Info (blue, distinct from primary)
   // ---------------------------------------------------------------------------
 
-  --color-info: #{$indigo-400};
+  --color-info: #{$blue-600};
   --color-info-contrast: #{$neutral-0};
-  --color-info-alpha-10: #{rgba($indigo-400, 0.1)};
-  --color-info-alpha-15: #{rgba($indigo-400, 0.15)};
-  --color-info-text: #{$indigo-600}; // WCAG AA on light tinted backgrounds
+  --color-info-alpha-10: #{rgba($blue-600, 0.1)};
+  --color-info-alpha-15: #{rgba($blue-600, 0.15)};
+  --color-info-text: #{$blue-700}; // WCAG AA on light tinted backgrounds
 
   // ---------------------------------------------------------------------------
   // Surfaces & backgrounds
@@ -175,7 +198,7 @@ $red-700: #b91c1c;
   --color-bg-sunken: #{$neutral-100};
   --color-overlay: #{rgba($neutral-900, 0.55)};
 
-  // Alphas utilitarios
+  // Utility alphas
   --color-white-alpha-15: #{rgba($neutral-0, 0.15)};
   --color-black-alpha-10: #{rgba($neutral-1000, 0.1)};
 
@@ -184,8 +207,8 @@ $red-700: #b91c1c;
   // ---------------------------------------------------------------------------
 
   --color-text: #{$neutral-900};
-  --color-text-muted: #{$neutral-500};
-  --color-text-subtle: #{$neutral-400};
+  --color-text-muted: #{$neutral-600};
+  --color-text-subtle: #{$neutral-600};
   --color-text-inverse: #{$neutral-0};
 
   // ---------------------------------------------------------------------------
@@ -194,12 +217,13 @@ $red-700: #b91c1c;
 
   --color-border: #{$neutral-200};
   --color-border-strong: #{$neutral-300};
+  --color-border-control: #{$neutral-500}; // UI contrast ≥3:1 on the control's own bg
 
   // ---------------------------------------------------------------------------
   // Focus
   // ---------------------------------------------------------------------------
 
-  --color-focus-ring: #{rgba($indigo-500, 0.4)};
+  --color-focus-ring: #{rgba($wine-500, 0.7)};
 
   // ---------------------------------------------------------------------------
   // Typography scale
@@ -275,28 +299,28 @@ $red-700: #b91c1c;
   --border-width-thick: 4px;
 
   // ---------------------------------------------------------------------------
-  // Shadows — tonalizadas en índigo para coherencia
+  // Shadows — tinted with wine for brand coherence
   // ---------------------------------------------------------------------------
 
-  --shadow-xs: 0 1px 2px 0 #{rgba($indigo-950, 0.04)};
+  --shadow-xs: 0 1px 2px 0 #{rgba($wine-950, 0.04)};
   --shadow-sm:
-    0 1px 3px 0 #{rgba($indigo-950, 0.08)},
-    0 1px 2px -1px #{rgba($indigo-950, 0.06)};
+    0 1px 3px 0 #{rgba($wine-950, 0.08)},
+    0 1px 2px -1px #{rgba($wine-950, 0.06)};
   --shadow-md:
-    0 4px 6px -1px #{rgba($indigo-950, 0.08)},
-    0 2px 4px -2px #{rgba($indigo-950, 0.06)};
+    0 4px 6px -1px #{rgba($wine-950, 0.08)},
+    0 2px 4px -2px #{rgba($wine-950, 0.06)};
   --shadow-lg:
-    0 10px 15px -3px #{rgba($indigo-950, 0.08)},
-    0 4px 6px -4px #{rgba($indigo-950, 0.05)};
+    0 10px 15px -3px #{rgba($wine-950, 0.08)},
+    0 4px 6px -4px #{rgba($wine-950, 0.05)};
   --shadow-xl:
-    0 20px 25px -5px #{rgba($indigo-950, 0.1)},
-    0 8px 10px -6px #{rgba($indigo-950, 0.06)};
-  --shadow-2xl: 0 25px 50px -12px #{rgba($indigo-950, 0.2)};
-  --shadow-inner: inset 0 2px 4px 0 #{rgba($indigo-950, 0.06)};
+    0 20px 25px -5px #{rgba($wine-950, 0.1)},
+    0 8px 10px -6px #{rgba($wine-950, 0.06)};
+  --shadow-2xl: 0 25px 50px -12px #{rgba($wine-950, 0.2)};
+  --shadow-inner: inset 0 2px 4px 0 #{rgba($wine-950, 0.06)};
 
-  // Glow para elementos activos / hover con acento
-  --shadow-glow-primary: 0 0 0 3px #{rgba($indigo-500, 0.3)};
-  --shadow-glow-secondary: 0 0 0 3px #{rgba($cyan-500, 0.3)};
+  // Glow for active / hover accent elements
+  --shadow-glow-primary: 0 0 0 3px #{rgba($wine-500, 0.7)};
+  --shadow-glow-secondary: 0 0 0 3px #{rgba($steel-500, 0.3)};
 
   // ---------------------------------------------------------------------------
   // Motion
@@ -331,43 +355,52 @@ $red-700: #b91c1c;
 }
 
 // =============================================================================
-// DARK MODE — [bursit-theme="dark"] o .dark
+// DARK MODE — [bursit-theme="dark"] or .dark
 // =============================================================================
-// Solo se redefinen los tokens que cambian entre modos.
-// Todos los tokens de espaciado, tipografía y motion se heredan de :root.
+// Only tokens that change between modes are redefined.
+// Spacing, typography, and motion tokens are inherited from :root.
 // =============================================================================
 
 [bursit-theme="dark"],
 .dark {
   // ---------------------------------------------------------------------------
-  // Brand / Primary — índigo más brillante sobre fondo oscuro
+  // Brand / Primary — brighter wine over dark surfaces
   // ---------------------------------------------------------------------------
 
-  --color-primary: #{$indigo-400};
-  --color-primary-hover: #{$indigo-300};
-  --color-primary-active: #{$indigo-200};
-  --color-primary-subtle: #{rgba($indigo-500, 0.15)};
+  --color-primary: #{$wine-300};
+  --color-primary-hover: #{$wine-200};
+  --color-primary-active: #{$wine-100};
+  --color-primary-subtle: #{rgba($wine-500, 0.15)};
   --color-primary-contrast: #{$neutral-950};
 
-  --color-primary-alpha-8: #{rgba($indigo-400, 0.08)};
-  --color-primary-alpha-15: #{rgba($indigo-400, 0.15)};
-  --color-primary-alpha-20: #{rgba($indigo-400, 0.2)};
+  --color-primary-alpha-8: #{rgba($wine-300, 0.08)};
+  --color-primary-alpha-15: #{rgba($wine-300, 0.15)};
+  --color-primary-alpha-20: #{rgba($wine-300, 0.2)};
 
   // ---------------------------------------------------------------------------
-  // Secondary — cian sobre oscuro
+  // Brand — mode-independent identity anchors
   // ---------------------------------------------------------------------------
 
-  --color-secondary: #{$cyan-400};
-  --color-secondary-hover: #{$cyan-300};
-  --color-secondary-active: #{$cyan-200};
-  --color-secondary-subtle: #{rgba($cyan-500, 0.12)};
+  --color-brand-field: #{$brand-field};
+  --color-brand-mark-bright: #{$wine-300};
+  --color-brand-mark-deep: #{$wine-400};
+
+  // ---------------------------------------------------------------------------
+  // Secondary — steel over dark surfaces
+  // ---------------------------------------------------------------------------
+
+  --color-secondary: #{$steel-400};
+  --color-secondary-hover: #{$steel-300};
+  --color-secondary-active: #{$steel-200};
+  --color-secondary-strong: #{$steel-100}; // ink on --btn-secondary-hover-bg
+  --color-secondary-subtle: #{rgba($steel-500, 0.12)};
   --color-secondary-contrast: #{$neutral-950};
 
-  --color-secondary-alpha-8: #{rgba($cyan-400, 0.08)};
-  --color-secondary-alpha-15: #{rgba($cyan-400, 0.15)};
+  --color-secondary-alpha-8: #{rgba($steel-400, 0.08)};
+  --color-secondary-alpha-15: #{rgba($steel-400, 0.15)};
 
   // ---------------------------------------------------------------------------
-  // Neutrals — invertidos
+  // Neutrals — inverted
   // ---------------------------------------------------------------------------
 
   --color-neutral-0: #{$neutral-950};
@@ -412,11 +445,11 @@ $red-700: #b91c1c;
   --color-error-alpha-15: #{rgba($red-400, 0.18)};
   --color-error-text: #{$red-400}; // WCAG AA on dark bg
 
-  --color-info: #{$indigo-300};
+  --color-info: #{$blue-400};
   --color-info-contrast: #{$neutral-950};
-  --color-info-alpha-10: #{rgba($indigo-300, 0.12)};
-  --color-info-alpha-15: #{rgba($indigo-300, 0.18)};
-  --color-info-text: #{$indigo-300}; // WCAG AA on dark tinted backgrounds
+  --color-info-alpha-10: #{rgba($blue-400, 0.12)};
+  --color-info-alpha-15: #{rgba($blue-400, 0.18)};
+  --color-info-text: #{$blue-400}; // WCAG AA on dark tinted backgrounds
 
   // ---------------------------------------------------------------------------
   // Surfaces
@@ -436,7 +469,7 @@ $red-700: #b91c1c;
 
   --color-text: #{$neutral-50};
   --color-text-muted: #{$neutral-400};
-  --color-text-subtle: #{$neutral-600};
+  --color-text-subtle: #{$neutral-400};
   --color-text-inverse: #{$neutral-950};
 
   // ---------------------------------------------------------------------------
@@ -445,15 +478,16 @@ $red-700: #b91c1c;
 
   --color-border: #{$neutral-800};
   --color-border-strong: #{$neutral-700};
+  --color-border-control: #{$neutral-400}; // UI contrast ≥3:1 on the control's own bg
 
   // ---------------------------------------------------------------------------
   // Focus
   // ---------------------------------------------------------------------------
 
-  --color-focus-ring: #{rgba($indigo-400, 0.45)};
+  --color-focus-ring: #{rgba($wine-300, 0.8)};
 
   // ---------------------------------------------------------------------------
-  // Shadows — más pronunciadas en dark (el contraste lo necesita)
+  // Shadows — more pronounced in dark (contrast needs it)
   // ---------------------------------------------------------------------------
 
   --shadow-xs: 0 1px 2px 0 #{rgba($neutral-1000, 0.3)};
@@ -472,12 +506,12 @@ $red-700: #b91c1c;
   --shadow-2xl: 0 25px 50px -12px #{rgba($neutral-1000, 0.7)};
   --shadow-inner: inset 0 2px 4px 0 #{rgba($neutral-1000, 0.4)};
 
-  --shadow-glow-primary: 0 0 0 3px #{rgba($indigo-400, 0.35)};
-  --shadow-glow-secondary: 0 0 0 3px #{rgba($cyan-400, 0.35)};
+  --shadow-glow-primary: 0 0 0 3px #{rgba($wine-300, 0.8)};
+  --shadow-glow-secondary: 0 0 0 3px #{rgba($steel-400, 0.35)};
 }
 
 // =============================================================================
-// Prefer-reduced-motion — respeta accesibilidad
+// Prefer-reduced-motion — respects accessibility preferences
 // =============================================================================
 
 @media (prefers-reduced-motion: reduce) {

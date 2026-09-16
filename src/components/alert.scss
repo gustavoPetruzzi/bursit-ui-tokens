@@ -2,6 +2,12 @@
 // Alert / Toast Tokens - CSS Custom Properties
 // =============================================================================
 // Tokens for alert message components.
+//
+// Accessibility: --alert-*-color, --alert-*-icon-color and --alert-*-border-color
+// point to the per-variant -text semantic tokens, which are tuned to pass WCAG AA
+// on their alpha tinted backgrounds (text needs 4.5:1, borders/UI graphics need
+// 3:1) in both light and dark mode. A 500-level token as text on a 10% tint of
+// itself tops out below 3:1 — see toast.scss, which follows the same pattern.
 // =============================================================================
 
 :root {
@@ -20,25 +26,25 @@
 
   // Variant: Info
   --alert-info-bg: var(--color-info-alpha-10);
-  --alert-info-border-color: var(--color-info);
-  --alert-info-color: var(--color-info);
-  --alert-info-icon-color: var(--color-info);
+  --alert-info-border-color: var(--color-info-text);
+  --alert-info-color: var(--color-info-text);
+  --alert-info-icon-color: var(--color-info-text);
 
   // Variant: Success
   --alert-success-bg: var(--color-success-alpha-10);
-  --alert-success-border-color: var(--color-success);
-  --alert-success-color: var(--color-success);
-  --alert-success-icon-color: var(--color-success);
+  --alert-success-border-color: var(--color-success-text);
+  --alert-success-color: var(--color-success-text);
+  --alert-success-icon-color: var(--color-success-text);
 
   // Variant: Warning
   --alert-warning-bg: var(--color-warning-alpha-10);
-  --alert-warning-border-color: var(--color-warning);
-  --alert-warning-color: var(--color-warning);
-  --alert-warning-icon-color: var(--color-warning);
+  --alert-warning-border-color: var(--color-warning-text);
+  --alert-warning-color: var(--color-warning-text);
+  --alert-warning-icon-color: var(--color-warning-text);
 
   // Variant: Error
   --alert-error-bg: var(--color-error-alpha-10);
-  --alert-error-border-color: var(--color-error);
-  --alert-error-color: var(--color-error);
-  --alert-error-icon-color: var(--color-error);
+  --alert-error-border-color: var(--color-error-text);
+  --alert-error-color: var(--color-error-text);
+  --alert-error-icon-color: var(--color-error-text);
 }
