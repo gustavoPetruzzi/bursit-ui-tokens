@@ -62,7 +62,7 @@ Brand and semantic colors switch to lighter steps in dark mode; contrast colors 
 
 | Token | Light | Dark |
 |-------|-------|------|
-| `--color-primary` | `#ba3b54` | `#e8a1af` |
+| `--color-primary` | `#835a60` | `#ebb2bd` |
 | `--color-primary-contrast` | `#ffffff` | `#22282e` |
 | `--color-secondary` | `#3a6b9c` | `#7ba3cc` |
 | `--color-secondary-strong` | `#23384d` | `#e7edf3` |

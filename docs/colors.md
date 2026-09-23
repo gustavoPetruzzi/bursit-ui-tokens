@@ -11,7 +11,7 @@ Primary and secondary brand colors for actions and accents.
     <span class="swatch-preview"></span>
     <div class="swatch-info">
       <code>--color-primary</code>
-      <span>#ba3b54</span>
+      <span>#835a60</span>
     </div>
   </div>
   <div class="color-swatch" style="--color: var(--color-primary-contrast); --text: var(--color-primary)">
@@ -25,14 +25,14 @@ Primary and secondary brand colors for actions and accents.
     <span class="swatch-preview"></span>
     <div class="swatch-info">
       <code>--color-primary-hover</code>
-      <span>#9d3449</span>
+      <span>#714e53</span>
     </div>
   </div>
   <div class="color-swatch" style="--color: var(--color-primary-active)">
     <span class="swatch-preview"></span>
     <div class="swatch-info">
       <code>--color-primary-active</code>
-      <span>#7f2f3f</span>
+      <span>#5f4145</span>
     </div>
   </div>
   <div class="color-swatch" style="--color: var(--color-secondary)">
