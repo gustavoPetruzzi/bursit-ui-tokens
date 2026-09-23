@@ -1,6 +1,6 @@
 {
   "name": "bursit-ui-tokens",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "description": "Shared CSS custom properties for Angular and React components",
   "type": "module",
   "main": "src/index.scss",
