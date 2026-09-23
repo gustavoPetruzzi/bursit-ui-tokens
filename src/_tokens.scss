@@ -12,13 +12,14 @@
 // PRIMITIVES — raw values, never used directly in components
 // =============================================================================
 
-// Wine scale (primary)
+// Wine scale (palette — shadows tint with $wine-950 and dark brand-mark facets
+// use $wine-300/400; the semantic primary ramp lives in $primary-* below)
 $wine-50: #fcf3f5;
 $wine-100: #f8e2e7;
 $wine-200: #f2c4ce;
 $wine-300: #e8a1af;
 $wine-400: #d77588;
-$wine-500: #ba3b54; // ← primary base
+$wine-500: #ba3b54;
 $wine-600: #9d3449;
 $wine-700: #7f2f3f;
 $wine-800: #622833;
@@ -84,24 +85,37 @@ $brand-field: #22282e;
 $brand-bright: #835a60;
 $brand-deep: #4e383e;
 
+// Primary ramp — Option A (logo-fidelity): semantic primary anchors on the logo
+// mark tone ($brand-bright), not the wine scale. Step numbering follows the house
+// convention: 50-700 serve light mode (hover/active go darker), 100-300 serve
+// dark mode (hover/active go lighter). Separation from the fixed error red is
+// won on chroma, never on hue.
+$primary-50: #fbf7f7; // light — subtle tinted background
+$primary-100: #fde0e6; // dark — active
+$primary-200: #f5c8d1; // dark — hover
+$primary-300: #ebb2bd; // dark — base (8.25:1 on $neutral-950)
+$primary-500: $brand-bright; // light — base #835a60 (5.59:1 on $neutral-50)
+$primary-600: #714e53; // light — hover
+$primary-700: #5f4145; // light — active
+
 // =============================================================================
 // LIGHT MODE — :root
 // =============================================================================
 
 :root {
   // ---------------------------------------------------------------------------
-  // Brand / Primary — wine
+  // Brand / Primary — logo mark (Option A)
   // ---------------------------------------------------------------------------
 
-  --color-primary: #{$wine-500};
-  --color-primary-hover: #{$wine-600};
-  --color-primary-active: #{$wine-700};
-  --color-primary-subtle: #{$wine-50};
+  --color-primary: #{$primary-500};
+  --color-primary-hover: #{$primary-600};
+  --color-primary-active: #{$primary-700};
+  --color-primary-subtle: #{$primary-50};
   --color-primary-contrast: #{$neutral-0};
 
-  --color-primary-alpha-8: #{rgba($wine-500, 0.08)};
-  --color-primary-alpha-15: #{rgba($wine-500, 0.15)};
-  --color-primary-alpha-20: #{rgba($wine-500, 0.2)};
+  --color-primary-alpha-8: #{rgba($primary-500, 0.08)};
+  --color-primary-alpha-15: #{rgba($primary-500, 0.15)};
+  --color-primary-alpha-20: #{rgba($primary-500, 0.2)};
 
   // ---------------------------------------------------------------------------
   // Brand — mode-independent identity anchors
@@ -223,7 +237,7 @@ $brand-deep: #4e383e;
   // Focus
   // ---------------------------------------------------------------------------
 
-  --color-focus-ring: #{rgba($wine-500, 0.7)};
+  --color-focus-ring: #{rgba($primary-500, 0.7)};
 
   // ---------------------------------------------------------------------------
   // Typography scale
@@ -319,7 +333,7 @@ $brand-deep: #4e383e;
   --shadow-inner: inset 0 2px 4px 0 #{rgba($wine-950, 0.06)};
 
   // Glow for active / hover accent elements
-  --shadow-glow-primary: 0 0 0 3px #{rgba($wine-500, 0.7)};
+  --shadow-glow-primary: 0 0 0 3px #{rgba($primary-500, 0.7)};
   --shadow-glow-secondary: 0 0 0 3px #{rgba($steel-500, 0.3)};
 
   // ---------------------------------------------------------------------------
@@ -364,18 +378,18 @@ $brand-deep: #4e383e;
 [bursit-theme="dark"],
 .dark {
   // ---------------------------------------------------------------------------
-  // Brand / Primary — brighter wine over dark surfaces
+  // Brand / Primary — logo mark, lighter steps over dark surfaces
   // ---------------------------------------------------------------------------
 
-  --color-primary: #{$wine-300};
-  --color-primary-hover: #{$wine-200};
-  --color-primary-active: #{$wine-100};
-  --color-primary-subtle: #{rgba($wine-500, 0.15)};
+  --color-primary: #{$primary-300};
+  --color-primary-hover: #{$primary-200};
+  --color-primary-active: #{$primary-100};
+  --color-primary-subtle: #{rgba($primary-300, 0.15)};
   --color-primary-contrast: #{$neutral-950};
 
-  --color-primary-alpha-8: #{rgba($wine-300, 0.08)};
-  --color-primary-alpha-15: #{rgba($wine-300, 0.15)};
-  --color-primary-alpha-20: #{rgba($wine-300, 0.2)};
+  --color-primary-alpha-8: #{rgba($primary-300, 0.08)};
+  --color-primary-alpha-15: #{rgba($primary-300, 0.15)};
+  --color-primary-alpha-20: #{rgba($primary-300, 0.2)};
 
   // ---------------------------------------------------------------------------
   // Brand — mode-independent identity anchors
@@ -484,7 +498,7 @@ $brand-deep: #4e383e;
   // Focus
   // ---------------------------------------------------------------------------
 
-  --color-focus-ring: #{rgba($wine-300, 0.8)};
+  --color-focus-ring: #{rgba($primary-300, 0.8)};
 
   // ---------------------------------------------------------------------------
   // Shadows — more pronounced in dark (contrast needs it)
@@ -506,7 +520,7 @@ $brand-deep: #4e383e;
   --shadow-2xl: 0 25px 50px -12px #{rgba($neutral-1000, 0.7)};
   --shadow-inner: inset 0 2px 4px 0 #{rgba($neutral-1000, 0.4)};
 
-  --shadow-glow-primary: 0 0 0 3px #{rgba($wine-300, 0.8)};
+  --shadow-glow-primary: 0 0 0 3px #{rgba($primary-300, 0.8)};
   --shadow-glow-secondary: 0 0 0 3px #{rgba($steel-400, 0.35)};
 }
 

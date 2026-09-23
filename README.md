@@ -92,14 +92,14 @@ Dark mode redefines only the tokens that change between modes (colors, shadows).
 
 Values shown are **light theme defaults**. In dark mode, brand and semantic colors switch to lighter steps, neutrals invert their scale (`--color-neutral-0` becomes darkest), and shadows get stronger.
 
-### Colors — Brand Primary (Wine)
+### Colors — Brand Primary
 
 | Token | Default | Description |
 |-------|---------|-------------|
-| `--color-primary` | `#ba3b54` | Wine 500 — primary brand color |
-| `--color-primary-hover` | `#9d3449` | Hover state (wine 600) |
-| `--color-primary-active` | `#7f2f3f` | Active/pressed state (wine 700) |
-| `--color-primary-subtle` | `#fcf3f5` | Tinted background (wine 50) |
+| `--color-primary` | `#835a60` | Logo mark tone — primary brand color |
+| `--color-primary-hover` | `#714e53` | Hover state (primary 600) |
+| `--color-primary-active` | `#5f4145` | Active/pressed state (primary 700) |
+| `--color-primary-subtle` | `#fbf7f7` | Tinted background (primary 50) |
 | `--color-primary-contrast` | `#ffffff` | Text on primary |
 
 ### Colors — Secondary (Steel)
@@ -170,9 +170,9 @@ The scale inverts in dark mode: `-0` becomes darkest and `-1000` becomes lightes
 
 | Token | Default | Description |
 |-------|---------|-------------|
-| `--color-primary-alpha-8` | `rgb(186 59 84 / 0.08)` | Subtle primary background |
-| `--color-primary-alpha-15` | `rgb(186 59 84 / 0.15)` | Primary background |
-| `--color-primary-alpha-20` | `rgb(186 59 84 / 0.2)` | Primary background (stronger) |
+| `--color-primary-alpha-8` | `rgb(131 90 96 / 0.08)` | Subtle primary background |
+| `--color-primary-alpha-15` | `rgb(131 90 96 / 0.15)` | Primary background |
+| `--color-primary-alpha-20` | `rgb(131 90 96 / 0.2)` | Primary background (stronger) |
 | `--color-secondary-alpha-8` | `rgb(58 107 156 / 0.08)` | Subtle secondary background |
 | `--color-secondary-alpha-15` | `rgb(58 107 156 / 0.15)` | Secondary background |
 | `--color-success-alpha-10` | `rgb(34 197 94 / 0.1)` | Success background |
@@ -201,7 +201,7 @@ The scale inverts in dark mode: `-0` becomes darkest and `-1000` becomes lightes
 | `--color-border` | `#dde3e9` | Default borders |
 | `--color-border-strong` | `#c0c9d3` | Emphasized borders |
 | `--color-border-control` | `#647587` | Control borders — ≥3:1 UI contrast (`#9aa8b6` in dark mode) |
-| `--color-focus-ring` | `rgb(186 59 84 / 0.7)` | Focus indicator color |
+| `--color-focus-ring` | `rgb(131 90 96 / 0.7)` | Focus indicator color |
 
 ### Typography — Font Family
 
@@ -304,7 +304,7 @@ Tinted with wine for coherence with the brand. All get stronger in dark mode.
 | `--shadow-xl` | `0 20px 25px -5px rgb(44 23 27 / 0.1), 0 8px 10px -6px rgb(44 23 27 / 0.06)` | Modals |
 | `--shadow-2xl` | `0 25px 50px -12px rgb(44 23 27 / 0.2)` | Full-screen overlays |
 | `--shadow-inner` | `inset 0 2px 4px 0 rgb(44 23 27 / 0.06)` | Inset wells |
-| `--shadow-glow-primary` | `0 0 0 3px rgb(186 59 84 / 0.7)` | Primary accent glow / focus ring |
+| `--shadow-glow-primary` | `0 0 0 3px rgb(131 90 96 / 0.7)` | Primary accent glow / focus ring |
 | `--shadow-glow-secondary` | `0 0 0 3px rgb(58 107 156 / 0.3)` | Secondary accent glow |
 
 ### Motion — Duration
