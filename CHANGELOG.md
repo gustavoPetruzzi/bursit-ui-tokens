@@ -1,5 +1,16 @@
 # Changelog
 
+## [3.0.0](https://github.com/gustavoPetruzzi/bursit-ui-tokens/compare/v2.0.0...v3.0.0) (2026-09-23)
+
+
+### ⚠ BREAKING CHANGES
+
+* **tokens:** --color-primary, -hover, -active, -subtle, the alpha-8/15/20 tints, --color-focus-ring and --shadow-glow-primary all change value in both modes.
+
+### Features
+
+* **tokens:** re-anchor the primary ramp to the logo mark tone ([#18](https://github.com/gustavoPetruzzi/bursit-ui-tokens/issues/18)) ([f16fb33](https://github.com/gustavoPetruzzi/bursit-ui-tokens/commit/f16fb3375807ba5ece8c60da4450e5038d97c86d))
+
 ## [2.0.0](https://github.com/gustavoPetruzzi/bursit-ui-tokens/compare/v1.2.0...v2.0.0) (2026-09-16)
 
 
